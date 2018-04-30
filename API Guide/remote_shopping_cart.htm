@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Using the Remote Shopping Cart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">Using the Remote Shopping Cart</div>
+<p class="bodycopy">This section explains how to use the remote shopping cart 
+  to add items to a cart and manage that shopping cart from a remote Web site 
+  or application.  This enables you to keep the customer on your site or application 
+  for the duration of their shopping session.</p>
+<h2 class="subhead">Elements of Remote Shopping Cart Calls</h2>
+<p class="bodycopy">The following elements are returned by the Add call. The Cart 
+  ID and HMAC values returned by that call serve to identify the shopping cart 
+  and must be passed unchanged to the other shopping carts requests described 
+  in this section.</p>
+<ol start=1 type=1>
+  <li class="bodycopy"><b>Cart ID</b>.  The Cart ID is the unique identifier for 
+    a given customer.</li>
+  <li class="bodycopy"><b>HMAC</b>.  The HMAC is a security token that must be 
+    passed back to Amazon Web Services for using an existing cart. This token 
+    is uniquely associated with each cart. When using the REST API, HMAC must 
+    be URL-encoded, so the <b>+</b> sign in the URL must be converted to <b>%2B</b> 
+    (otherwise the browser will interpret this as a space).</li>
+  <li class="bodycopy"><b>Purchase URL</b>.  The purchase URL must be included 
+    in your link to enable purchasing from a cart.  The purchase URL transfers 
+    items from your local cart to the Amazon.com shopping cart.  Your site or 
+    application must provide a user interface which allows the user to &quot;click&quot; 
+    on this URL and to display the result.</li>
+</ol>
+<h2 class="subhead">Remote Shopping Cart Process</h2>
+<p class="bodycopy">This section shows the process for creating a cart, modifying 
+  the cart, and uploading the cart to Amazon for processing.</p>
+<p><img border=0 width=595 height=192
+src="http://images.amazon.com/images/G/01/anywhere/web-services/image006.gif"></p>
+<p class="bodycopy">Creating and managing a remote shopping cart involves one 
+  or more of the following steps:</p>
+<ol start=1 type=1>
+  <li class="bodycopy"><b>Creating the Cart</b>.  In order to create the cart, 
+    you simply need to send an add item request to AWS that contains an item for 
+    inclusion in the cart.  </li>
+  <li class="bodycopy"><b>Adding Items</b>.  As your customer shops, they may 
+    decide to add items to their cart.  You can enable this with the Add Items 
+    request.</li>
+  <li class="bodycopy"><b>Modifying the Cart</b>.  Your customer may decide to 
+    delete an item or change the number of a given item.  You enable this with 
+    the Modify Cart request.  You can also retrieve items from the cart or clear 
+    the cart entirely.</li>
+  <li class="bodycopy"><b>Transfer the cart to Amazon</b>.  When the customer 
+    is ready to make the purchase, you upload the cart to Amazon for order processing 
+    using the Purchase URL.  <b><i><span style='color:red'>Please note</span></i></b><i>:  
+    Once the customer clicks on the purchasing URL, remote interaction with the 
+    cart is no longer possible.&nbsp; Any modifications to the cart at this point 
+    must be made on Amazon.com</i></li>
+</ol>
+
+</body>
+</html>

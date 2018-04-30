@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title></title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class=Section1> 
+  <h1 class="header">Getting Started</h1>
+  <h2><a class="subhead">What Are Amazon Web Services for Sellers?</a></h2>
+  <p class="bodycopy">Amazon Web Services for Sellers provides a secure and automated 
+    method to upload inventory details to Amazon.com (zShops and Amazon Marketplace) 
+    on a scheduled basis. It also enables the automation of other important seller 
+    activities such as generating order reports and issuing bulk refunds. This 
+    is a first step toward real-time updates that will enable selling partners 
+    to better manage their inventory in multiple physical and virtual locations. 
+  </p>
+  <p class="bodycopy">This project utilizes HTTPS (Hypertext Transfer Protocol 
+    Secure), a protocol that is designed to transfer encrypted information between 
+    computers over the World Wide Web. HTTPS is a unique protocol that combines 
+    SSL and HTTP to provide secure data transmission. The goal of this document 
+    is to help our valued partners understand the technical requirements of our 
+    HTTPS solution.</p>
+  <h2 class="subhead">Getting Registered</h2>
+  <p class="bodycopy">In order to sell products on the Amazon Web site, you’ll 
+    first need to register with Amazon.com.  To get started, see the <a
+href="http://www.amazon.com/exec/obidos/tg/browse/-/1161232/ref=br_lr_/104-8908261-1003914">help 
+    information</a> contained on the Amazon Web site.</p>
+  <h2><a class="subhead">Security</a></h2>
+  <p class="bodycopy">Use of HTTPS ensures that all data uploads and downloads 
+    will be encrypted and secure. </p>
+  <p class="bodycopy">Sellers will need to use SSL (Secure Sockets Layer) and 
+    PKI (Public Key Infrastructure) technology to communicate securely with Amazon.com—if 
+    you are using Perl, note that both of these technologies are built into Perl 
+    to ensure that scripts written to automate the data communication are correctly 
+    configured.</p>
+  <p class="bodycopy">The identity of the seller will be verified using the &quot;Basic 
+    HTTP Authentication Scheme.&quot; The seller will provide his or her e-mail 
+    address and password in the HTTPS header, encoded using base64.&nbsp;</p>
+  <h2><a class="subhead">Automation</a> </h2>
+  <p class="bodycopy">Please note that the below instructions are detailed for 
+    partners using Perl. However, you may use any language.</p>
+  <h3><a class="subhead2">Script Configuration</a> </h3>
+  <p class="bodycopy">In order to automate the secure uploading and retrieval 
+    of files and/or reports, selling partners will need to create an HTTPS client. 
+    This client will consist of scripts that automate the uploading and retrieval 
+    of files. </p>
+  <ul type=disc>
+    <li class="bodycopy"><b>Upload:</b> To upload a file, the seller uses a Perl 
+      script that they have written to send a POST request with the file attached 
+      in the request body. The seller should include both their Amazon.com e-mail 
+      address and password in the request header.</li>
+    <li class="bodycopy"><b>Retrieve:</b> To retrieve a file, the seller sends 
+      a POST request for the particular file. Amazon.com sends the requested file 
+      in an HTTPS response, at which point the seller would redirect the response 
+      to a specified directory and then save the file.</li>
+    <li class="bodycopy"><b>Notifications:</b> Selling partners who participate 
+      in the HTTPS solution can have the automatic e-mail notifications from Amazon.com 
+      regarding uploads and reports turned off, relying instead on the HTTPS responses 
+      in XML.</li>
+  </ul>
+  <p class="bodycopy">If an upload fails due to internal error, Amazon.com will 
+    send e-mail with the batch status and information<b>.</b></p>
+  <p class="bodycopy"><b>&nbsp;NOTE: </b>Your script will need to include the 
+    cookie value – here is a sample of this code in Perl: </p>
+  <p class=Code>$request-&gt;headers-&gt;push_header('Cookie',&quot;x-main=YvjPkwfntqDKun0QEmVRPcTTZDMe?Tn?;ubid-main=002-8989859-9917520;ubid-tacbus=019-5423258-4241018;x-tacbus=vtm4d53DvX\@Sc9LxTnAnxsFL3DorwxJa; 
+    ubid-tcmacb=087-8055947-0795529;ubid-ty2kacbus=161-5477122-2773524; session-id=087-178254-5924832; 
+    session-id-time=950660664&quot;);</p>
+</div>
+</body>
+</html>

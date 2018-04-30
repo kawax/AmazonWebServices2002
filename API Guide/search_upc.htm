@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>UPC Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a> 
+<h2 class="header">UPC Searches</h2>
+<h2 class="subhead">UPC Searches via XML</h2>
+</a>
+<p class="bodycopy"><a>Amazon.com's catalog also contains UPC (Universal Product 
+  Code) information for music CDs and cassettes (at this time, we do not have 
+  UPC information for product lines other than music). </a></p>
+<p class="bodycopy"><a><b><i><span style='color:red'>Please note</span></i></b><i>:  
+  UPC searches can only be used to retrieve US music items at this time.</i></a></p>
+<h3 class="subhead2"><a>Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span
+  style='font-size:10.0pt;color:red'>[developer’s token goes here]</span>&amp;UpcSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>UPC goes 
+        here</span><span style='font-size:10.0pt;color:red'>]</span>&amp;mode=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>product line 
+        goes here: choices are music, classical</span><span style='font-size:
+  10.0pt;color:red'>]</span>&amp;type=<span style='font-size:10.0pt;
+  color:red'>[lite or heavy]</span>&amp;f=xml</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The UPCSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<h3 class="subhead2"><a>Example</a></h3>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;UpcSearch=076732601822&amp;mode=music&amp;type=lite&amp;f=xml 
+  </a></p> 
+<h2><a class="subhead">UPC Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for a UPC search.  
+  This request will return a SOAP object containing the Lite or the Heavy form 
+  of the data.</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>UpcSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>upc  string</a></p>
+      <p class=bodycopy><a>mode  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The UPCSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

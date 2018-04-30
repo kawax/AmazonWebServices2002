@@ -1,0 +1,281 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Managing Inventory</title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Managing Your Inventory</div>
+<h2><a class="subhead">Types of Requests (Summary)</a></h2>
+<table border=1 cellspacing=0 cellpadding=0 width=630>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#D9D6AF"> 
+      <p class=TableHead>Request 
+        Type </p></td>
+    <td width=72 bgcolor="#D9D6AF"> 
+      <p class=TableHead>HTTP Request 
+        Type </p></td>
+    <td width=138 bgcolor="#D9D6AF"> 
+      <p class=TableHead>URL </p></td>
+    <td width=174 bgcolor="#D9D6AF"> 
+      <p class=TableHead>Name Value 
+        Pairs in Header </p></td>
+    <td width=156 bgcolor="#D9D6AF"> 
+      <p class=TableHead>Response 
+        Types </p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>Add/ Modify/Delete</p></td>
+    <td width=72 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>POST </p></td>
+    <td width=138 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/add-modify-delete 
+      </p></td>
+    <td width=174 bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+      <p><b><span style='font-size:9.0pt'>UploadFor:</span></b><span
+  style='font-size:9.0pt'> ZShop or Marketplace or MarketplaceOnly</span></p>
+      <p><b><span style='font-size:9.0pt'>FileFormat:</span></b><span
+  style='font-size:9.0pt'> UIEE or TabDelimited</span></p></td>
+    <td width=156 valign=top bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>&lt;Success&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        SUCCESS<br>
+        <b>&lt;/Success&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        CUSTOMER_UNAUTHORIZED<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        NO_DEFAULT_PAYMENT<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        INVALID_LISTING_PROGRAM<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        INVALID_FILE_FORMAT<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span> </p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>Modify Delete</p></td>
+    <td width=72 bgcolor="#FDFDF9"> 
+      <p class=Tablebody> POST</p></td>
+    <td width=138 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/modify-only</p></td>
+    <td width=174 bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+      <p><b><span style='font-size:9.0pt'>UploadFor:</span></b><span
+  style='font-size:9.0pt'> ZShop or Marketplace or MarketplaceOnly </span></p>
+      <p><b><span style='font-size:9.0pt'>FileFormat:</span></b><span
+  style='font-size:9.0pt'> UIEE or TabDelimited</span></p></td>
+    <td width=156 valign=top bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>&lt;Success&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        SUCCESS<br>
+        <b>&lt;/Success&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        CUSTOMER_UNAUTHORIZED<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        NO_DEFAULT_PAYMENT<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        INVALID_LISTING_PROGRAM<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        INVALID_FILE_FORMAT<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>Purge and 
+        Replace </p></td>
+    <td width=72 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>POST </p></td>
+    <td width=138 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/purge-replace 
+      </p></td>
+    <td width=174 bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+      <p><b><span style='font-size:9.0pt'>UploadFor:</span></b><span
+  style='font-size:9.0pt'> ZShop or Marketplace or MarketplaceOnly </span></p>
+      <p><b><span style='font-size:9.0pt'>FileFormat:</span></b><span
+  style='font-size:9.0pt'> UIEE or TabDelimited</span></p></td>
+    <td width=156 valign=top bgcolor="#FDFDF9"> 
+      <p> <b><span style='font-size:9.0pt'>&lt;Success&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        SUCCESS<br>
+        <b>&lt;/Success&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        CUSTOMER_UNAUTHORIZED<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        NO_DEFAULT_PAYMENT<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        INVALID_LISTING_PROGRAM<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p>
+      <p class=Tablebody><b>&lt;BusinessLogicError&gt;</b><br>
+        INVALID_FILE_FORMAT<br>
+        <b>&lt;/BusinessLogicError&gt;</b></p></td>
+  </tr>
+</table>
+<h2><a class="subhead">Types of Requests (Detailed)</a></h2>
+<p class="bodycopy">Sellers will be able to manage their inventory at Amazon.com 
+  using the following request types:</p>
+<ul type=disc>
+  <li class="bodycopy">Add/Modify/Delete </li>
+  <li class="bodycopy">Modify/Delete</li>
+  <li class="bodycopy">Purge and Replace </li>
+</ul>
+<p class="bodycopy">The difference between each of these request types is explained 
+  below.</p>
+<h3><a class="subhead2">Inventory Upload via Add/Modify/Delete</a></h3>
+<p class="bodycopy"><b>Use Case: </b>A seller should use the Add/Modify/Delete 
+  request to upload a batch of Amazon Marketplace and/or zShops listings containing 
+  additions, modifications, and/or deletions to their current inventory. Deletions 
+  must be marked as such in their template, (with a <b>d</b> in the add-delete 
+  field) and our system will update changed items to reflect the modifications. 
+</p>
+<p class="bodycopy">A seller should choose the Add/Modify/Delete option when they 
+  have a large amount of inventory to upload onto the Amazon.com platform.</p>
+<p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+<p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/add-modify-delete">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/add-modify-delete</a></p>
+<p class="bodycopy"><b>Header Content:</b></p>
+<ul>
+  <li><span class="bodycopy">Username (using basic authentication)</span></li>
+  <li><span class="bodycopy">Password (using basic authentication)</span></li>
+  <li><span class="bodycopy">Developer Token</span></li>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Choice 
+    of program type</span> 
+    <ul>
+      <li><span class="bodycopy">Amazon Marketplace only (for UIEE users) (default)</span></li>
+      <li><span class="bodycopy">zShops only</span></li>
+    </ul>
+  </li>
+  <ul>
+    <li><span class="bodycopy">Amazon Marketplace and/or zShops </span></li>
+  </ul>
+  <li><span class="bodycopy">Choice of file format</span><span class="bodycopy"
+style='font-family:"Courier New"'><span style='font:7.0pt "Times New Roman"'> 
+    </span></span>
+    <ul>
+      <li><span class="bodycopy">Tab-delimited (default)</span></li>
+      <li><span class="bodycopy">UIEE</span></li>
+    </ul>
+  </li>
+</ul>
+<p class="bodycopy"><b>Message Body:</b></p>
+<p class="bodycopy">The body of the message should include the actual inventory 
+  file desired for upload with the required Amazon.com headers and values. These 
+  required values can be found via the URL below for program type &quot;zShops 
+  only&quot;:</p>
+<p class="bodycopy"><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html</a></p>
+<p class="bodycopy">and via the URL below for program type &quot;Amazon Marketplace 
+  and/or zShops&quot;:</p>
+<p class="bodycopy"><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html</a></p>
+<h3><a class="subhead2">Inventory Upload via Modify/Delete</a></h3>
+<p class="bodycopy"><b>Use Case: </b>A seller should use the Modify/Delete request 
+  when they want to upload modifications to their current inventory but don't 
+  want to supply all of the fields that an Add/Modify/Delete file requires. The 
+  field &quot;sku&quot; is required in this upload file, as well as at least one 
+  additional field that they are choosing to modify. The allowable fields of modification 
+  in the Modify/Delete Only option are price and quantity. Please note: to submit 
+  a delete, use the quantity column and enter &quot;0&quot; as the value. </p>
+<p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+<p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/modify-only">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/modify-only</a></p>
+<p class="bodycopy"><b>Header Content:</b></p>
+<ul>
+  <li><span class="bodycopy">Username (using basic authentication)</span></li>
+  <li><span class="bodycopy">Password (using basic authentication)</span></li>
+  <li><span class="bodycopy">Developer Token</span></li>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Choice 
+    of program type</span> 
+    <ul>
+      <li><span class="bodycopy">Amazon Marketplace only (for UIEE users) (default)</span></li>
+      <li><span class="bodycopy">zShops only</span></li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li><span class="bodycopy">Amazon Marketplace and/or zShops </span></li>
+</ul>
+<ul>
+  <li><span class="bodycopy">Choice of file format</span><span class="bodycopy"
+style='font-family:"Courier New"'><span style='font:7.0pt "Times New Roman"'> 
+    </span></span> 
+    <ul>
+      <li><span class="bodycopy">Tab-delimited (default)</span></li>
+      <li><span class="bodycopy">UIEE</span></li>
+    </ul>
+  </li>
+</ul>
+<h3 class="bodycopy"><a class="subhead2">Inventory Upload via Purge and Replace</a></h3>
+<p class="bodycopy"><b>Use Case: </b>A seller should use the Purge and Replace 
+  request when they want to completely purge all of their current Amazon Marketplace 
+  and/or zShops listings and replace them with a new set of offerings contained 
+  in their template.</p>
+<p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+<p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/purge-replace">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/purge-replace</a></p>
+<p class="bodycopy"><b>Header Content:</b></p>
+<ul>
+  <li><span class="bodycopy">Username (using basic authentication)</span></li>
+  <li><span class="bodycopy">Password (using basic authentication)</span></li>
+  <li><span class="bodycopy">Developer Token</span></li>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Choice 
+    of program type</span> 
+    <ul>
+      <li><span class="bodycopy">Amazon Marketplace only (for UIEE users) (default)</span></li>
+      <li><span class="bodycopy">zShops only</span></li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li><span class="bodycopy">Amazon Marketplace and/or zShops </span></li>
+</ul>
+<ul>
+  <li><span class="bodycopy">Choice of file format</span><span class="bodycopy"
+style='font-family:"Courier New"'><span style='font:7.0pt "Times New Roman"'> 
+    </span></span> 
+    <ul>
+      <li><span class="bodycopy">Tab-delimited (default)</span></li>
+      <li><span class="bodycopy">UIE</span></li>
+    </ul>
+  </li>
+</ul>
+<p class="bodycopy"><b>Message Body:</b></p>
+<p class="bodycopy">The body of the message should include the actual inventory 
+  file desired for upload with the required Amazon.com headers and values. These 
+  required values can be found via the URL below for program type &quot;zShops 
+  only&quot;:</p>
+<p class="bodycopy"><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html</a></p>
+<p class="bodycopy">and via the URL below for program type &quot;Amazon Marketplace 
+  and/or zShops&quot;:</p>
+<p class="bodycopy"><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html</a></p>
+</body>
+</html>

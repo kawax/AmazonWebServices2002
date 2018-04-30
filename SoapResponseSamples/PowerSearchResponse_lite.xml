@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/1999/XMLSchema" xmlns:namesp175="urn:PI/DevCentral/SoapService">
+	<SOAP-ENV:Body>
+		<namesp176:PowerSearchRequestResponse xmlns:namesp176="urn:PI/DevCentral/SoapService">
+			<return xsi:type="namesp175:ProductInfo">
+				<TotalResults xsi:type="xsd:string">4</TotalResults>
+				<Details SOAP-ENC:arrayType="namesp175:Details[2]" xsi:type="SOAP-ENC:Array">
+					<Details xsi:type="namesp175:Details">
+						<Url xsi:type="xsd:string">http://www.amazon.com/exec/obidos/redirect?tag=webservices-20%26creative=your-dev-tag%26camp=2025%26link_code=sp1%26path=ASIN/1575862492</Url>
+						<Asin xsi:type="xsd:string">1575862492</Asin>
+						<ProductName xsi:type="xsd:string">Selected Papers on Discrete Mathematics</ProductName>
+						<Catalog xsi:type="xsd:string">Book</Catalog>
+						<Authors SOAP-ENC:arrayType="xsd:string[1]" xsi:type="SOAP-ENC:Array">
+							<Author xsi:type="xsd:string">Donald E. Knuth</Author>
+						</Authors>
+						<ReleaseDate xsi:type="xsd:string">01 December, 2002</ReleaseDate>
+						<Manufacturer xsi:type="xsd:string">C S L I Publications</Manufacturer>
+						<ImageUrlSmall xsi:type="xsd:string">http://images.amazon.com/images/P/1575862492.01.THUMBZZZ.jpg</ImageUrlSmall>
+						<ImageUrlMedium xsi:type="xsd:string">http://images.amazon.com/images/P/1575862492.01.MZZZZZZZ.jpg</ImageUrlMedium>
+						<ImageUrlLarge xsi:type="xsd:string">http://images.amazon.com/images/P/1575862492.01.LZZZZZZZ.jpg</ImageUrlLarge>
+						<ListPrice xsi:type="xsd:string">$74.95</ListPrice>
+						<OurPrice xsi:type="xsd:string">$74.95</OurPrice>
+					</Details>
+					<Details xsi:type="namesp175:Details">
+						<Url xsi:type="xsd:string">http://www.amazon.com/exec/obidos/redirect?tag=webservices-20%26creative=your-dev-tag%26camp=2025%26link_code=sp1%26path=ASIN/1575863812</Url>
+						<Asin xsi:type="xsd:string">1575863812</Asin>
+						<ProductName xsi:type="xsd:string">Selected Papers on Computer Languages (Csli Lecture Notes, No. 139)</ProductName>
+						<Catalog xsi:type="xsd:string">Book</Catalog>
+						<Authors SOAP-ENC:arrayType="xsd:string[1]" xsi:type="SOAP-ENC:Array">
+							<Author xsi:type="xsd:string">Donald Ervin Knuth</Author>
+						</Authors>
+						<ReleaseDate xsi:type="xsd:string">01 December, 2002</ReleaseDate>
+						<Manufacturer xsi:type="xsd:string">C S L I Publications</Manufacturer>
+						<ImageUrlSmall xsi:type="xsd:string">http://images.amazon.com/images/P/1575863812.01.THUMBZZZ.jpg</ImageUrlSmall>
+						<ImageUrlMedium xsi:type="xsd:string">http://images.amazon.com/images/P/1575863812.01.MZZZZZZZ.jpg</ImageUrlMedium>
+						<ImageUrlLarge xsi:type="xsd:string">http://images.amazon.com/images/P/1575863812.01.LZZZZZZZ.jpg</ImageUrlLarge>
+						<ListPrice xsi:type="xsd:string">$75.00</ListPrice>
+						<OurPrice xsi:type="xsd:string">$75.00</OurPrice>
+					</Details>
+				</Details>
+			</return>
+		</namesp176:PowerSearchRequestResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><SellerProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xml.amazon.com/schemas/dev-heavy.xsd">
+
+   <SellerProfileDetails>
+      <SellerNickname>samantha-de</SellerNickname>
+      <OverallFeedbackRating>5.</OverallFeedbackRating>
+      <NumberOfFeedback>1</NumberOfFeedback>
+      <StoreId>S2A82BOWJ90A14</StoreId>
+      <StoreName>zebra zShop</StoreName>
+      <SellerFeedback>
+         <Feedback>
+            <FeedbackRating>5</FeedbackRating>
+            <FeedbackComments>Outstanding buyer babe!</FeedbackComments>
+            <FeedbackDate>11/30/2001</FeedbackDate>
+            <FeedbackRater>shelbybeau_2001</FeedbackRater>
+         </Feedback>
+      </SellerFeedback>
+   </SellerProfileDetails>
+</SellerProfile>

@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Writing Applications Using Amazon Web Services</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Writing Applications Using Amazon Web Services</div>
+<p class="bodycopy">This section explains the ways you can use Amazon Web Services 
+  to write an application or Web site.  It also shows how data moves through the 
+  system and explains the data model for AWS.</p>
+<h2 class="subhead">Types of Web Sites </h2>
+<p class="bodycopy">There are many ways to design and architect your AWS application 
+  or Web site. This section outlines some basic architectural models to get you 
+  started.</p>
+<h3 class="subhead2">Creating a Static Web Site using XML/XSLT</h3>
+<p class="bodycopy">XML and XSLT can be used to create a static site -- one with 
+  no server-side code whatsoever. This model works well when you do not have programming 
+  skills or access to pre-built components. A very simple site can be built using 
+  just two files:</p>
+<ol start=1 type=1>
+  <li class="bodycopy">An HTML &quot;home&quot; page for the site. Each product 
+    link on the page will contain a particular type of AWS request (e.g. BrowseNode 
+    or AuthorSearch) along with a reference to an XSLT style sheet.</li>
+  <li class="bodycopy">An XSLT style sheet. The style sheet is responsible for 
+    mapping or translating the raw XML returned by the AWS request into an actual 
+    HTML page. The style sheet will contain HTML elements and instructions to 
+    extract certain values from the XML.</li>
+</ol>
+<p class="bodycopy">Going further, you could use multiple style sheets. For example, 
+  you could format BrowseNode requests into an overview page with a list or grid 
+  of summary information about a group of related products. The links from the 
+  overview pages would make additional AWS requests, formatting detailed data 
+  about a single product as desired.</p>
+<h3 class="subhead2">Creating a Dynamic Site</h3>
+<p class="bodycopy">SOAP or XML can be used to create a dynamic site. A dynamic 
+  site builds each page as it is needed, filling the page in with information 
+  fetched from AWS and then returning the finished page to the user. </p>
+<p class="bodycopy">A simple dynamic site could make one or more AWS requests 
+  each time it generates a page. However, this places a high load on AWS and can 
+  make the site slow at peak times. For best results, the data returned from AWS 
+  should be cached. The proper lifetime for cache entries is specified in the 
+  AWS license agreement. Caching data can also add robustness to the site, since 
+  the site will not be affected by a momentary AWS outage.</p>
+<p class="bodycopy">There are several different ways to build and use a cache. 
+  Some sites fetch all of the needed data from AWS at once, and then store it 
+  in a database or even create static pages from it. Other sites make AWS requests 
+  on an as-needed basis and then save the data in the cache for potential reuse.</p>
+<p class="bodycopy">Dynamic sites are very flexible. They can, however, place 
+  an appreciable load on the site's server as traffic to the site grows.</p>
+<h3 class="subhead2">Creating a Pseudo-Static Site</h3>
+<p class="bodycopy">AWS can be used to build a site which appears to be static. 
+  Typically, a program or script is used to fetch the AWS data needed to build 
+  the entire site. This data is then used to construct static pages. </p>
+<p class="bodycopy">A pseudo-static site is not quite as flexible as a dynamic 
+  site. On the plus side, such a site will typically be able to handle significantly 
+  more traffic than a dynamic site.</p>
+<h3 class="subhead">Applications</h3>
+<p class="bodycopy">An application is a dedicated non-browser client for AWS. 
+  Operationally, an application is structured like and behaves similarly to a 
+  dynamic site. Again, caching should be used to increase responsiveness and availability.</p>
+</body>
+</html>

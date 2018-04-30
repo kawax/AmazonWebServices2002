@@ -1,0 +1,624 @@
+INDEXER SETTINGS:
+ Minimum term length: 3
+ Maximum term length: 25
+ Index files with extensions: htm html 
+ Ignore files and directories: 
+
+Starting indexer at "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help"
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\add_to_cart.htm"
+  Last updated: Apr 17, 2003
+  File Size: 8 KB
+  Title: Adding Items to Shopping Carts
+  Description: ... Items to Shopping Carts Please use the following HTML to add a shopping cart button
+  Total terms in file: 113
+  Total terms indexed: 78
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\amazon_terminology.htm"
+  Last updated: Apr 17, 2003
+  File Size: 6 KB
+  Title: Amazon-Specific Terminology
+  Description: ... Terminology This section provides definitions for Amazon-specific terms that appear in this document. Term Definition
+  Total terms in file: 178
+  Total terms indexed: 128
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\common_modes.htm"
+  Last updated: Apr 21, 2003
+  File Size: 17 KB
+  Title: Common Product Modes and Browse IDs
+  Description: ... Product Modes and Browse IDs This section contains information on commonly used product modes and
+  Total terms in file: 559
+  Total terms indexed: 493
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\constraints_and_limitations.htm"
+  Last updated: Apr 17, 2003
+  File Size: 4 KB
+  Title: Constraints and Limitations
+  Description: ... and Limitations This section shows the limits of Amazon Web Services. Issue Limitation Request length
+  Total terms in file: 168
+  Total terms indexed: 104
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\data_flow.htm"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Amazon Web Services Data Flow
+  Description: ... Web Services Data Flow This section provides a graphic that shows how data comes to
+  Total terms in file: 19
+  Total terms indexed: 12
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\data_model.htm"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Amazon Web Services Data Model
+  Description: ... Web Services Data Model This section provides a graphical listing of the elements of the
+  Total terms in file: 40
+  Total terms indexed: 29
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\development_process.htm"
+  Last updated: Apr 17, 2003
+  File Size: 3 KB
+  Title: Amazon Web Services Development Process
+  Description: ... Web Services Development Process This section shows the three stages of developing an application or
+  Total terms in file: 120
+  Total terms indexed: 81
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\document_control.htm"
+  Last updated: Apr 17, 2003
+  File Size: 3 KB
+  Title: Document Control
+  Description: ... Control This section shows the version, date, author, and change description for this document. Version
+  Total terms in file: 97
+  Total terms indexed: 62
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\document_information.htm"
+  Last updated: Apr 17, 2003
+  File Size: 5 KB
+  Title: Document Information
+  Description: ... Information This section describes the audience, assumptions, contributors, and conventions used in this document. Document
+  Total terms in file: 227
+  Total terms indexed: 164
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\dtd_xsd_soap_wsdl.htm"
+  Last updated: Apr 17, 2003
+  File Size: 24 KB
+  Title: DTD, XSD and SOAP WSDL
+  Description: ... XSD and SOAP WSDL This section contains pointers to current Amazon Web Services DTDs, XSDs
+  Total terms in file: 208
+  Total terms indexed: 177
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\earning_money.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Earning Money through the Amazon Associates Program
+  Description: ... Money through the Amazon Associates Program If you find yourself sending a lot of traffic
+  Total terms in file: 160
+  Total terms indexed: 102
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\enabling_transactions.htm"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Enabling Transactions with Amazon.com
+  Description: ... Transactions with Amazon.com Using Web services, you can now enable your Web site visitors to
+  Total terms in file: 86
+  Total terms indexed: 52
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\front_page.htm"
+  Last updated: Apr 21, 2003
+  File Size: 1 KB
+  Title: AWS Search
+  Description: ... page is designed to be viewed by a browser which supports frames.
+  Total terms in file: 15
+  Total terms indexed: 8
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\generating_additional_results.htm"
+  Last updated: Apr 17, 2003
+  File Size: 2 KB
+  Title: Generating Additional Product Results
+  Description: ... Additional Product Results Because some queries could potentially return a large number of results, Amazon
+  Total terms in file: 127
+  Total terms indexed: 72
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\glossary.htm"
+  Last updated: Apr 17, 2003
+  File Size: 14 KB
+  Title: Glossary
+  Description: ... This section lists terms relevant to this product, and provides definitions for those terms.  Some
+  Total terms in file: 499
+  Total terms indexed: 409
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\introduction.htm"
+  Last updated: Apr 17, 2003
+  File Size: 4 KB
+  Title: Introduction
+  Description: ... What are Web Services? Web services are applications whose logic and functions are accessible using
+  Total terms in file: 220
+  Total terms indexed: 159
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\message_boards.htm"
+  Last updated: Apr 17, 2003
+  File Size: 3 KB
+  Title: Using the Developer&#8217;s Message Board and Reporting Bugs
+  Description: ... the Developer’s Message Board and Reporting Bugs This section shows the process for using the
+  Total terms in file: 161
+  Total terms indexed: 115
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\mode_apparal.htm"
+  Last updated: Apr 18, 2003
+  File Size: 1 KB
+  Title: Working with Apparel Data
+  Description: ... with Apparel Data AWS 3.0 support s calls for content from Amazon's apparel store. Using
+  Total terms in file: 33
+  Total terms indexed: 19
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\new_features.htm"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: New Features in this Release
+  Description: ... Features in this Release This section shows the new features available in this release of
+  Total terms in file: 15
+  Total terms indexed: 11
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\new_feature_xml3.htm"
+  Last updated: Apr 18, 2003
+  File Size: 1 KB
+  Title: Using XML3
+  Description: ... XML3 All existing calls to Amazon servers should now point to the AWS 3.0 services.
+  Total terms in file: 43
+  Total terms indexed: 29
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\parameter_types.htm"
+  Last updated: Apr 17, 2003
+  File Size: 11 KB
+  Title: Parameter Types
+  Description: ... Types This section shows the various parameter types that can be used with Amazon.com Web
+  Total terms in file: 198
+  Total terms indexed: 143
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\price_range_searches.htm"
+  Last updated: Apr 18, 2003
+  File Size: 3 KB
+  Title: Price Range Searches
+  Description: ... Range Searches AWS 3.0 features a new parameter that you can use to generate search
+  Total terms in file: 75
+  Total terms indexed: 56
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\product_variation_relationships.htm"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Working with Product Variation Relationships
+  Description: ... with Product Variation Relationships A product variation relationship is the relationship between a product and
+  Total terms in file: 69
+  Total terms indexed: 44
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\publishing_your_application.htm"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Making Your Application Available to Amazon Associates
+  Description: ... Your Application Available to Amazon Associates Developers can earn money by providing their solution or
+  Total terms in file: 49
+  Total terms indexed: 29
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\references.htm"
+  Last updated: Apr 17, 2003
+  File Size: 6 KB
+  Title: References and Resources
+  Description: ... and Resources This section contains additional resources for information on Web services, XML, and SOAP.
+  Total terms in file: 73
+  Total terms indexed: 61
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\remote_shopping_cart.htm"
+  Last updated: Apr 17, 2003
+  File Size: 3 KB
+  Title: Using the Remote Shopping Cart
+  Description: ... the Remote Shopping Cart This section explains how to use the remote shopping cart to
+  Total terms in file: 152
+  Total terms indexed: 108
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\remote_soap_cart.htm"
+  Last updated: Apr 17, 2003
+  File Size: 6 KB
+  Title: Using the Remote Shopping Cart via SOAP
+  Description: ... the Remote Shopping Cart via SOAP Creating a Cart with SOAP To create a new
+  Total terms in file: 79
+  Total terms indexed: 53
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\remote_xml_cart.htm"
+  Last updated: Apr 18, 2003
+  File Size: 9 KB
+  Title: Using the Remote Shopping Cart via XML/HTTP
+  Description: ... the Remote Shopping Cart via XML/HTTP Creating a Cart and Adding an Item To create
+  Total terms in file: 103
+  Total terms indexed: 75
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_actor.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Actor/Actress Searches
+  Description: ... Searches Actor/Actress Searches via XML This section shows how to create a request for an
+  Total terms in file: 73
+  Total terms indexed: 58
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_artist.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Artist/Musician Searches
+  Description: ... Searches Artist/Musician Searches via XML This section shows how to create a request for an
+  Total terms in file: 73
+  Total terms indexed: 56
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_asin_isbn.htm"
+  Last updated: Apr 21, 2003
+  File Size: 9 KB
+  Title: ASIN and ISBN Searches
+  Description: ... and ISBN Searches ASIN and ISBN Searches via XML Every unique product in Amazon.com's catalog
+  Total terms in file: 197
+  Total terms indexed: 134
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_author.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Author Searches
+  Description: ... Searches Author Searches via XML This section shows how to create a request for an
+  Total terms in file: 71
+  Total terms indexed: 54
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_blended.htm"
+  Last updated: Apr 21, 2003
+  File Size: 4 KB
+  Title: Blended Searches
+  Description: ... Searches Blended Searches via XML With a single query, developers can retrieve results across all
+  Total terms in file: 110
+  Total terms indexed: 77
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_browse.htm"
+  Last updated: Apr 18, 2003
+  File Size: 5 KB
+  Title: Browse Node Searches
+  Description: ... Node Searches Browse Node Searches via XML The browse structure is the way that Amazon.com
+  Total terms in file: 165
+  Total terms indexed: 115
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_browse_keywords.htm"
+  Last updated: Apr 18, 2003
+  File Size: 3 KB
+  Title: Keyword Searches in Specific Browse Nodes
+  Description: ... Searches in Specific Browse Nodes You can execute a search for a specific keyword within
+  Total terms in file: 99
+  Total terms indexed: 66
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_director.htm"
+  Last updated: Apr 18, 2003
+  File Size: 3 KB
+  Title: Director Searches
+  Description: ... Searches Director Searches via XML This section shows how to create a request for a
+  Total terms in file: 70
+  Total terms indexed: 55
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_exchanges.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Exchange Searches
+  Description: ... Searches Exchange Searches via XML Every item in the Amazon.com catalog that is offered by
+  Total terms in file: 100
+  Total terms indexed: 72
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_keywords.htm"
+  Last updated: Apr 18, 2003
+  File Size: 5 KB
+  Title: Keyword Searches
+  Description: ... Searches This section shows how to execute keyword searches using SOAP or XML. Keyword Searches
+  Total terms in file: 128
+  Total terms indexed: 88
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_listmania.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Listmania! Searches
+  Description: ... Searches Listmania! Searches via XML Listmania! lists are created by Amazon.com customers, and usually appear
+  Total terms in file: 131
+  Total terms indexed: 92
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_manufacturer.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Manufacturer Searches
+  Description: ... Searches Manufacturer Searches via XML This section shows how to create a request for a
+  Total terms in file: 77
+  Total terms indexed: 62
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_marketplace.htm"
+  Last updated: Apr 21, 2003
+  File Size: 3 KB
+  Title: Marketplace Searches
+  Description: ... Searches Marketplace Searches via XML Call and Response Request Format http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t= [Developer’s token goes here]
+  Total terms in file: 58
+  Total terms indexed: 43
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_power.htm"
+  Last updated: Apr 21, 2003
+  File Size: 8 KB
+  Title: Power Searches
+  Description: ... Searches A power search is used to retrieve book information using a complex query. You
+  Total terms in file: 221
+  Total terms indexed: 172
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_seller_profiles.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Seller Profile Search
+  Description: ... Profile Search Seller Profile Search via XML Every third-party seller at Amazon.com has a “member
+  Total terms in file: 89
+  Total terms indexed: 63
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_similarities.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Similarities Searches
+  Description: ... Searches Similarities Searches via XML If you shop at Amazon.com regularly, you have probably noticed
+  Total terms in file: 112
+  Total terms indexed: 78
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_third_party.htm"
+  Last updated: Apr 21, 2003
+  File Size: 6 KB
+  Title: Third-Party Searches
+  Description: ... Searches Third-party Seller Searches via XML There are thousands of third-party sellers who offer their
+  Total terms in file: 176
+  Total terms indexed: 126
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_types.htm"
+  Last updated: Apr 17, 2003
+  File Size: 6 KB
+  Title: Search Types
+  Description: ... Types This section shows the various searches that can be used with Amazon.com Web Services.
+  Total terms in file: 57
+  Total terms indexed: 44
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_upc.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: UPC Searches
+  Description: ... Searches UPC Searches via XML Amazon.com's catalog also contains UPC (Universal Product Code) information for
+  Total terms in file: 93
+  Total terms indexed: 64
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search_wishlist.htm"
+  Last updated: Apr 18, 2003
+  File Size: 4 KB
+  Title: Wish List and Registry Searches
+  Description: ... List and Registry Searches Wish List and Registry Searches via XML As with Listmania! lists,
+  Total terms in file: 105
+  Total terms indexed: 72
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\sort_types.htm"
+  Last updated: Apr 17, 2003
+  File Size: 26 KB
+  Title: Sort Types
+  Description: ... Types This section shows the possible ways to sort data for the various types of
+  Total terms in file: 103
+  Total terms indexed: 85
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\toc.htm"
+  Last updated: Apr 21, 2003
+  File Size: 2 KB
+  Title: Deva Navigation System
+  Description: ... need to enable JavaScript in your browser to use this navigation system. Please refer to
+  Total terms in file: 32
+  Total terms indexed: 20
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\top.htm"
+  Last updated: Apr 17, 2003
+  File Size: 6 KB
+  Title: Merchant Documentation Library
+  Description: ...
+  Total terms in file: 3
+  Total terms indexed: 3
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_catalog_data.htm"
+  Last updated: Apr 17, 2003
+  File Size: 3 KB
+  Title: Working with Amazon.com Catalog Data
+  Description: ... with Amazon.com Catalog Data This section explains how to work with two core attributes of
+  Total terms in file: 189
+  Total terms indexed: 113
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_international_data.htm"
+  Last updated: Apr 18, 2003
+  File Size: 3 KB
+  Title: Working with International Data
+  Description: ... with International Data This section describes the way you can incorporate results from Amazon.com’s international
+  Total terms in file: 170
+  Total terms indexed: 127
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_offerings.htm"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Working with Offerings
+  Description: ... with Offerings An offering is an actual item that Amazon or a third party merchant
+  Total terms in file: 55
+  Total terms indexed: 36
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_quick_click.htm"
+  Last updated: Apr 18, 2003
+  File Size: 3 KB
+  Title: Using Amazon.com Quick-Click Buying
+  Description: ... Amazon.com Quick-Click Buying Amazon.com Quick-Click Buying allows your Web site visitors to purchase products sold
+  Total terms in file: 149
+  Total terms indexed: 108
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_soap.htm"
+  Last updated: Apr 17, 2003
+  File Size: 8 KB
+  Title: Accessing Amazon.com Data via SOAP
+  Description: ... Amazon.com Data via SOAP This section explains how to access Amazon.com data using SOAP. Amazon.com
+  Total terms in file: 182
+  Total terms indexed: 141
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_xml.htm"
+  Last updated: Apr 17, 2003
+  File Size: 2 KB
+  Title: Accessing Amazon.com Data via XML/HTTP
+  Description: ... Amazon.com Data via XML/HTTP This section explains the process of accessing Amazon.com data via XML
+  Total terms in file: 110
+  Total terms indexed: 73
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_xslt.htm"
+  Last updated: Apr 21, 2003
+  File Size: 6 KB
+  Title: Using the Amazon.com XSLT Service
+  Description: ... the Amazon.com XSLT Service This section provides information on developing applications and Web sites that
+  Total terms in file: 232
+  Total terms indexed: 158
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_xslt_request_parameter_access.htm"
+  Last updated: Apr 18, 2003
+  File Size: 0 KB
+  Title: XSLT Request Parameter Access
+  Description: ... Request Parameter Access asdf
+  Total terms in file: 5
+  Total terms indexed: 5
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\using_xslt_stylesheets.htm"
+  Last updated: Apr 18, 2003
+  File Size: 9 KB
+  Title: XSLT Stylesheets
+  Description: ... Stylesheets The Amazon XSL processor takes the output of an XML request and formats the
+  Total terms in file: 246
+  Total terms indexed: 160
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\writing_applications.htm"
+  Last updated: Apr 17, 2003
+  File Size: 4 KB
+  Title: Writing Applications Using Amazon Web Services
+  Description: ... Applications Using Amazon Web Services This section explains the ways you can use Amazon Web
+  Total terms in file: 231
+  Total terms indexed: 166
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\help.html"
+  Last updated: Apr 17, 2003
+  File Size: 2 KB
+  Title: Search AWS
+  Description: ... software development kit provides information on using Amazon Web Services to add content to Web
+  Total terms in file: 54
+  Total terms indexed: 38
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\index.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Amazon Web Services Software Development Kit
+  Description: ...
+  Total terms in file: 6
+  Total terms indexed: 6
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\search.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Deva Search
+  Description: ... page is designed to be viewed by a browser which supports frames.
+  Total terms in file: 15
+  Total terms indexed: 8
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\searchalt.html"
+  Last updated: Apr 21, 2003
+  File Size: 1 KB
+  Title: Deva Search - Refresh previous page or no Javascript
+  Description: ... the Browser Lost Your Search Results? Click the Back button on your browser, refresh the
+  Total terms in file: 40
+  Total terms indexed: 20
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\searchresults.html"
+  Last updated: Apr 17, 2003
+  File Size: 2 KB
+  Title: Deva Search
+  Description: ...
+  Total terms in file: 2
+  Total terms indexed: 2
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\searchresultsnext.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Deva Search
+  Description: ...
+  Total terms in file: 2
+  Total terms indexed: 2
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\searchresultsprev.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Deva Search
+  Description: ...
+  Total terms in file: 2
+  Total terms indexed: 2
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\searchtopframe.html"
+  Last updated: Apr 17, 2003
+  File Size: 16 KB
+  Title: Amazon Web Services 3.0 Software Development Kit
+  Description: ... Web Services 3.0 Software Development Kit &nbsp; &nbsp;
+  Total terms in file: 64
+  Total terms indexed: 45
+
+Enter directory: "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaConfig"
+Enter directory: "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaConfig\_notes"
+Enter directory: "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch"
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\help.html"
+  Last updated: Apr 17, 2003
+  File Size: 2 KB
+  Title: Search AWS
+  Description: ... software development kit provides information on using Amazon Web Services to add content to Web
+  Total terms in file: 54
+  Total terms indexed: 38
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\search.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Deva Search
+  Description: ... page is designed to be viewed by a browser which supports frames.
+  Total terms in file: 15
+  Total terms indexed: 8
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\searchalt.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Deva Search - Refresh previous page or no Javascript
+  Description: ... the Browser Lost Your Search Results? Click the Back button on your browser, refresh the
+  Total terms in file: 40
+  Total terms indexed: 20
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\searchresults.html"
+  Last updated: Apr 17, 2003
+  File Size: 2 KB
+  Title: Deva Search
+  Description: ...
+  Total terms in file: 2
+  Total terms indexed: 2
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\searchresultsnext.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Deva Search
+  Description: ...
+  Total terms in file: 2
+  Total terms indexed: 2
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\searchresultsprev.html"
+  Last updated: Apr 17, 2003
+  File Size: 1 KB
+  Title: Deva Search
+  Description: ...
+  Total terms in file: 2
+  Total terms indexed: 2
+
+Indexed "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\searchtopframe.html"
+  Last updated: Apr 17, 2003
+  File Size: 16 KB
+  Title: Deva Search
+  Description: ... Web Services 3.0 Software Development Kit &nbsp; &nbsp;
+  Total terms in file: 64
+  Total terms indexed: 45
+
+Enter directory: "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\Library"
+Enter directory: "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\surfmapjs"
+Enter directory: "C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\surfmapjs\folderstyle"
+Saved index file: C:\Documents and Settings\jkuyken\My Documents\Local Toaster\aws_help\DevaSearch\devasearch.js (83KB)
+Write output file: "searchtopframe.html".
+Finished: Indexed 2357 terms from 76 files (352KB) with 8162 total terms.

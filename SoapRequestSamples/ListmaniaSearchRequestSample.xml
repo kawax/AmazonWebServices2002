@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<SOAP-ENV:Body>
+		<namesp1:ListManiaSearchRequest xmlns:namesp1="urn:PI/DevCentral/SoapService">
+			<ListManiaSearchRequest xsi:type="m:KeywordRequest">
+				<lm_id >34TRCFE5HC23</lm_id>
+				<page >1</page>
+				<tag >webservices-20</tag>
+				<type >lite</type>
+				<dev-tag >your-dev-tag</dev-tag>
+				<format >xml</format>
+				<version >1.0</version>
+			</ListManiaSearchRequest>
+		</namesp1:ListManiaSearchRequest>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

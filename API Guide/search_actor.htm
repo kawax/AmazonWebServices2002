@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Actor/Actress Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">Actor/Actress Searches</div>
+<h2 class="bodycopy"><a class="subhead">Actor/Actress Searches via XML</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for an actor/actress 
+  search.</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[developer’s 
+        token goes here]</span>&amp;ActorSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>actor/actress 
+        name goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;mode=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>product line 
+        goes here: choices are dvd, vhs, video</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;page=1&amp;f=xml 
+        </a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The ActorSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<h3 class="bodycopy"><a class="subhead2">Example</a></h3>
+<div><p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;ActorSearch=Marilyn%20Monroe&amp;mode=vhs&amp;type=lite&amp;page=1&amp;f=xml 
+  </a></p></div>
+<h2 class="bodycopy"><a class="subhead">Actor/Actress Search via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for an Actor/Actress 
+  search.  This request will return a SOAP object containing the Lite or the Heavy 
+  form of the data.</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>ActorSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>actor  string</a></p>
+      <p class=bodycopy><a>page  string</a></p>
+      <p class=bodycopy><a>mode  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>sort&nbsp; string&nbsp; (optional)</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The ActorSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p class=bodycopy>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Constraints and Limitations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div> 
+  <div class="header"> Constraints and Limitations</div>
+  <p class="bodycopy">This section shows the limits of Amazon Web Services.</p>
+  <table border=1 cellspacing=0 cellpadding=0 width=618>
+    <tr> 
+      <td width=192 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Issue</p></td>
+      <td width=426 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Limitation</p></td>
+    </tr>
+    <tr> 
+      <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Request 
+          length</p></td>
+      <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Limited 
+          to the length of a URL if you are performing an XML/HTTP query.  (Internet 
+          Explorer supports a maximum length of 2083 characters).</p></td>
+    </tr>
+    <tr> 
+      <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Maximum 
+          number of words in a query</p></td>
+      <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Unlimited. 
+          Make sure to separate each word with the characters “%20”.</p></td>
+    </tr>
+    <tr> 
+      <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Maximum 
+          number of results per query</p></td>
+      <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Each 
+          XML document, both lite and heavy, will display a maximum of ten products 
+          per page. To obtain more than ten results for a search, you simply need 
+          to pass a &quot;page&quot; parameter in your URL. For example, to get 
+          the top 30 books written by Stephen King (instead of simply the top 
+          10), you would need to make three separate calls into Amazon.com, with 
+          the parameters page=1 (which will give you books #1 through #10), page=2 
+          (books #11 through #20) and page=3 (books #21 through #30).   This limitation 
+          does not apply to blended searches (which return results across multiple 
+          product categories).</p></td>
+    </tr>
+    <tr> 
+      <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Returned 
+          catalog data constraints</p></td>
+      <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Amazon 
+          attempts to return as much data as possible for each query.  In those 
+          cases where Amazon is not the primary owner of the data (such as third-party 
+          reviews), we may not be legally able to release that data.  Our goal, 
+          however, is to return as much product information as we can.</p></td>
+    </tr>
+    <tr> 
+      <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Multiple 
+          product entries</p></td>
+      <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Some 
+          product attributes have multiple entries. (For example, many products 
+          in our database have 100 or more customer reviews.) To make our XML 
+          documents simpler, we have set a maximum limit of ten authors, ten actors/actresses, 
+          ten artists, five similar products and three customer reviews for any 
+          product that is returned in the document.  The Listmania searches will 
+          return up to ten items.</p></td>
+    </tr>
+    <tr> 
+      <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Missing 
+          products in returned data</p></td>
+      <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Please 
+          note that not all products in the Amazon catalog contain catalog attributes.&nbsp; 
+          Amazon returns whatever information is stored in our catalog.&nbsp; 
+          If the data is missing from our catalog, it will be a null value or 
+          excluded from our XML document as well.</p></td>
+    </tr>
+  </table>
+
+  <div class="bodycopy"></div>
+  </div>
+</body>
+</html>

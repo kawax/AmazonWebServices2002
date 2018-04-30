@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+	<SOAP-ENV:Body>
+		<namesp3:BrowseNodeSearchRequestResponse xmlns:namesp3="urn:PI/DevCentral/SoapService">
+			<ProductInfo>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0316525405">
+					<Asin>0316525405</Asin>
+					<ProductName>One Nation: America Remembers September 11, 2001</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Life Magazine Staff</Author>
+						<Author>Rudolph W. Giuliani</Author>
+						<Author>editors of LIFE magazine</Author>
+					</Authors>
+					<ReleaseDate>06 December, 2001</ReleaseDate>
+					<Manufacturer>Little Brown &amp; Company</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0316525405.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0316525405.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0316525405.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$29.95</ListPrice>
+					<OurPrice>$20.97</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0786709219">
+					<Asin>0786709219</Asin>
+					<ProductName>The Mammoth Book of Illustrated Erotica</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Marilyn Jaye Lewis</Author>
+						<Author>Maxim Jakubowski</Author>
+					</Authors>
+					<ReleaseDate>09 January, 2002</ReleaseDate>
+					<Manufacturer>Carroll &amp; Graf</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0786709219.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0786709219.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0786709219.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$16.95</ListPrice>
+					<OurPrice>$11.87</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/1585421464">
+					<Asin>1585421464</Asin>
+					<ProductName>The  Artist's Way: A Spiritual Path to Higher Creativity</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Julia Cameron</Author>
+					</Authors>
+					<ReleaseDate>28 February, 2002</ReleaseDate>
+					<Manufacturer>J. P. Tarcher</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/1585421464.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/1585421464.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/1585421464.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$15.95</ListPrice>
+					<OurPrice>$11.17</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0789723182">
+					<Asin>0789723182</Asin>
+					<ProductName>Photoshop Restoration and Retouching</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Katrin Eismann</Author>
+						<Author>Steve Simmons</Author>
+					</Authors>
+					<ReleaseDate>03 April, 2001</ReleaseDate>
+					<Manufacturer>Que</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0789723182.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0789723182.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0789723182.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$49.99</ListPrice>
+					<OurPrice>$34.99</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/1576871304">
+					<Asin>1576871304</Asin>
+					<ProductName>New York September 11</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Magnum Photographers</Author>
+						<Author>David Halberstam</Author>
+					</Authors>
+					<ReleaseDate>16 November, 2001</ReleaseDate>
+					<Manufacturer>powerHouse Books</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/1576871304.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/1576871304.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/1576871304.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$29.95</ListPrice>
+					<OurPrice>$20.96</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0874774241">
+					<Asin>0874774241</Asin>
+					<ProductName>The New Drawing on the Right Side of the Brain</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Betty Edwards</Author>
+					</Authors>
+					<ReleaseDate>September, 1999</ReleaseDate>
+					<Manufacturer>J. P. Tarcher</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0874774241.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0874774241.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0874774241.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$16.95</ListPrice>
+					<OurPrice>$11.87</OurPrice>
+					<UsedPrice>$2.00</UsedPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0810932679">
+					<Asin>0810932679</Asin>
+					<ProductName>Earth from Above</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Yann Arthus-Bertrand</Author>
+						<Author>Sophie Bessis</Author>
+						<Author>David Baker</Author>
+					</Authors>
+					<ReleaseDate>November, 1999</ReleaseDate>
+					<Manufacturer>Harry N Abrams</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0810932679.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0810932679.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0810932679.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$65.00</ListPrice>
+					<OurPrice>$45.50</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0399527257">
+					<Asin>0399527257</Asin>
+					<ProductName>The Art of Shen Ku: The Ultimate Traveler's Guide: The First Intergalactic Artform of the En  Tire Universe</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Zeek</Author>
+					</Authors>
+					<ReleaseDate>04 September, 2001</ReleaseDate>
+					<Manufacturer>Perigee</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0399527257.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0399527257.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0399527257.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$19.95</ListPrice>
+					<OurPrice>$13.97</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0684866048">
+					<Asin>0684866048</Asin>
+					<ProductName>Move Your Stuff, Change Your Life: How to Use Feng Shui to Get Love, Money, Respect, and Happiness</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>Karen Rauch Carter</Author>
+						<Author>Jeff Fessler</Author>
+					</Authors>
+					<ReleaseDate>January, 2000</ReleaseDate>
+					<Manufacturer>Fireside</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0684866048.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0684866048.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0684866048.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$13.00</ListPrice>
+					<OurPrice>$10.40</OurPrice>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/0596001045">
+					<Asin>0596001045</Asin>
+					<ProductName>iMovie 2: The Missing Manual</ProductName>
+					<Catalog>Book</Catalog>
+					<Authors>
+						<Author>David Pogue</Author>
+					</Authors>
+					<ReleaseDate>15 January, 2001</ReleaseDate>
+					<Manufacturer>O'Reilly &amp; Associates</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/0596001045.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/0596001045.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/0596001045.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$19.95</ListPrice>
+					<OurPrice>$13.97</OurPrice>
+				</Details>
+			</ProductInfo>
+		</namesp3:BrowseNodeSearchRequestResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

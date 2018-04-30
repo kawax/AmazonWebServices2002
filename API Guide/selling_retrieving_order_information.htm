@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Retrieving Your Order Information</title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class=Section1> 
+  <h1 class="header"><a>Retrieving Your Order Information</a></h1>
+  <h2><a class="subhead">Types of Requests (Summary)</a></h2>
+  <table border=1 cellspacing=0 cellpadding=0 width=624>
+    <tr class="bodycopy"> 
+      <td width=84 valign=top bgcolor="#D9D6AF"> <p class=TableHead>Request Type</p></td>
+      <td width=72 valign=top bgcolor="#D9D6AF"> <p class=TableHead>HTTP RequestType 
+        </p></td>
+      <td width=126 valign=top bgcolor="#D9D6AF"> <p class=TableHead>URL </p></td>
+      <td width=192 valign=top bgcolor="#D9D6AF"> <p class=TableHead>Name Value 
+          Pairs in Header</p></td>
+      <td width=150 valign=top bgcolor="#D9D6AF"> <p class=TableHead>Response 
+          Types </p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=84 bgcolor="#FDFDF9"> <p class=Tablebody>Report Status</p></td>
+      <td width=72 bgcolor="#FDFDF9"> <p class=Tablebody>POST</p></td>
+      <td width=126 bgcolor="#FDFDF9"> <p class=Tablebody>https://secure.amazon.com/exec/panama/ 
+          seller-admin/manual-reports/get-report-status </p></td>
+      <td width=192 bgcolor="#FDFDF9"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>NumberOfReports:</span></b><span
+  style='font-size:9.0pt'> [insert number of reports here]</span></p>
+        <p><b><span style='font-size:9.0pt'>ReportName:</span></b><span
+  style='font-size:9.0pt'> Order or PreOrder or BatchRefund or BulkRefund</span></p></td>
+      <td width=150 bgcolor="#FDFDF9"> <p><b><span style='font-size:9.0pt'>&lt;Reports&gt;<br>
+          &lt;Report&gt;</span></b><span style='font-size:9.0pt'> <br>
+          reportstarttime<br>
+          reportendtime<br>
+          ReportID<br>
+          <b>&lt;/Report&gt;<br>
+          &lt;/Reports&gt;</b> </span></p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=84 bgcolor="#FDFDF9"> <p class=Tablebody>Order Fulfillment Report</p></td>
+      <td width=72 bgcolor="#FDFDF9"> <p class=Tablebody>POST</p></td>
+      <td width=126 bgcolor="#FDFDF9"> <p class=Tablebody>https://secure.amazon.com/exec/panama/ 
+          seller-admin/download/report </p></td>
+      <td width=192 bgcolor="#FDFDF9"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>ReportID:</span></b><span
+  style='font-size:9.0pt'> [insert Report ID here]</span></p>
+        <p><span style='font-size:9.0pt'>or</span></p>
+        <p><b><span style='font-size:9.0pt'>ReportName:</span></b><span
+  style='font-size:9.0pt'> Order or PreOrder or BatchRefund or BulkRefund</span></p></td>
+      <td width=150 valign=top bgcolor="#FDFDF9"> <p><b><span style='font-size:9.0pt'>&lt;FileError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          FILE_NOT_FOUND<br>
+          <b>&lt;/FileError&gt;</b> </span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;SecurityError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          ACCESS_DENIED<br>
+          <b>&lt;/SecurityError&gt;</b></span></p></td>
+    </tr>
+  </table>
+  <h2><a class="subhead">Types of Requests (Detailed)</a></h2>
+  <p class="bodycopy">Sellers can also make HTTPS requests to retrieve order information. 
+    The two types of requests are detailed below.</p>
+  <h3><a class="subhead2">Checking Status of Order Fulfillment Reports</a></h3>
+  <p class="bodycopy"><b>Use Case: </b>A seller<b> </b>should use the Report Status 
+    Request when they want to check on the status of multiple order reports. They 
+    should include the number of reports that they want to check on in the request 
+    header.</p>
+  <p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+  <p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/manual-reports/get-report-status">https://secure.amazon.com/exec/panama/seller-admin/manual-reports/get-report-status</a></p>
+  <p class="bodycopy"><b>Header Content:</b></p>
+</div>
+<ul>
+  <li> 
+    <div class=Section1><span class="bodycopy">Username (using basic authentication)</span></div>
+  </li>
+  <li> 
+    <div class=Section1><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Password 
+      (using basic authentication)</span></div>
+  </li>
+  <li> 
+    <div class=Section1><span class="bodycopy">Developer Token</span></div>
+  </li>
+  <li> 
+    <div class=Section1><span class="bodycopy">Number of Reports (default = 10)</span></div>
+  </li>
+  <li> 
+    <div class=Section1><span class="bodycopy">Choice of Report Name</span></div>
+    <ul>
+      <li> 
+        <div class=Section1><span class="bodycopy">Order (default)</span></div>
+      </li>
+      <li> 
+        <div class=Section1><span class="bodycopy">Preorder</span></div>
+      </li>
+      <li> 
+        <div class=Section1><span class="bodycopy">Batch Refund</span></div>
+      </li>
+      <li>
+        <div class=Section1> 
+          <div class=Section1><span class="bodycopy">Bulk Refund</span></div>
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class=Section1>
+  <h3><a class="subhead2">Retrieving Order Fulfillment Reports</a></h3>
+  <p class="bodycopy"><b>Use Case: </b>A seller<b> </b>should use the Order Fulfillment 
+    Request when they want to download a specific report. The request header must 
+    include either the ID of the report in question, or a generic report name 
+    (Order, Preorder, etc.). If a generic report name is used, then the system 
+    will retrieve the latest available report.</p>
+  <p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+  <p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/download/report">https://secure.amazon.com/exec/panama/seller-admin/download/report</a></p>
+  <p class="bodycopy"><b>Header Content:</b></p>
+  <ul>
+    <li> 
+      <div class=Section1><span class="bodycopy">Username (using basic authentication)</span></div>
+    </li>
+    <li> 
+      <div class=Section1><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Password 
+        (using basic authentication)</span></div>
+    </li>
+    <li> 
+      <div class=Section1><span class="bodycopy">Developer Token</span></div>
+    </li>
+    <li> 
+      <div class=Section1><span class="bodycopy">Number of Reports (default = 
+        10)</span></div>
+    </li>
+    <li> 
+      <div class=Section1><span class="bodycopy">Choice of Report Name</span></div>
+      <ul>
+        <li> 
+          <div class=Section1><span class="bodycopy">Order (default)</span></div>
+        </li>
+        <li> 
+          <div class=Section1><span class="bodycopy">Preorder</span></div>
+        </li>
+        <li> 
+          <div class=Section1><span class="bodycopy">Batch Refund</span></div>
+        </li>
+        <li> 
+          <div class=Section1> 
+            <div class=Section1><span class="bodycopy">Bulk Refund</span></div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>&nbsp;</p>
+  </div>
+</body>
+</html>

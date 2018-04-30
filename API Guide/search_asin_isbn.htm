@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>ASIN and ISBN Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">ASIN and ISBN Searches</div>
+<h2 class="bodycopy"><a class="subhead">ASIN and ISBN Searches via XML</a></h2>
+<p class="bodycopy"><a>Every unique product in Amazon.com's catalog has an &quot;ASIN&quot;, 
+  which is short for &quot;Amazon Standard Item Number&quot;. (For our books category, 
+  a book's ASIN is the same as its &quot;International Standard Book Number&quot;, 
+  or &quot;ISBN&quot;). You can find a product's ASIN in one of two ways: </a></p>
+<ol start=1 type=1>
+  <li class="bodycopy"><a>It should be listed in the fine print on a product's 
+    detail page. </a></li>
+  <li class="bodycopy"><a>Alternatively, you can look in the URL of that same 
+    detail page. In most cases, the format of the URL should start like this: 
+    <b>http://www.amazon.com/exec/obidos/ASIN/nnnnnnnnnn</b>/. The ASIN number 
+    is the 10-digit number that appears directly after &quot;ASIN&quot;.</a></li>
+</ol>
+<p class="bodycopy"><a>As an example, the following product’s ASIN would be <b>043935806X</b>:  
+  </a></p>
+<p class="code"><a> http://www.amazon.com/exec/obidos/ASIN/043935806X</a></p>
+<h3 class="bodycopy"><a><span class="subhead2">Standard Searches</span></a></h3>
+<p class="bodycopy"><a>To query for an ASINs attributes in XML form, you would 
+  use the following format:</a></p>
+<h4 class="bodycopy"><a><strong>Call and Response</strong></a></h4>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+        token goes here]</span>&amp;AsinSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>ASIN/ISBN 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;f=xml </a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The AsinSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<h4 class="bodycopy"><a><strong>Example</strong></a></h4>
+<p class="bodycopy"><a>To generate XML for ASIN #0439139597 (Harry Potter Book 
+  4), you would use this URL: </a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;AsinSearch=0439139597&amp;type=lite&amp;f=xml </a></p>
+<p class="bodycopy"><a>You can use up to 10 ASINs in one call for &quot;heavy&quot; 
+  XML documents, and up to 30 ASINs for &quot;lite&quot; XML documents. ASINs 
+  in the URL should be separated by commas, such as: </a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;AsinSearch=0439139597,0439064872,0439136350&amp;type=lite&amp;f=xml 
+  </a></p>
+<h3 class="bodycopy"><a><span class="subhead2">Marketplace Searches</span></a></h3>
+<p class="bodycopy"><a>You can also use the AsinSearch to retrieve information 
+  about products sold by third party sellers  Amazon.com allows third-party sellers 
+  to sell their own products in our catalog. To find all third-party offerings 
+  for a specific ASIN in XML, use the offer and offerpage parameters as shown 
+  in the table below.</a></p>
+<h4 class="bodycopy"><a><strong>Call and Response</strong></a></h4>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[developer’s 
+        token goes here]</span>&amp;AsinSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>ASIN/ISBN 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;offer=<span style='font-size:10.0pt;color:red'>[</span>offer 
+        <span
+  style='color:red'>types goes here: choices are ThirdPartyNew, Used, Collectible 
+        and Refurbished</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;offerpage=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>page # goes here</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;f=xml </a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The AsinSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<h4 class="bodycopy"><a><strong>Example</strong></a></h4>
+<p class="bodycopy"><a>To generate XML for all “used” offerings of ASIN # B00005JKDR, 
+  you would use this format:</a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;AsinSearch=B00005JKDR&amp;type=lite&amp;offer=Used&amp;offerpage=1&amp;f=xml</a></p>
+<p class="bodycopy"><a>The “offerpage” parameter is similar to the “page” parameter 
+  in previous examples, with each offerpage <strong><span style='font-family:
+Arial;font-weight:normal'>returning</span><span
+style='font-family:Arial;color:blue'> </span></strong>25 offerings. So if a specific 
+  ASIN had 40 different used offerings, you would need to make two requests to 
+  the service, the first with “offerpage=1” and the second with “offerpage=2”.</a></p>
+<h2 class="bodycopy"><a class="subhead">ASIN and ISBN Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for an ASIN 
+  or ISBN search.  This request will return a SOAP object containing the Lite 
+  or the Heavy form of the data.</a></p>
+<h3 class="subhead2"><a>Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>AsinSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>asin  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The AsinSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p class="bodycopy"><a>You can also use the AsinSearch to retrieve information 
+  about products sold by third party sellers  Amazon.com allows third-party sellers 
+  to sell their own products in our catalog. This request will return a SOAP object 
+  containing the Lite or the Heavy form of the data. </a></p>
+<h3 class="bodycopy"><a><span class="subhead2">Call and Response</span></a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>AsinSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>asin  string</a></p>
+      <p class=bodycopy><a>offer  string</a></p>
+      <p class=bodycopy><a>offerpage  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The AsinSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

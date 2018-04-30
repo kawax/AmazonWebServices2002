@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>XSLT Request Parameter Access</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+
+  
+<div class="header">XSLT Request Parameter Access</div>
+  
+<p class="bodycopy">On pages that use XSLT, you can use the Request Parameter 
+  Access feature to affect different formatting for different elements of your 
+  Web page or application. Standard XSLT calls use a single input--the XSL from 
+  the original request--to determine the page formatting for a given page. Request 
+  Parameter Access enables you to add specific formatting variables to a request 
+  to generate results that use that formatting. Without this feature, you would 
+  need to use separate XSLT style sheets to enable different formatting types 
+  on a single page.</p>
+<p class="bodycopy">You can also use the Request Parameter Access feature to pass 
+  state info such as the CartID and HMAC from page to page within a Web site. 
+</p>
+<p class="subhead">Generating Pages with Multiple Presentation Formats</p>
+<table width="100%" border="0" cellpadding="10" cellspacing="10">
+  <tr>
+    <td><img src="http://images.amazon.com/images/G/01/anywhere/web-services/request_parameter_access.gif" width="291" height="367"></td>
+    <td align="left" valign="top"> 
+      <p class="bodycopy">In this example, we're using four separate presentation 
+        formats on a single page using a single XSLT request.</p> 
+      <ul>
+        <li class="bodycopy">Style A could use a black Arial font and a white 
+          background<br>
+        </li>
+        <li class="bodycopy">Style B could use a bold Verdana font and a light 
+          gray background<br>
+        </li>
+        <li class="bodycopy">Style C could use a normal Verdana font and a white 
+          background<br>
+        </li>
+        <li class="bodycopy">Style D could use a normal Arial font on a cream 
+          background</li>
+      </ul>
+      <p class="bodycopy">&nbsp;</p></td>
+  </tr>
+</table>
+<p class="subhead">Implementing Request Parameter Access</p>
+<p class="bodycopy">To implemente Request Parameter Access, you'll need to set 
+  the parameters for your presentation. You can do this by identifying the parameters 
+  in your XML calls, as shown below:</p>
+<h3><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+        token goes here]</span>&amp;<font color="#FF0000">yourparametername1</font>=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>parameter 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;<font color="#FF0000">yourparametername2</font>=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>parameter 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;<font color="#FF0000">yourparametername3</font>=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>parameter 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;f=xml </a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>The Request Parameter 
+        Access function returns data formatted in the look and feel of your choosing.</p></td>
+  </tr>
+</table>
+<p class="bodycopy">This type of formatting can be used with any type of AWS search. 
+  For example, you could call your parameter name &quot;fontface&quot; or &quot;bgcolor&quot; 
+  or whatever name makes sense for your presentation.</p>
+<p class="subhead">Example</p>
+<p class="bodycopy">The example below shows how a standard Artist search can be 
+  configured to return results in the format of your choosing.</p>
+<p class="subhead2"><strong>Standard Search</strong></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;ArtistSearch=The%20Rolling%20Stones&amp;mode=music&amp;type=lite&amp;page=1&amp;f=xml 
+  </a></p>
+<p class="subhead2"><strong>Search with Request Parameter Access</strong></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;ArtistSearch=The%20Rolling%20Stones&amp;mode=music&amp;type=lite&amp;page=1<font color="#FF0000">&amp;fontface=verdana</font><font color="#0000FF">&amp;bgcolor=white</font>&amp;<br>
+  f=xml</a></p>
+<p class="bodycopy">This call will generate the following results:</p>
+<div class="code"> 
+  <p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; <br>
+    - &lt;ProductInfo&gt;<br>
+    - &lt;Request&gt;<br>
+    - &lt;Args&gt;<br>
+    &lt;Arg value=&quot;<a>The%20Rolling%20Stones</a>&quot; Name=&quot;ArtistSearch&quot; 
+    /&gt; <br>
+    &lt;Arg value=&quot;Music&quot; Name=&quot;<a>mode</a>&quot; /&gt; <br>
+    &lt;Arg value=&quot;lite&quot; Name=&quot;<a>type</a>&quot; /&gt; <br>
+    &lt;Arg value=&quot;1&quot; Name=&quot;<a>page</a>&quot; /&gt; <br>
+    &lt;Arg value=&quot;verdana&quot; Name=&quot;<a>fontface</a>&quot; /&gt;<br>
+    &lt;Arg value=&quot;white&quot; Name=&quot;bgcolor&quot; /&gt; <br>
+    &lt;/Args&gt;<br>
+    &lt;/Request&gt;<br>
+    &lt;/ProductInfo&gt;<br>
+  </p>
+  </div>
+<p class="bodycopy">&nbsp;</p>
+<p class="bodycopy">&nbsp;</p>
+<p class="bodycopy"><a></a></p>
+</body>
+</html>

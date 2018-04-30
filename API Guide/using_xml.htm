@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Accessing Amazon.com Data via XML/HTTP</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Accessing Amazon.com Data via XML/HTTP</div>
+<p class="bodycopy"><a>This section explains the process of accessing Amazon.com 
+  data via XML over HTTP.</a></p>
+<a> 
+<h2><a class="subhead">Amazon XML Usage Overview</a></h2>
+<p class="bodycopy">This section of the document details how to invoke Amazon.com 
+  catalog information using the XML/HTTP method by passing parameters such as 
+  keywords and browse nodes in the URL. The resulting XML can come in two forms 
+  - a &quot;lite&quot; document that contains essential catalog information such 
+  as a product's name or price, and a &quot;heavy&quot; document that contains 
+  more complete product information such as sales ranking and customer reviews. 
+  Please see the <a href="http://xml.amazon.com/schemas3/dev-lite.dtd
+">lite</a> and <a href="http://xml.amazon.com/schemas3/dev-heavy.dtd
+">heavy</a> versions of the DTD, and/or the <a href="http://xml.amazon.com/schemas3/dev-lite.xsd
+">lite</a> and <a href="http://xml.amazon.com/schemas3/dev-heavy.xsd
+">heavy</a> versions of 
+  the XSD for more information on the specific elements of the two document versions. 
+</p>
+<h2 class="subhead">Guidelines for Accessing Amazon.com Data via XML over HTTP</h2>
+</a>
+<p class="bodycopy"><a>This section shows general guidelines for accessing Amazon.com 
+  data via XML over HTTP.</a></p>
+<ol start=1 type=1>
+  <li class="bodycopy"><a>Your Web site or application should make no more than 
+    one (1) request per second to our servers.</a></li>
+  <li class="bodycopy"><a>Your Web site or application should have some kind of 
+    caching mechanism to temporarily store Amazon catalog data.</a></li>
+  <li class="bodycopy"><a>Your Web site or application should contain some measure 
+    of error handling.</a></li>
+  <li class="bodycopy"><a>Your Web site or application should not be configured 
+    to immediately retry failed server requests—doing so only exacerbates problems.</a></li>
+</ol>
+<a>
+<h2>&nbsp; </h2>
+</a> 
+</body>
+</html>

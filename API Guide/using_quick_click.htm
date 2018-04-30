@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Using Amazon.com Quick-Click Buying</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">Using Amazon.com Quick-Click Buying</div>
+<p class="bodycopy">Amazon.com Quick-Click Buying allows your Web site visitors 
+  to purchase products sold at Amazon.com quickly and easily. Quick-Click Buying 
+  gives your visitors the option of either adding an item to their Amazon.com 
+  shopping cart or, if they are recognized customers of our store, buying the 
+  item using Amazon.com's 1-Click® technology.</p>
+<p class="bodycopy">When you paste the code below into your Web site, a “Buy 
+  from Amazon.com” link will be served onto your Web site. When a user clicks 
+  this link, a small Quick-Click Buying window will launch on your site, with 
+  information such as the product name and price, as well as add-to-shopping-cart 
+  and 1-Click® buttons. <br clear=all>
+  &nbsp;</p>
+<div class="code">&lt;script language=&quot;JavaScript&quot;&gt;<br>
+  function popUp(URL,NAME) {<br>
+  amznwin=window.open(URL,NAME,'location=yes,scrollbars=yes,status=yes,toolbar=yes,resizable=yes,width=380,height=450,screenX=10,screenY=10,top=10,left=10');<br>
+  amznwin.focus();}<br>
+  document.open();<br>
+  document.write(&quot;&lt;a href=javascript:popUp('http://buybox.amazon.com/exec/obidos/redirect?tag=[Associates 
+  ID goes here]&amp;link_code=qcb&amp;creative=23424&amp;camp=2025&amp;path=/dt/assoc/tg/aa/xml/assoc/-/[ASIN 
+  number goes here]/[Associates ID goes here]/ref=ac_bb1_,_amazon')&gt;&lt;img 
+  src=http://rcm-images.amazon.com/images/G/01/associates/remote-buy-box/buy1.gif 
+  border=0 alt='Buy from Amazon.com' &gt;&lt;/a&gt;&quot;);<br>
+  document.close();<br>
+  &lt;/script&gt;<br>
+  &lt;noscript&gt;<br>
+  &lt;form method=&quot;POST&quot; action=&quot;http://buybox.amazon.com/o/dt/assoc/handle-buy-box=[ASIN 
+  number goes here]&quot;&gt;<br>
+  &lt;input type=&quot;hidden&quot; name=&quot;asin.[ASIN number goes here]&quot; 
+  value=&quot;1&quot;&gt;<br>
+  &lt;input type=&quot;hidden&quot; name=&quot;tag-value&quot; value=&quot;[Associates 
+  ID goes here]&quot;&gt;<br>
+  &lt;input type=&quot;hidden&quot; name=&quot;tag_value&quot; value=&quot;[Associates 
+  ID goes here]&quot;&gt;<br>
+  &lt;input type=&quot;image&quot; name=&quot;submit.add-to-cart&quot; value=&quot;Buy 
+  from Amazon.com&quot; border=&quot;0&quot; alt=&quot;Buy from Amazon.com&quot; 
+  src=&quot;http://rcm-images.amazon.com/images/G/01/associates/add-to-cart.gif&quot;&gt;<br>
+  &lt;/form&gt;<br>
+  &lt;/noscript&gt;</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Marketplace Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">Marketplace Searches</div>
+<h2 class="bodycopy"><a class="subhead">Marketplace Searches via XML</a></h2>
+<h4 class="bodycopy">There are two new types of marketplace searches -- listing-ID 
+  and keyword. A listing-ID search allows you to get product information for a 
+  specific marketplace item. Every listing ID is unique to a marketplace item, 
+  so requesting that ID will give you the product information for that item. Every 
+  marketplace item has both a listing ID and exhcange ID, and prior to this release 
+  we had exchange ID searches, but many sellers didn't know their exchangeID. 
+</h4>
+<p class="bodycopy">The second type of new marketplace search is a keyword search. 
+  A keyword search enables you to search for across all of our marketplace listings 
+  for items that match your keyword criteria. This search also can use a number 
+  of optional parameters: </p>
+<ul>
+  <li><span class="bodycopy"><strong>keyword-search</strong>: Can have the following 
+    two values: </span> 
+    <ul>
+      <li class="bodycopy">title: search for the keyword in the title of exchanges 
+        only</li>
+      <li class="bodycopy">titledesc: search for the keyword in the title &amp; 
+        description exchanges only</li>
+    </ul>
+  </li>
+  <li class="bodycopy"> <strong>browse-id</strong>: The marketplace browse-id&#8217;s, 
+    list is similar to the seller-browse-id </li>
+  <li class="bodycopy"><strong>zipcode</strong>: To filter marketplace searches 
+    by sellers from a specific part of the country, fill in the appropriate ZIP 
+    code with your request </li>
+  <li class="bodycopy"><strong>area-id</strong>: The numerical country code, it 
+    is the list of numbers that can be picked up by looking at the source code 
+    in the following URL: <a href="http://s1.amazon.com/exec/varzea/subst/search/fixed-search.html/ref=z_h_tn_as/103-2952754-6690224%20">http://s1.amazon.com/exec/varzea/subst/search/fixed-search.html/</a></li>
+  <li class="bodycopy"><strong>geo</strong>: values are: 
+    <ul>
+      <li>ship-to: Indicates that the items can be shipped to the area-id picked 
+        above. </li>
+      <li>ship-from: Indicates that show items that are shipped from the area-id 
+        specified above</li>
+    </ul>
+  </li>
+  <li><span class="bodycopy"> <strong>rank</strong>: The sort-type values are: 
+    </span> 
+    <ul>
+      <li class="bodycopy">&#8211;bfp: sorted by featured listings (default)</li>
+      <li class="bodycopy">&#8211;startdate: Start Date from New to Old </li>
+      <li class="bodycopy">+startdate: Start Date from Old to New </li>
+      <li class="bodycopy">+price: Price Low to High </li>
+      <li class="bodycopy">&#8211;price: Price from High to Low</li>
+    </ul>
+  </li>
+  <li><span class="bodycopy"><strong>index</strong>: values </span> 
+    <ul>
+      <li class="bodycopy">marketplace: return marketplace offerings only </li>
+      <li class="bodycopy">zshops: return zshops listings only.</li>
+    </ul>
+  </li>
+</ul>
+<h4 class="subhead2"><a><strong>Call and Response</strong></a>: Listing ID</h4>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a>Working 
+        with z-Shops Products</p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+        token goes here]</span>&amp;</a>MarketplaceSearch=listing-id&amp;t=test&amp;f=xml<a><span class=code0>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span></span></a>&amp;listing-id=<a><span class=code0><span
+  style='font-size:10.0pt;color:red'>[listing ID goes here]</span></span></a></p>
+      </td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The Marketplace 
+        search request returns data from Amazon's marketplace stores filtered 
+        for sellers. </a></p></td>
+  </tr>
+</table>
+<p class="subhead2"><a><strong>Call and Response</strong></a>: Keyword</p>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+        token goes here]</span>&amp;</a>v=1.0&amp;MarketplaceSearch=keyword&amp;t=test&amp;f=xml<a><span class=code0>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span></span></a>&amp;keyword=<a><span class=code0><span
+  style='font-size:10.0pt;color:red'>[keyword goes here]</span></span></a>&amp;keyword-search=title&amp;browse-id=<a><span class=code0><span
+  style='font-size:10.0pt;color:red'>[browse ID goes here]</span></span></a>&amp;zipcode=<a><span class=code0><span
+  style='font-size:10.0pt;color:red'>[ZIP code goes here]</span></span></a>&amp;area-id=4000227&amp;geo=ship-to&amp;rank=-startdate&amp;page=1</p>
+      </td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal">&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h2 class="bodycopy"><a class="subhead">Marketplace Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for an ASIN 
+  or ISBN search.  This request will return a SOAP object containing the Lite 
+  or the Heavy form of the data.</a></p>
+<h3 class="subhead2"><a>Call and Response</a>: Listing ID Search</h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>MarketplaceSearchRequest</p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a>: 
+      </p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p>
+      <p class=bodycopy>format string</p>
+      <p class=bodycopy>version string</p>
+      <p class=bodycopy>listing ID string</p>
+      <p class=bodycopy>&nbsp;</p>
+      </td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The Marketplace 
+        search request returns data from Amazon's marketplace stores filtered 
+        for sellers. </a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 class="subhead2"><a>Call and Response</a>: Keyword Search</h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>MarketplaceSearchRequest</p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a>: 
+      </p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p>
+      <p class=bodycopy>format string</p>
+      <p class=bodycopy>version string</p>
+      <p class=bodycopy>page</p>
+      <p class=bodycopy>keyword</p>
+      <p class=bodycopy>keyword search string</p>
+      <p class=bodycopy>browse ID</p>
+      <p class=bodycopy>zipcode</p>
+      <p class=bodycopy>area ID</p>
+      <p class=bodycopy>geo</p>
+      <p class=bodycopy>rank</p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The Marketplace 
+        search request returns data from Amazon's marketplace stores filtered 
+        for sellers. </a></p></td>
+  </tr>
+</table>
+<p class="bodycopy">&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

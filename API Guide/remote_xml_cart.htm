@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Using the Remote Shopping Cart via XML/HTTP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="header">Using the Remote Shopping Cart via XML/HTTP</h2>
+<h3 class="subhead">Creating a Cart and Adding an Item </h3>
+<p class="bodycopy">To create a new shopping cart on a remote site using XML/HTTP, 
+  make the request shown in the table below.</p>
+<table class=bodycopy border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Request Format</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><span class="bodycopy">http://xml.amazon.com/onca/xml3?ShoppingCart=add&amp;f=xml&amp;dev-t=<span style='font-size:10.0pt;color:red;font-weight:normal'>[developer’s 
+        token goes here]</span>&amp;<span style='font-size:10.0pt;font-weight:
+  normal'>t=</span></span><span class="bodycopy" style='font-size:10.0pt;color:red;
+  font-weight:normal'>[associates ID goes here]</span><span class="bodycopy">&amp;Asin.<span style='font-size:10.0pt;color:red;font-weight:normal'>[ASIN 
+        goes here]</span></span><span class="bodycopy" style='font-weight:normal'>=</span><span class="bodycopy" style='font-size:10.0pt;color:red;font-weight:normal'>[</span><span class="bodycopy" style='color:red;font-weight:normal'>quantity 
+        goes here]</span></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Function</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>The Cart Creation 
+        request creates a shopping cart and adds an item to that shopping cart.</p></td>
+  </tr>
+</table>
+<p class="bodycopy"><b><i><span style='color:red'>Please note</span></i></b><i>: 
+  the</i> &quot;<span style='color:red'>&amp;Asin.[ASIN goes here]=[quantity goes 
+  here]</span>&quot; <i>portion of the URL can be repeated to add multiple items 
+  to the cart.</i></p>
+<h3 class="subhead">Adding Items to an Existing Cart</h3>
+<p class="bodycopy">To add items to an existing cart on a remote site, make the 
+  request shown in the table below.  In order to add items to an existing cart, 
+  you’ll need to know both the CartID and the HMAC for that cart.</p>
+<table class=bodycopy border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Request Format</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><span class="bodycopy">http://xml.amazon.com/onca/xml3?ShoppingCart=add&amp;f=xml&amp; 
+        dev-t=<span style='font-size:10.0pt;color:red;font-weight:
+  normal'>[ [developer’s token goes here]</span>&amp;<span
+  style='font-size:10.0pt;font-weight:normal'>t=</span></span><span class="bodycopy"
+  style='font-size:10.0pt;color:red;font-weight:normal'>[associates ID goes here]</span><span class="bodycopy">&amp;Asin.<span style='font-size:10.0pt;
+  color:red;font-weight:normal'>[ASIN goes here]</span></span><span class="bodycopy" style='font-weight:normal'>=</span><span class="bodycopy" style='font-size:10.0pt;color:red;font-weight:normal'>[</span><span class="bodycopy" style='color:red;font-weight:normal'>quantity 
+        goes here]</span><span class="bodycopy" style='font-size:10.0pt;color:red;font-weight:normal'> 
+        </span><span class="bodycopy">&amp;CartId=<span style='font-size:10.0pt;color:red;font-weight:normal'>[cart 
+        ID goes here]</span></span> <span class="bodycopy">&amp;Hmac=<span
+  style='font-size:10.0pt;color:red;font-weight:normal'>[HMAC goes here]</span></span></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Function</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>The Add Item call 
+        adds an item to an existing shopping cart.</p></td>
+  </tr>
+</table>
+<h4>&nbsp;</h4>
+<h3><span class="subhead">Modifying an Existing Cart </span> </h3>
+<p class="bodycopy">To modify an item that is already in the shopping cart, make 
+  the request shown in the table below.  In order to modify an existing cart, 
+  you’ll need to know the CartID, the HMAC, and the item number for the item you 
+  want to modify.  The item number is the itemID returned from any cart operation.  
+  Note that the <b>ShoppingCart=</b> command now reads <b>ShoppingCart=modify</b>.</p>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Request Format</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><span class="bodycopy">http://xml.amazon.com/onca/xml3?ShoppingCart=modify&amp;f=xml&amp; 
+        dev-t=<span style='font-size:10.0pt;color:red;font-weight:
+  normal'>[ [developer’s token goes here]</span>&amp;<span
+  style='font-size:10.0pt;font-weight:normal'>t=</span></span><span class="bodycopy"
+  style='font-size:10.0pt;color:red;font-weight:normal'>[associates ID goes here]</span><span class="bodycopy">&amp;Item.<span style='font-size:10.0pt;
+  color:red;font-weight:normal'>[itemID goes here]</span></span><span class="bodycopy" style='font-weight:normal'>=</span><span class="bodycopy" style='font-size:10.0pt;color:red;font-weight:normal'>[</span><span class="bodycopy" style='color:red;font-weight:normal'>quantity 
+        goes here]</span><span class="bodycopy" style='font-size:10.0pt;color:red;font-weight:normal'> 
+        </span><span class="bodycopy">&amp;CartId=<span style='font-size:10.0pt;color:red;font-weight:normal'>[cart 
+        ID goes here]</span></span> <span class="bodycopy">&amp;Hmac=<span
+  style='font-size:10.0pt;color:red;font-weight:normal'>[HMAC goes here]</span></span></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Function</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>The Modify Cart 
+        call modifies items in an existing shopping cart.</p></td>
+  </tr>
+</table>
+<p class="bodycopy"><b><i><span style='color:red'>Please note</span></i></b>:  
+  <i>Once an item is placed in a cart, the user can change the quantity for that 
+  item to any number greater than zero.  </i></p>
+<h3 class="subhead">Retrieving Items from a Cart</h3>
+<p class="bodycopy">To retrieve items from a cart on a remote site, make the request 
+  shown in the table below.  Note that the <b>ShoppingCart=</b> command now reads 
+  <b>ShoppingCart=get</b>.</p>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Request Format</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><span class="bodycopy">http://xml.amazon.com/onca/xml3?ShoppingCart=get&amp;f=xml&amp; 
+        dev-t=<span style='font-size:10.0pt;color:red;font-weight:
+  normal'>[ [developer’s token goes here]</span>&amp;<span
+  style='font-size:10.0pt;font-weight:normal'>t=</span></span><span class="bodycopy"
+  style='font-size:10.0pt;color:red;font-weight:normal'>[associates ID goes here]</span><span class="bodycopy">&amp;CartId=<span style='font-size:10.0pt;
+  color:red;font-weight:normal'>[cart ID goes here]</span></span> <span class="bodycopy">&amp;Hmac=<span style='font-size:10.0pt;color:red;font-weight:normal'>[HMAC 
+        goes here]</span></span></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Function</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>The Retrieve Items 
+        call retrieves items in an existing shopping cart.</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Clearing a Cart </h3>
+<p class="bodycopy">To clear a new shopping cart on a remote site, make the request 
+  shown in the table below.  Note that the <b>ShoppingCart=</b> command now reads 
+  <b>ShoppingCart=clear</b>.</p>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Request Format</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><span class="bodycopy">http://xml.amazon.com/onca/xml3?ShoppingCart=clear&amp;f=xml&amp; 
+        dev-t=<span style='font-size:10.0pt;color:red;font-weight:
+  normal'>[ [developer’s token goes here]</span>&amp;<span
+  style='font-size:10.0pt;font-weight:normal'>t=</span></span><span class="bodycopy"
+  style='font-size:10.0pt;color:red;font-weight:normal'>[associates ID goes here]</span><span class="bodycopy">&amp;CartId=<span style='font-size:10.0pt;
+  color:red;font-weight:normal'>[cart ID goes here]</span></span> <span class="bodycopy">&amp;Hmac=<span style='font-size:10.0pt;color:red;font-weight:normal'>[HMAC 
+        goes here]</span></span></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><b>Response</b></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>The Clear Cart 
+        call clears the contents of an existing cart.</p></td>
+  </tr>
+</table>
+
+</body>
+</html>

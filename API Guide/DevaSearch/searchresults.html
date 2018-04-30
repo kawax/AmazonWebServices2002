@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<!-- //
+Version 1.1
+Copyright 2001, Deva Associates LLC. All rights reserved.
+Portions copyright 2001, KScripts Web Consulting and Design. All rights reserved. 
+// -->
+<TITLE>Deva Search</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css" TITLE="style">
+<script language="Javascript" type="text/javascript">
+<!-- // START OF SEARCH SCRIPT
+
+var query = parent.frames[0].document.searchform.query.value;
+var resultsStart = parent.frames[0].document.searchform.res_start.value;
+
+if (parent.frames[0].window_loaded == 1)
+  {
+  if (parent.frames[0].search(query) != 0)
+    {
+    resultsStart = "0";
+    parent.frames[0].currentmatch = 0;  
+    }
+  else
+    resultsStart = "";
+  }
+  
+  
+// END OF SEARCH SCRIPT -->
+</script>
+</HEAD>
+<BODY>
+<SCRIPT language=JavaScript1.2>
+<!--
+if (resultsStart == "")
+  {
+  document.write("<CENTER>");
+  document.write("<table border=0 cellpadding=10 align=center>");
+  document.write("<TR><TD class=\"help\" nowrap><P><UL>");
+  document.write("<LI><B>Add + in front of terms that must appear in results</B>");
+  document.write("<LI><B>Add - in front of terms that must not appear in results</B>");
+  document.write("<LI><B>Common words are excluded from the search index.</B>");
+  document.write("<LI><B>Terms may have characters: [ A-Z a-z 0-9 _ - . ' , $ % ] </B>");
+  document.write("<LI><B>Case insensitive.</B>");
+  document.write("</UL></P></TD></TR></table>")
+  }
+else
+  {
+  // write 
+  parent.frames[0].display(parent.frames[0].sortedurls, 
+                           parent.frames[0].currentmatch, 
+                           parent.frames[0].displaymatches);
+  }
+
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>

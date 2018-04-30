@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Third-Party Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">Third-Party Searches</div>
+<h2 class="bodycopy"><a class="subhead">Third-party Seller Searches via XML</a></h2>
+<p class="bodycopy"><a>There are thousands of third-party sellers who offer their 
+  own products on the Amazon.com Web site. If you are interested in receiving 
+  an XML list of products offered by a specific seller, you simply need to plug 
+  that seller’s unique ID into the request format below. To find the seller ID, 
+  visit the seller’s “member profile” page. The ID appears in that page’s URL 
+  after the “/ts/customer-glance” string. For example, in the following URL, the 
+  seller ID would be <b>A2OFEB6YLE4L1K</b>.</a></p>
+<p class="bodycopy"><a><b>http://s1.amazon.com/exec/varzea/ts/customer-glance/A2OFEB6YLE4L1K</b></a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[developer’s 
+        token goes here]</span>&amp;SellerSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>seller ID 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;page=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>page # goes here</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;offerstatus=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>open or closed</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;page=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>page # goes here</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;f=xml</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><font color="#000000"><a>The 
+        SellerSearch request returns a SellerSearchDetails node.</a></font></p></td>
+  </tr>
+</table>
+<h3 class="bodycopy"><a class="subhead2">Example</a></h3>
+<p class="bodycopy"><a>To find all products sold by, say, Wherehouse Music (seller 
+  ID: A3QFR0K2KCB7EG), the query would look like this:</a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<b><span
+style='color:red'>[developer’s token goes here]</span></b>&amp;SellerSearch=S2RNQ11JZRSMTL&amp;type=lite&amp;offerstatus=open&amp;page=1&amp;f=xml</a></p>
+<p class="bodycopy"><a>Each value for the “page” parameter gives 25 results (as 
+  opposed to 10 results in some of the previous searches). The “offerstatus” parameter 
+  refers to listings that are either “open” or “closed”. Closed listings are product 
+  offerings that are listed by the seller in the Amazon.com catalog, but are not 
+  able to be purchased.</a></p>
+<p class="bodycopy"><a>You can also filter a seller’s listings by a specific seller 
+  browse node or keyword. Seller browse IDs use a different taxonomy than Amazon.com 
+  retail – to view the seller browse ID tree, please go here: </a></p>
+<p class="bodycopy"><a>&nbsp;http://s1.amazon.com/exec/varzea/ts/browse-zshops/68280&nbsp;&nbsp;&nbsp;&nbsp; 
+  (The ID is the number after the “browse-zshops” string).</a></p>
+<p class="bodycopy"><a><b><i><span style='color:red'>Please note</span></i></b><i>:  
+  Referral feels for third-party items are not available with UK Web Services.</i></a></p>
+<h2 class="bodycopy"><a class="subhead">Third-party Seller Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for products 
+  sold by a third-party seller.  This request will return a SOAP object containing 
+  the Lite or the Heavy form of the data.</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>SellerSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>seller_id string</a></p>
+      <p class=bodycopy><a>mode&nbsp; string</a></p>
+      <p class=bodycopy><a>tag&nbsp; string</a></p>
+      <p class=bodycopy><a>type&nbsp; string</a></p>
+      <p class=bodycopy><a>devtag&nbsp; string</a></p>
+      <p class=bodycopy><a>offerstatus&nbsp; string</a></p>
+      <p class=bodycopy><a>page&nbsp; string</a></p>
+      <p class=bodycopy><a>seller_browse_id&nbsp;&nbsp;string&nbsp;&nbsp;(optional)</a></p>
+      <p class=bodycopy><a>keyword&nbsp; string&nbsp; (optional)</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The SellerSearch 
+        request returns a SellerSearchDetails node.</a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

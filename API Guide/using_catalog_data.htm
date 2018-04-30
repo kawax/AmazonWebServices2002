@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Working with Amazon.com Catalog Data</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Working with Amazon.com Catalog Data</div>
+<p class="bodycopy">This section explains how to work with two core attributes 
+  of the Amazon.com catalog: pricing data and product image data.  </p>
+<h2><a class="subhead">Prices</a> </h2>
+<p class="bodycopy">Most products in the Amazon catalog will have at least two 
+  separate price attributes -- a &quot;list&quot; price (which is the manufacturer’s 
+  suggested retail price) and an &quot;our price&quot; (which is what Amazon.com 
+  actually charges for the product). The &quot;our&quot; price attribute is the 
+  true Amazon.com price -- you should use that one on your Web site. The &quot;list&quot; 
+  price is included so that you can calculate product discounts if you would like. 
+</p>
+<p class="bodycopy">In heavy documents, many products will also contain additional 
+  data for up to three other prices -- a &quot;used&quot; price, a &quot;refurbished&quot; 
+  price and a &quot;collectible&quot; price. (&quot;Lite&quot; documents sometimes 
+  contain used pricing as well). These prices are usually listed by our third-party 
+  merchants, and are available for your use if you would like. Because a product 
+  often has multiple used, refurbished and collectible prices, the returned data 
+  contains the lowest one for each category. </p>
+<p class="bodycopy"><b><i><span style='color:red'>Please note</span></i></b><i>: 
+  In cases (for example, US and UK import items) , non-US sites may return a US 
+  list price in addition to the country's list price.</i></p>
+<h3 class="subhead2">Pricing Display Guidelines</h3>
+<p class="bodycopy">Since pricing is a sensitive issue with most shoppers, here 
+  are some tips to ensure that the customer has a good experience as he or she 
+  makes the transition from your Web site to ours: </p>
+<ol start=1 type=1>
+  <li class="bodycopy">If a product shows &quot;our price&quot; but not &quot;list 
+    price&quot;, this is because there is no Amazon.com discount. </li>
+  <li class="bodycopy">There may be occasions when the &quot;our price&quot; does 
+    not match the price that is prominently featured on the product detail page. 
+    This happens because in some instances we give a third-party seller the same 
+    merchandising space that is usually devoted to an Amazon.com product. </li>
+  <li class="bodycopy">You should retrieve data results once every hour, in order 
+    to ensure that your Web site reflects the most up-to-date price. </li>
+  <li class="bodycopy">Please put a notice somewhere on your Web site that says 
+    &quot;Amazon.com prices subject to change.&quot;</li>
+</ol>
+<h2 class="subhead">Product Images </h2>
+<p><span class="bodycopy">Every product should have a &quot;large image,&quot; 
+  a &quot;medium image,&quot; and a &quot;small image&quot; attribute. In most 
+  cases, these attributes will correspond to large, medium and small thumbnail 
+  images of the product in question. However, there are some products that we 
+  do not have images for -- in these cases, the image URL will point to a 1 pixel 
+  invisible GIF. Unfortunately, we do not yet have a way of signifying these 1 
+  pixel GIFs directly in the returned data. </span></p>
+
+</body>
+</html>

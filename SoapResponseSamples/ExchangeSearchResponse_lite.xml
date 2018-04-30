@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:namesp37="urn:PI/DevCentral/SoapService" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+	<SOAP-ENV:Body>
+		<namesp38:ExchangeSearchRequestResponse xmlns:namesp38="urn:PI/DevCentral/SoapService">
+			<ListingProductDetails xsi:type="namesp37:ListingProductDetails">
+				<ExchangeId xsi:type="xsd:string">Y01Y2741473Y6491313</ExchangeId>
+				<ListingId xsi:type="xsd:string">0929T880784</ListingId>
+				<ExchangeTitle xsi:type="xsd:string">Harry Potter And The Sorcerer's Stone (COLLECTOR'S EDITION) [Leather Bound]  by</ExchangeTitle>
+				<ExchangePrice xsi:type="xsd:string">$63.44</ExchangePrice>
+				<ExchangeAsin xsi:type="xsd:string">043920352X</ExchangeAsin>
+				<ExchangeEndDate xsi:type="xsd:string">12/31/1969 16:00:00 PST</ExchangeEndDate>
+				<ExchangeTinyImage xsi:type="xsd:string">http://s1-images.amazon.com/images/A/tiny-/www.bookconsignment.com/image5.gif</ExchangeTinyImage>
+				<ExchangeOfferingType xsi:type="xsd:string">used</ExchangeOfferingType>
+				<ExchangeSellerId xsi:type="xsd:string">AL6XILMA6I8HN</ExchangeSellerId>
+				<ExchangeSellerNickname xsi:type="xsd:string">info5</ExchangeSellerNickname>
+				<ExchangeStartDate xsi:null="1" xsi:type="xsd:string"/>
+				<ExchangeStatus xsi:type="xsd:string">Open</ExchangeStatus>
+				<ExchangeQuantity xsi:type="xsd:string">2</ExchangeQuantity>
+				<ExchangeQuantityAllocated xsi:type="xsd:string">0</ExchangeQuantityAllocated>
+				<ExchangeFeaturedCategory xsi:type="xsd:string">68297</ExchangeFeaturedCategory>
+				<ExchangeCondition xsi:type="xsd:string">Binding: Hardcover, Publisher: Carlsen Verlag -Toll free customer service-</ExchangeCondition>
+				<ExchangeConditionType xsi:type="xsd:string">verygood</ExchangeConditionType>
+				<ExchangeAvailability xsi:type="xsd:string">Usually ships in 1-2 business days</ExchangeAvailability>
+				<ExchangeSellerState xsi:type="xsd:string">CA</ExchangeSellerState>
+				<ExchangeSellerCountry xsi:type="xsd:string">United States</ExchangeSellerCountry>
+				<ExchangeSellerRating xsi:type="xsd:string">4.0</ExchangeSellerRating>
+			</ListingProductDetails>
+		</namesp38:ExchangeSearchRequestResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

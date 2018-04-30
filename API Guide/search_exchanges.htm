@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Exchange Searches </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="header">Exchange Searches </div>
+<h2 class="subhead">Exchange Searches via XML</h2>
+<p class="bodycopy">Every item in the Amazon.com catalog that is offered by a 
+  third-party seller has a unique “exchange” ID<i>.</i> </p>
+<p class="bodycopy">To find a product’s Exchange ID, visit the page within our 
+  zShops area of the Web site that is devoted to that product. The ID appears 
+  in that page’s URL after the “/ts/exchange-glance” string. For example, in the 
+  following URL, the exchange ID would be<b> Y02Y4715852Y4685018</b>:</p>
+<p class="code">http://s1.amazon.com/exec/varzea/ts/exchange-glance/Y02Y4715852Y4685018</p>
+<h3 class="subhead2">Call and Response</h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy>Request Format</p></td>
+    <td width=493 valign=top class="Normal"> <p class=TableBody><span class="bodycopy">http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+        token goes here]</span>&amp;ExchangeSearch=<span
+  style='font-size:10.0pt;color:red'>[</span></span><span class="bodycopy" style='color:red'>Exchange 
+        ID goes here</span><span class="bodycopy" style='font-size:10.0pt;
+  color:red'>]</span><span class="bodycopy">&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;f=xml</span></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy>Response</p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy>The ExchangeSearch 
+        request returns a ListingProductInfo node. The ListingProductInfo node 
+        contains an array of ListingProductDetails nodes.</p></td>
+  </tr>
+</table>
+<h3 class="subhead2">Example</h3>
+<p class=code>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;ExchangeSearch=Z01Y1142250Y1355111&amp;type=lite&amp;f=xml 
+</p>
+<h2 class="bodycopy"><a class="subhead">Exchange Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for exchange 
+  searches.  This request will return a SOAP object containing the Lite or the 
+  Heavy form of the data.</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>ExchangeSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>exchange_id  
+        string</a></p>
+      <p class=bodycopy><a>mode  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The ExchangeSearch 
+        request returns a ListingProductInfo node. The ListingProductInfo node 
+        contains an array of ListingProductDetails nodes.</a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

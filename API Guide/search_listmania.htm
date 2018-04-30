@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Listmania! Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">Listmania! Searches</div>
+<h2 class="bodycopy"><a class="subhead">Listmania! Searches via XML</a></h2>
+<p class="bodycopy"><a> Listmania! lists are created by Amazon.com customers, 
+  and usually appear in the right-hand margin of a search results page. They comprise 
+  a group of products centered on a theme, such as &quot;The scariest horror novels 
+  of all time&quot; or &quot;DVDs with the best car chases&quot;. </a></p>
+<p class="bodycopy"><a>To call up a specific list in XML, you must first find 
+  that list's ID number. Simply travel to the page that contains the list that 
+  you are interested in, and look for the list's 13 character ID in web page's 
+  URL. (It appears after the &quot;/list-browse/-/&quot; string). For example, 
+  in the following URL the list ID would be &quot;34TRCFE5HC23M&quot;.  </a></p>
+<p class="code"><a>http://www.amazon.com/exec/obidos/tg/listmania/list-browse/-/19J6Y001ZYYD3/<span
+style='color:blue'>&nbsp;</span></a></p>
+<p class="bodycopy"><a>Once you find the list’s ID, you simply plug it into the 
+  request format below.</a></p>
+<h3 class="bodycopy"><a><span class="subhead2">Call and Response</span></a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span
+  style='font-size:10.0pt;color:red'>[developer’s token goes here]</span>&amp;ListManiaSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>listmania 
+        ID goes here</span><span style='font-size:10.0pt;color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;f=xml</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The ListManiaSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<h3 class="bodycopy"><a class="subhead2">Example</a></h3>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;ListManiaSearch=34TRCFE5HC23M&amp;type=lite&amp;f=xml 
+  </a></p>
+<h2 class="bodycopy"><a class="subhead">Listmania! Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for a Listmania! 
+  Search.  This request will return a SOAP object containing the Lite or the Heavy 
+  form of the data.</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>ListManiaSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>lm_id  string</a></p>
+      <p class=bodycopy><a>page  string</a></p>
+      <p class=bodycopy><a>mode  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The ListManiaSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

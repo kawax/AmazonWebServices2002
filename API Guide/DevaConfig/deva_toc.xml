@@ -1,0 +1,251 @@
+<deva type="toc" version="1.0">
+	<toc name="What's New in this Release?" type="#">
+		<link src="No URL defined"/>
+		<toc name="Version 3.0" type="#">
+			<link src="No URL defined"/>
+			<toc name="Additional Power Search Features" type="url">
+				<link src="search_power.htm#product_matching"/>
+			</toc>
+			<toc name="Enabling Honor System with Quick Click" type="url">
+				<link src="honor_system_payments.htm"/>
+			</toc>
+			<toc name="Keyword Searches" type="#">
+				<link src="keyword_searches.htm"/>
+			</toc>
+			<toc name="Marketplace Searches" type="url">
+				<link src="search_marketplace.htm"/>
+			</toc>
+			<toc name="Mobile Access to AWS" type="#">
+				<link src="mobile_access.htm"/>
+			</toc>
+			<toc name="Price Range Searches" type="url">
+				<link src="price_range_searches.htm"/>
+			</toc>
+			<toc name="Using Amazon Chat" type="#">
+				<link src="using_amazon_chat.htm"/>
+			</toc>
+			<toc name="Using XML3 in AWS Calls" type="url">
+				<link src="new_feature_xml3.htm"/>
+			</toc>
+			<toc name="Working with z-Shops Products" type="url">
+				<link src="z_shop_cobranding.htm"/>
+			</toc>
+			<toc name="XSLT Request Parameter Access" type="url">
+				<link src="using_xslt_request_parameter_access.htm"/>
+			</toc>
+		</toc>
+	</toc>
+	<toc name="Search This Kit" type="#">
+		<link src="No URL defined"/>
+		<toc name="Search" type="url">
+			<link src="DevaSearch/search.html"/>
+		</toc>
+	</toc>
+	<toc name="Getting Started" type="#">
+		<link src="No URL defined"/>
+		<toc name="Introduction" type="url">
+			<link src="introduction.htm"/>
+		</toc>
+		<toc name="AWS Overview" type="#">
+			<link src="No URL defined"/>
+			<toc name="Earning Money with AWS" type="url">
+				<link src="earning_money.htm"/>
+			</toc>
+			<toc name="Development Process" type="url">
+				<link src="development_process.htm"/>
+			</toc>
+			<toc name="Writing Applications Using Web Services" type="url">
+				<link src="writing_applications.htm"/>
+			</toc>
+			<toc name="Data Flow" type="url">
+				<link src="data_flow.htm"/>
+			</toc>
+			<toc name="Data Model" type="url">
+				<link src="data_model.htm"/>
+			</toc>
+			<toc name="Using the Developer’s Message Board" type="url">
+				<link src="message_boards.htm"/>
+			</toc>
+		</toc>
+		<toc name="Accessing Amazon Web Services" type="#">
+			<link src="No URL defined"/>
+			<toc name="Using SOAP" type="url">
+				<link src="using_soap.htm"/>
+			</toc>
+			<toc name="Using XML" type="url">
+				<link src="using_xml.htm"/>
+			</toc>
+			<toc name="Using XSLT" type="#">
+				<link src="No URL defined"/>
+				<toc name="Using XSLT" type="url">
+					<link src="using_xslt.htm"/>
+				</toc>
+				<toc name="Request Parameter Access" type="url">
+					<link src="using_xslt_request_parameter_access.htm"/>
+				</toc>
+				<toc name="Using XSLT Stylesheets" type="url">
+					<link src="using_xslt_stylesheets.htm"/>
+				</toc>
+			</toc>
+		</toc>
+		<toc name="Using International Data" type="#">
+			<link src="No URL defined"/>
+			<toc name="Using International Data" type="url">
+				<link src="using_international_data.htm"/>
+			</toc>
+		</toc>
+	</toc>
+	<toc name="Product and Catalog Data" type="#">
+		<link src="No URL defined"/>
+		<toc name="Product Data Overview" type="#">
+			<link src="No URL defined"/>
+			<toc name="Generating Additional Product Results" type="url">
+				<link src="generating_additional_results.htm"/>
+			</toc>
+			<toc name="Using Catalog Data" type="url">
+				<link src="using_catalog_data.htm"/>
+			</toc>
+			<toc name="Using Offerings" type="url">
+				<link src="using_offerings.htm"/>
+			</toc>
+		</toc>
+		<toc name="Actor/Actress Searches" type="url">
+			<link src="search_actor.htm"/>
+		</toc>
+		<toc name="Artist/Musician Searches" type="url">
+			<link src="search_artist.htm"/>
+		</toc>
+		<toc name="ASIN and ISBN Searches" type="url">
+			<link src="search_asin_isbn.htm"/>
+		</toc>
+		<toc name="Author Searches" type="url">
+			<link src="search_author.htm"/>
+		</toc>
+		<toc name="Blended Results Searches" type="url">
+			<link src="search_blended.htm"/>
+		</toc>
+		<toc name="Browse Node Searches" type="#">
+			<link src="search_browse.htm"/>
+		</toc>
+		<toc name="Director Searches" type="url">
+			<link src="search_director.htm"/>
+		</toc>
+		<toc name="Exchange Searches " type="url">
+			<link src="search_exchanges.htm"/>
+		</toc>
+		<toc name="Keyword Searches" type="url">
+			<link src="search_keywords.htm"/>
+		</toc>
+		<toc name="Listmania! Searches" type="url">
+			<link src="search_listmania.htm"/>
+		</toc>
+		<toc name="Manufacturer Searches" type="url">
+			<link src="search_manufacturer.htm"/>
+		</toc>
+		<toc name="Marketplace Searches" type="url">
+			<link src="search_marketplace.htm"/>
+		</toc>
+		<toc name="Power Searches" type="url">
+			<link src="search_power.htm"/>
+		</toc>
+		<toc name="Seller Profile Searches" type="url">
+			<link src="search_seller_profiles.htm"/>
+		</toc>
+		<toc name="Similarities Searches" type="url">
+			<link src="search_similarities.htm"/>
+		</toc>
+		<toc name="Third Party Searches" type="url">
+			<link src="search_third_party.htm"/>
+		</toc>
+		<toc name="UPC Searches" type="url">
+			<link src="search_upc.htm"/>
+		</toc>
+		<toc name="Wishlist Searches" type="url">
+			<link src="search_wishlist.htm"/>
+		</toc>
+	</toc>
+	<toc name="Enabling Purchases" type="#">
+		<link src="No URL defined"/>
+		<toc name="Enabling Transactions" type="url">
+			<link src="enabling_transactions.htm"/>
+		</toc>
+		<toc name="Adding Items to Shopping Carts" type="url">
+			<link src="add_to_cart.htm"/>
+		</toc>
+		<toc name="Using the Remote Shopping Cart" type="#">
+			<link src="No URL defined"/>
+			<toc name="Remote Shopping Cart via SOAP" type="url">
+				<link src="remote_soap_cart.htm"/>
+			</toc>
+			<toc name="Remote Shopping Cart via XML" type="url">
+				<link src="remote_xml_cart.htm"/>
+			</toc>
+			<toc name="Using the Remote Shopping Cart" type="url">
+				<link src="remote_shopping_cart.htm"/>
+			</toc>
+		</toc>
+		<toc name="Using Quick Click" type="url">
+			<link src="using_quick_click.htm"/>
+		</toc>
+	</toc>
+	<toc name="Selling Products on Amazon.com" type="#">
+		<link src="No URL defined"/>
+		<toc name="Getting Started" type="url">
+			<link src="selling_getting_started.htm"/>
+		</toc>
+		<toc name="Managing Your Inventory" type="url">
+			<link src="selling_managing_inventory.htm"/>
+		</toc>
+		<toc name="Retrieving Your Order Information" type="#">
+			<link src="selling_retrieving_order_information.htm"/>
+		</toc>
+		<toc name="Checking Inventory Status" type="#">
+			<link src="selling_checking_inventory_status.htm"/>
+		</toc>
+		<toc name="Submitting Bulk Refunds" type="#">
+			<link src="selling_submitting_bulk_refunds.htm"/>
+		</toc>
+		<toc name="Uploads and Order Logistics" type="#">
+			<link src="selling_uploads_order_logistics.htm"/>
+		</toc>
+	</toc>
+	<toc name="Reference" type="#">
+		<link src="No URL defined"/>
+		<toc name="About this SDK" type="url">
+			<link src="document_information.htm"/>
+		</toc>
+		<toc name="Amazon Terminology" type="url">
+			<link src="amazon_terminology.htm"/>
+		</toc>
+		<toc name="Common Product Modes and Browse IDs" type="url">
+			<link src="common_modes.htm"/>
+		</toc>
+		<toc name="Constraints and Limitations" type="url">
+			<link src="constraints_and_limitations.htm"/>
+		</toc>
+		<toc name="DTD, XSD and SOAP WSDL" type="url">
+			<link src="dtd_xsd_soap_wsdl.htm"/>
+		</toc>
+		<toc name="Publishing Your Application" type="url">
+			<link src="publishing_your_application.htm"/>
+		</toc>
+		<toc name="References and Resources" type="url">
+			<link src="references.htm"/>
+		</toc>
+		<toc name="Search, Sort, and Parameter Types" type="#">
+			<link src="No URL defined"/>
+			<toc name="Parameter Types" type="url">
+				<link src="parameter_types.htm"/>
+			</toc>
+			<toc name="Search Types" type="url">
+				<link src="search_types.htm"/>
+			</toc>
+			<toc name="Sort Types" type="url">
+				<link src="sort_types.htm"/>
+			</toc>
+		</toc>
+		<toc name="Web Services Glossary" type="url">
+			<link src="glossary.htm"/>
+		</toc>
+	</toc>
+</deva>

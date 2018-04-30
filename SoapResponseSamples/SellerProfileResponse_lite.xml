@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:namesp245="urn:PI/DevCentral/SoapService" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+	<SOAP-ENV:Body>
+		<namesp246:SellerProfileSearchRequestResponse xmlns:namesp246="urn:PI/DevCentral/SoapService">
+			<return xsi:type="namesp245:SellerProfile">
+				<SellerProfileDetails SOAP-ENC:arrayType="namesp245:SellerProfileDetails[1]" xsi:type="SOAP-ENC:Array">
+					<SellerProfileDetails xsi:type="namesp245:SellerProfileDetails">
+						<SellerNickname xsi:type="xsd:string">1bookstreet</SellerNickname>
+						<OverallFeedbackRating xsi:type="xsd:string">4.4</OverallFeedbackRating>
+						<NumberOfFeedback xsi:type="xsd:string">8942</NumberOfFeedback>
+						<StoreId xsi:type="xsd:string">S2HD7SHV3OTSUT</StoreId>
+						<StoreName xsi:type="xsd:string">1bookstreet zShop</StoreName>
+						<SellerFeedback xsi:type="namesp245:SellerFeedback">
+							<Feedback SOAP-ENC:arrayType="namesp245:Feedback[5]" xsi:type="SOAP-ENC:Array">
+								<Feedback xsi:type="namesp245:Feedback">
+									<FeedbackRating xsi:type="xsd:string">5</FeedbackRating>
+									<FeedbackComments xsi:type="xsd:string">Book was perfect and delivery was very prompt</FeedbackComments>
+									<FeedbackDate xsi:type="xsd:string">10/03/2002</FeedbackDate>
+									<FeedbackRater xsi:null="1" xsi:type="xsd:string"/>
+								</Feedback>
+								<Feedback xsi:type="namesp245:Feedback">
+									<FeedbackRating xsi:type="xsd:string">5</FeedbackRating>
+									<FeedbackComments xsi:type="xsd:string">This was sent as a gift - Thanks</FeedbackComments>
+									<FeedbackDate xsi:type="xsd:string">10/03/2002</FeedbackDate>
+									<FeedbackRater xsi:null="1" xsi:type="xsd:string"/>
+								</Feedback>
+								<Feedback xsi:type="namesp245:Feedback">
+									<FeedbackRating xsi:type="xsd:string">5</FeedbackRating>
+									<FeedbackComments xsi:type="xsd:string">Quick delivery and no problems at all.</FeedbackComments>
+									<FeedbackDate xsi:type="xsd:string">10/03/2002</FeedbackDate>
+									<FeedbackRater xsi:null="1" xsi:type="xsd:string"/>
+								</Feedback>
+								<Feedback xsi:type="namesp245:Feedback">
+									<FeedbackRating xsi:type="xsd:string">5</FeedbackRating>
+									<FeedbackComments xsi:type="xsd:string">Good communication, fast shipment, excellent item!</FeedbackComments>
+									<FeedbackDate xsi:type="xsd:string">10/03/2002</FeedbackDate>
+									<FeedbackRater xsi:null="1" xsi:type="xsd:string"/>
+								</Feedback>
+								<Feedback xsi:type="namesp245:Feedback">
+									<FeedbackRating xsi:type="xsd:string">5</FeedbackRating>
+									<FeedbackComments xsi:type="xsd:string">Fast, easy. Perfect.</FeedbackComments>
+									<FeedbackDate xsi:type="xsd:string">10/03/2002</FeedbackDate>
+									<FeedbackRater xsi:null="1" xsi:type="xsd:string"/>
+								</Feedback>
+							</Feedback>
+						</SellerFeedback>
+					</SellerProfileDetails>
+				</SellerProfileDetails>
+			</return>
+		</namesp246:SellerProfileSearchRequestResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

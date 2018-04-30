@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Price Range Searches</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+
+ 
+<div class="header">Price Range Searches</div>
+<h2 class="bodycopy">AWS 3.0 features a new parameter that you can use to generate 
+  search results based on a price range. By adding this parameter to a search 
+  request--say, a search for new DVDs--you can narrow the results to fit a high-to-low 
+  price range. You can also use this search to find products at a specific price 
+  point (for example, a search for books that cost $7.99). This search will work 
+  with all searches except power search, similarities search, listmania search, 
+  wishlist search, and seller searches.</h2>
+<p class="bodycopy"><strong><font color="#FF0000"><em>Please note</em></font></strong><em>: 
+  The prices returned in a price range search are in US currency pennies, so the 
+  given search of price=2000-5000 would find items priced at between 20 and 50 
+  dollars. </em><br>
+</p>
+<p class="subhead">Example</p>
+<p class="bodycopy">Here's an example of a standard browse node request:</p>
+<p class="code"><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+  token goes here]</span>&amp;BrowseNodeSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>browse node 
+  goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;mode=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>product line 
+  goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span> &amp;page=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>page # goes here</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;f=xml </a> </p>
+<p class="bodycopy">By adding the price range parameter to this request, you can 
+  generate results to fit that price range. </p>
+<p class="code"><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+  token goes here]</span>&amp;BrowseNodeSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>browse node 
+  goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;mode=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>product line 
+  goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span> &amp;page=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>page # goes here</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;price=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>price range 
+  goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;f=xml </a></p>
+<p class="bodycopy"><a class="subhead">Example</a></p>
+<p class="bodycopy"><a>To generate a &quot;heavy&quot; XML document listing top-selling 
+  books, the URL would look like this: </a></p>
+<p class=code><a><span
+style='font-size:10.0pt;font-family:"Courier New"'>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=</span><b><span style='font-size:10.0pt;color:red'>[developer’s 
+  token goes here]</span></b><span style='font-size:10.0pt;
+font-family:"Courier New"'>&amp;BrowseNodeSearch=1000&amp;mode=books&amp;type=heavy&amp;page=1<font color="#FF0000"><strong>&amp;price=20-50</strong></font>&amp;f=xml</span></a></p>
+<p>&nbsp; </p>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Power Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">Power Searches</div>
+<h2 class="bodycopy"><a>A power search is used to retrieve book information using 
+  a complex query. You can use the power search to send Amazon.com complex descriptions 
+  of books you are looking for. The syntax for a power search is shown below: 
+  </a></h2>
+<ul type=disc>
+  <li class="bodycopy"><a>author: ambrose</a></li>
+  <li class="bodycopy"><a>author: ambrose and binding: (abridged or large print) 
+    and pubdate: after 11-1996 </a></li>
+  <li class="bodycopy"><a>subject: history and (spain or mexico) and not military 
+    and language: spanish</a></li>
+  <li class="bodycopy"><a>(subject: marketing and author: kotler) or (publisher: 
+    harper and subject: &quot;high technology&quot;) </a></li>
+  <li class="bodycopy"><a>keywords: &quot;high tech&quot; and not fiction and 
+    pubdate: during 1999</a></li>
+  <li class="bodycopy"><a>isbn: 0446394319 or 0306806819 or 1567993850</a></li>
+</ul>
+<p class="bodycopy"><a>You can use the following properties of a book in your 
+  search: </a></p>
+<ul type=disc>
+  <li class="bodycopy"><a>Title</a></li>
+  <li class="bodycopy"><a>Subject</a></li>
+  <li class="bodycopy"><a>Author</a></li>
+  <li class="bodycopy"><a>Keyword</a></li>
+  <li class="bodycopy"><a>ISBN</a></li>
+  <li class="bodycopy"><a>Publisher</a></li>
+  <li class="bodycopy"><a>Language</a></li>
+  <li class="bodycopy"><a>Publication date (pubdate)</a></li>
+</ul>
+<p class="bodycopy"><a>You can use the words <i>and</i>, <i>or</i>, and <i>not</i> 
+  to link different parts of a book description. You can also group properties 
+  together using parentheses if that seems necessary to convey the precise meaning 
+  of your description. </a></p>
+<p class="bodycopy" style='text-autospace:
+none'><a><b><i><span style='color:red'>Please note</span></i></b><i><span
+style='color:blue'>:  </span>Because power searches can only be used on book-related 
+  searches on the Amazon site, power search results will only return book-related 
+  searches in XML.</i></a></p>
+<p class="subhead" style='text-autospace:
+none'><a name="product_matching" id="product_matching"></a></p>
+<p class="subhead" style='text-autospace:
+none'>Matching Against Product Fields</p>
+<p class="bodycopy">Power Search allows searching against a variety of fields. 
+  You can use any combination of the following keywords to match against specific 
+  product fields:</p>
+<ul>
+  <li class="bodycopy"> asin:</li>
+  <li class="bodycopy"> author:</li>
+  <li class="bodycopy"> author-exact:</li>
+  <li class="bodycopy"> author-begins:</li>
+  <li class="bodycopy"> keywords:</li>
+  <li class="bodycopy"> keywords-begin:</li>
+  <li class="bodycopy"> language:</li>
+  <li class="bodycopy"> publisher:</li>
+  <li class="bodycopy"> subject:</li>
+  <li class="bodycopy"> subject-words-begin:</li>
+  <li class="bodycopy"> subject-begins:</li>
+  <li class="bodycopy"> title:</li>
+  <li class="bodycopy"> title-words-begin:</li>
+  <li class="bodycopy"> title-begins:</li>
+</ul>
+<p class="bodycopy">You can combine them with <strong>and</strong>, <strong>or</strong>, 
+  and <strong>not</strong>, and you can group them with parentheses.</p>
+<p class="bodycopy">Here are two simple examples. </p>
+<p class="bodycopy">Find the French versions of the Michelin travel guides: </p>
+<p class="code">http://xml.amazon.com/onca/xml2?dev-t=D2ED5GR7A6RZ7Y&amp;t=YOURID&amp;PowerSearch=language:french%20and%20keywords:travel%20and%20title-begins:Michelin&amp;page=1&amp;mode=books&amp;type=lite&amp;f=xml</p>
+<p class="bodycopy">Find the English versions of those same travel guides: </p>
+<p class="code">http://xml.amazon.com/onca/xml2?dev-t=D2ED5GR7A6RZ7Y&amp;t=YOURID&amp;PowerSearch=language:english%20and%20keywords:travel%20and%20title-begins:Michelin&amp;page=1&amp;mode=books&amp;type=lite&amp;f=xml</p>
+<p><a class="subhead">Power Searches via XML</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class="bodycopy" style='text-autospace:
+  none'><a><u><span style='color:blue'>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=</span><span
+  style='color:red'>[developer’s token goes here]</span></u>&amp;PowerSearch=<span
+  style='color:red'>[search query goes here]</span>&amp;mode=<span
+  style='color:red'>[product line goes here: must be books]</span>&amp;type=<span
+  style='color:red'>[lite or heavy]</span>&amp;page=<span
+  style='color:red'>[page # goes here]</span>&amp;f=xml </a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The PowerSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p class="bodycopy" style='text-autospace:
+none'><a><b><i><span style='color:red'>Please note</span></i></b><i><span
+style='color:blue'>:  </span>Space characters must be represented in &quot;URL 
+  encoded&quot; form where the spaces are replaced with the three character sequence 
+  &quot;%20&quot;.<span style='color:blue'> </span></i></a></p>
+<p class="bodycopy"><a>Here is a sample URL:</a></p>
+<p class="code"><a>http://xml.amazon.com/onca/xml?v=1.0&amp;PowerSearch=author:Stephen%20King%20and%20pubdate:2003&amp;mode=books&amp;dev-t=<b><span
+style='color:red'>[developer’s token goes here]</span></b>&amp;t=test&amp;type=lite&amp;f=xml</a></p>
+<p class="bodycopy"><a>Queries can include parentheses for grouping, and the <b>and</b>, 
+  <b>or</b>, and <b>not</b> operators.</a></p>
+<h3 class="bodycopy"><a><span class="subhead2">Examples</span></a></h3>
+<p class="code" style='
+text-autospace:none'><a>http://xml.amazon.com/onca/xml3?PowerSearch=author:Knuth&amp;mode=books&amp;dev-t=<span
+style='color:red'>[developer’s token goes here]</span>&amp;t=webservices-20&amp;type=lite&amp;f=xml</a></p>
+<p class="code" style='
+text-autospace:none'><a>http://xml.amazon.com/onca/xml3?PowerSearch=author:Knuth%20and%20subject:Art&amp;mode=books&amp;dev-t=webservices-20&amp;t=<span
+style='color:red'>[developer’s token goes here]</span>&amp;type=lite&amp;f=xml</a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?PowerSearch=author:Stephen%20King%20and%20pubdate:2003&amp;mode=books&amp;dev-t=<span
+style='color:red;font-weight:normal'>[developer’s token goes here]</span>&amp;t=webservices-20&amp;type=lite&amp;f=xml</a></p>
+<h2 class="bodycopy"><a class="subhead">Power Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for power searches 
+  via SOAP.  This request will return a SOAP object containing the Lite or the 
+  Heavy form of the data.</a></p>
+<h3 class="bodycopy"><a><span class="subhead2">Call and Response</span></a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>PowerSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>power string</a></p>
+      <p class=bodycopy><a>page  string</a></p>
+      <p class=bodycopy><a>mode  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>sort&nbsp; string&nbsp; (optional)</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The PowerSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

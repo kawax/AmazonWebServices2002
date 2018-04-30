@@ -1,0 +1,210 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Parameter Types</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<h2 class="header">Parameter Types</h2>
+<p class="bodycopy">This section shows the various parameter types that can be 
+  used with Amazon.com Web Services.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=192 bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Parameter</p></td>
+    <td width=426 bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Description</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>t</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Associates 
+        tag</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ct</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Content-type 
+        for returned data (important for those who use XSL or are using proprietary 
+        systems that can't handle the text/HTML content type)</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>dev-t</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Developer 
+        token</p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>sort</p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Sort 
+        type </p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>mode</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Product 
+        line</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>type</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Output type</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>f </p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Output format</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>page</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Result page</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>offer</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">The offer 
+        parameter is used to request and limit the types of offerings returned 
+        as part of an ASIN search. If the offer parameter is not supplied then 
+        the returned data does not include any offering information. If the parameter 
+        is supplied it must be one of the following values:&nbsp;</p>
+      <p class="bodycopy">1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>ThirdPartyNew</p>
+      <p class="bodycopy">2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>Used</p>
+      <p class="bodycopy">3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>Collectible</p>
+      <p class="bodycopy">4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>Refurbished</p>
+      <p class="bodycopy">5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span>All</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>offerpage</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">The offerpage 
+        parameter is used to request a particular page of offering&nbsp;information. 
+        The default value is 1; 25 offerings are returned per page. </p>
+      <p class="bodycopy">To put offer and offerpage together, consider the following 
+        page:</p>
+      <p class="bodycopy"><a
+  href="http://www.amazon.com/exec/obidos/tg/stores/offering/list/-/0385503822/used/ref%3Dbuy%5Fpb%5Fu%5F"><span
+  style='color:windowtext'>http://www.amazon.com/exec/obidos/tg/stores/offering/list/-/0385503822/used/ref%3Dbuy%5Fpb%5Fu%5F</span></a></p>
+      <p class="bodycopy">The offer parameter selects a single &quot;tab&quot; 
+        of info (Used/New/Collectible). Then the offerpage selects successive 
+        chunks of 25 offers within the page. </p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>offerstatus</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>The offerstatus 
+        parameter is used to request&nbsp;either open (value = &quot;open&quot;) 
+        or closed (value=&quot;closed&quot;) offers when requesting information 
+        about a seller using the SellerSearch request.</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>keyword</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>The keyword 
+        parameter is used in SellerSearch requests, and allows the user to filter 
+        a specific seller’s products by a keyword.</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>seller-browse-id</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>The seller-browse-id 
+        parameter is used in SellerSearch requests, and allows the user to filter 
+        a specific seller’s products by a browse ID. Seller browse IDs use a different 
+        taxonomy than Amazon.com retail – to view the seller browse ID tree, please 
+        go here:</p>
+      <p class=bodycopy><a
+  href="http://s1.amazon.com/exec/varzea/ts/browse-zshops/68280">http://s1.amazon.com/exec/varzea/ts/browse-zshops/68280</a></p>
+      <p class=bodycopy>The ID is the number after the “browse-zshops” string.</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>BrowseNodeSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Browse node 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>SellerSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Seller search 
+        specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>AsinSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ASIN/ISBN 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>UpcSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>UPC search 
+        specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ExchangeSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Exchange 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>AuthorSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Author search 
+        specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ArtistSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Artist/Musician 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ActorSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Actor/Actress 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>DirectorSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Director 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ManufacturerSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ListmaniaSearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Listmania 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>SimilaritySearch</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Similarity 
+        search specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>SellerProfile</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">The SellerProfile 
+        parameter requests request for information about a particular seller. 
+        The value of the parameter is an encrypted representation of the Seller 
+        ID. </p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ExchangeRequest</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Exchange 
+        query specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>WishlistRequest</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Wish list 
+        query specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>SellerProfileRequest</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Seller profile 
+        query specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>SellerRequest</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Seller query 
+        specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>PowerRequest</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Power search 
+        query specifier</p></td>
+  </tr>
+  <tr> 
+    <td width=192 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Locale</p></td>
+    <td width=426 bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>International 
+        locale specifier</p></td>
+  </tr>
+</table>
+</body>
+</html>

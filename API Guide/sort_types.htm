@@ -1,0 +1,533 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Sort Types</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<h2 class="header">Sort Types</h2>
+<p class="bodycopy">This section shows the possible ways to sort data for the 
+  various types of searches Amazon Web Services offers.  </p>
+<p class="bodycopy">Amazon.com Web Services search results can be sorted in various 
+  ways, depending on the type of product returned by the search.  Search results 
+  may be sorted by the following criteria:</p>
+<ul type=disc>
+  <li class="bodycopy">Featured Items</li>
+  <li class="bodycopy">Bestselling</li>
+  <li class="bodycopy">Alphabetical (A-Z and Z-A)</li>
+  <li class="bodycopy">Price (High to Low and Low to High)</li>
+  <li class="bodycopy">Publication or Release Date</li>
+  <li class="bodycopy">Manufacturer</li>
+  <li class="bodycopy">Average Customer Review</li>
+  <li class="bodycopy">Artist Name</li>
+</ul>
+<p class="bodycopy"><b><i><span style='color:red'>Please note</span></i></b><i>:  
+  If a sort parameter isn’t specified in the request, the results will be ordered 
+  as if the <b>+salesrank</b> value is specified.</i></p>
+<div>
+  <p class="subhead">Sorting Books Results</p>
+</div>
+<p class="bodycopy">This table shows the possible books sort types and their corresponding 
+  values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Average 
+        Customer Review</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+reviewrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (Low to High)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pricerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (High to Low)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+inverse-pricerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Publication 
+        Date</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+daterank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-titlerank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Software Results</h3>
+<p class="bodycopy">This table shows the possible software sort types and their 
+  corresponding values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (High to Low)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+price</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (Low to High)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-price</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Outdoor Living Results</h3>
+<p class="bodycopy">This table shows the possible outdoor living sort types and 
+  their corresponding values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+psrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+manufactrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-manufactrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (Low to High)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+price</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (High to Low)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-price</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Tools Results</h3>
+<p class="bodycopy">This table shows the possible tools sort types and their corresponding 
+  values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+psrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+manufactrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-manufactrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (Low to High)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+price</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (High to Low)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-price</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Camera and Photo Results</h3>
+<p class="bodycopy">This table shows the possible camera and photo sort types 
+  and their corresponding values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-titlerank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Computers Results</h3>
+<p class="bodycopy">This table shows the possible computers sort types and their 
+  corresponding values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+psrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-titlerank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Video Games Results</h3>
+<p class="bodycopy">This table shows the possible video games sort types and their 
+  corresponding values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+      </p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (Low to High)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+price</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (High to Low)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-price</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Music Results</h3>
+<p class="bodycopy">This table shows the possible music sort types and their corresponding 
+  values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+psrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Artist 
+        Name</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+artistrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Original 
+        Release Date</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+orig-rel-date</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+      </p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Office Products Results</h3>
+<p class="bodycopy">This table shows the possible sort types and their corresponding 
+  values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (Low to High)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+price</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (High to Low)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-price</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Review</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+reviewrank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Video Results</h3>
+<p class="bodycopy">This table shows the possible video sort types and their corresponding 
+  values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Sort 
+        Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+psrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+      </p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Electronics Results</h3>
+<p class="bodycopy">This table shows the possible electronics sort types and their 
+  corresponding values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+      </p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Review</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+reviewrank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting DVDs Results</h3>
+<p class="bodycopy">This table shows the possible DVD sort types and their corresponding 
+  values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+      </p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Kitchen Results</h3>
+<p class="bodycopy">This table shows the possible kitchen sort types and their 
+  corresponding values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=222 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Featured 
+        Items</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Bestselling</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Alphabetical 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-titlerank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        (A-Z)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+manufactrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        (Z-A)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-manufactrank</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (Low to High)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>+price</p></td>
+  </tr>
+  <tr> 
+    <td width=222 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Price 
+        (High to Low)</p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>-price</p></td>
+  </tr>
+</table>
+<h3 class="subhead">Sorting Toys Results</h3>
+<p class="bodycopy">This table shows the possible toy sort types and their corresponding 
+  values.</p>
+<table border=1 cellspacing=0 cellpadding=0 width=624>
+  <tr> 
+    <td width=228 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>&nbsp;Type</p></td>
+    <td width=396 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy>Value</p></td>
+  </tr>
+  <tr> 
+    <td width=228 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy"><span style='font-size:9.0pt'>Featured 
+        Items</span></p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">+pmrank</p></td>
+  </tr>
+  <tr> 
+    <td width=228 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy"><span style='font-size:9.0pt'>Bestselling</span></p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">+salesrank</p></td>
+  </tr>
+  <tr> 
+    <td width=228 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy"><span style='font-size:9.0pt'>Price 
+        (Low to High)</span></p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">+pricerank</p></td>
+  </tr>
+  <tr> 
+    <td width=228 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy"><span style='font-size:9.0pt'>Price 
+        (High to Low)</span></p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">+inverse-pricerank</p></td>
+  </tr>
+  <tr> 
+    <td width=228 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy"><span style='font-size:9.0pt'>Alphabetical 
+        (A-Z)</span></p></td>
+    <td width=396 valign=top bgcolor="#FDFDF9" class="Normal"> <p class="bodycopy">+titlerank</p></td>
+  </tr>
+</table>
+<div class="bodycopy"></div>
+<p class="bodycopy">&nbsp;</p>
+
+</body>
+</html>

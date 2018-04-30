@@ -1,0 +1,656 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Working with International Web Services</title>
+<style><!--
+.subhead
+	{font-size:9.5pt;
+	font-family:Verdana;
+	color:#036A08;
+	font-weight:bold;}
+.bodycopy
+	{font-size:8.0pt;
+	font-family:Verdana;
+	color:black;}
+.Section1
+	{page:Section1;}
+-->
+</style>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Working with International Web Services</div>
+  
+<p class=bodycopy><span style='font-size:10.0pt'>This section describes the way 
+  you can incorporate results from Amazon.com’s international sites into your 
+  application or Web site.</span></p>
+  
+<p class=subhead><span style='font-size:12.0pt'>I. Overview</span></p>
+  <p class=bodycopy><span style='font-size:10.0pt'>The XML and SOAP calls described 
+    in this document speak to US-based Amazon services.&nbsp; However, Amazon.com 
+    also operates Web sites in other countries, and many of those sites can also 
+    be accessed using AWS.&nbsp; Here are a list of countries that Amazon.com 
+    currently operates in, and whether we offer Web Services for those sites:</span></p>
+  
+<table border=1 cellpadding=0 cellspacing=0>
+  <tr class="bodycopy"> 
+      <td width=221 valign=top bgcolor="#D9D6AF"> <p class=bodycopy><b>Country</b></p></td>
+      <td width=147 valign=top bgcolor="#D9D6AF"> <p class=bodycopy><b>Amazon 
+          URL</b></p></td>
+      <td width=173 valign=top bgcolor="#D9D6AF"> <p class=bodycopy><b>AWS offered 
+          for that site?</b></p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=221 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>United States</p></td>
+      <td width=147 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>www.amazon.com</p></td>
+      <td width=173 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>yes</p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=221 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>Great Britain</p></td>
+      <td width=147 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>www.amazon.co.uk</p></td>
+      <td width=173 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>yes</p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=221 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>Germany </p></td>
+      <td width=147 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>www.amazon.de</p></td>
+      <td width=173 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>yes</p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=221 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>Japan</p></td>
+      <td width=147 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>www.amazon.co.jp</p></td>
+      <td width=173 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>yes</p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=221 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>Canada</p></td>
+      <td width=147 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>www.amazon.ca</p></td>
+      <td width=173 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>Late 2003</p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=221 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>France</p></td>
+      <td width=147 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>www.amazon.fr</p></td>
+      <td width=173 valign=top bgcolor="#FDFDF9"> <p class=bodycopy>Late 2003</p></td>
+    </tr>
+  </table>
+  
+<p class=subhead><span style='font-size:12.0pt'>II. Feature List</span></p>
+  <p class=bodycopy><span style='font-size:10.0pt'>Some AWS features are not supported 
+    for our international Web sites; we will be releasing them as soon as we can. 
+    The following table lists the features for each country:</span></p>
+  
+<table border=1 cellpadding=0 cellspacing=0>
+  <tr> 
+    <td width=121 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>AWS 
+        Feature</b></p></td>
+    <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>US</b></p></td>
+    <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>UK</b></p></td>
+    <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>DE</b></p></td>
+    <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>JP</b></p></td>
+  </tr>
+  <tr> 
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Keyword 
+        Search</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Power Search</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+    <td valign=top bgcolor="#FDFDF9" class="Normal"><p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Browse 
+        Node Search</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ASIN 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Blended 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>UPC 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Artist 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Author 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Actor 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Director 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Manufacturer 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Similarity 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ASIN 
+        Offering Search</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Exchange 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Seller 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Seller 
+        Profile </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Listmania 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Wishlist 
+        Search </p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>XSLT 
+        support</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>“add-to” 
+        cart buttons</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Remote 
+        Shopping Cart</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+  </tr>
+  <tr> 
+    <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Quick 
+        Click Buying</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Yes</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+  </tr>
+</table>
+<h3><span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>Because 
+  they rely on marketplace data, </span><span style='font-size:
+10.0pt;font-family:Verdana;font-weight:normal'>ASIN offering, Exchange, Seller 
+  and Seller Profile searches are not supported for our international Web sites. 
+  However, we will be launching these (and other) features for our international 
+  sites sometime in 2003.</span></h3>
+  
+<h3><span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>(Please 
+  note: ASIN offering searches (which are essentially searches for marketplace 
+  items) are different than ASIN searches. ASIN searches are supported for all 
+  countries).</span></h3>
+  
+<p class=subhead><span style='font-size:12.0pt'>III. Making Service Calls</span></p>
+  <p class=bodycopy><span style='font-size:10.0pt'>Amazon Web Services uses the 
+    US Web site as the default site for shopping and fulfillment.&nbsp; To target 
+    a request for a specific country, you need to both append a parameter to the 
+    call to identify the country in question, and (for </span><span style='font-size:
+  10.0pt'>UK</span><span style='font-size:10.0pt'> and DE), use a slightly different 
+    URL in making your calls:</span></p>
+  <table border=1 cellpadding=0 cellspacing=0>
+    <tr> 
+      <td width=85 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>Country</b></p></td>
+      <td width=96 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>“locale” 
+          parameter</b></p></td>
+      <td width=144 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>AWS 
+          XML/HTTP URL</b></p></td>
+      <td width=216 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>SOAP 
+          WSDL</b></p></td>
+    </tr>
+    <tr> 
+      <td width=85 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>United 
+          States</p></td>
+      <td width=96 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>None 
+          needed</p></td>
+      <td width=144 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>http://xml.amazon.com...</p></td>
+      <td width=216 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><span style='color:windowtext'><a
+  href="http://soap.amazon.com/schemas3/AmazonWebServices.wsdl"><span
+  style='color:windowtext;text-decoration:none'>http://soap.amazon.com/schemas3/AmazonWebServices.wsdl</span></a></span></p></td>
+    </tr>
+    <tr> 
+      <td width=85 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Great 
+          Britain</p></td>
+      <td width=96 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>locale=uk</p></td>
+      <td width=144 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>http://xml-eu.amazon.com...</p></td>
+      <td width=216 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><span style='color:windowtext'><a
+  href="http://soap.amazon.com/schemas3/AmazonWebServices.wsdl"><span
+  style='color:windowtext;text-decoration:none'>http://soap-eu.amazon.com/schemas3/AmazonWebServices.wsdl</span></a></span></p></td>
+    </tr>
+    <tr> 
+      <td width=85 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Germany 
+        </p></td>
+      <td width=96 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>locale=de</p></td>
+      <td width=144 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>http://xml-eu.amazon.com...</p></td>
+      <td width=216 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><span style='color:windowtext'><a
+  href="http://soap.amazon.com/schemas3/AmazonWebServices.wsdl"><span
+  style='color:windowtext;text-decoration:none'>http://soap-eu.amazon.com/schemas3/AmazonWebServices.wsdl</span></a></span></p></td>
+    </tr>
+    <tr> 
+      <td width=85 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Japan</p></td>
+      <td width=96 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>locale=jp</p></td>
+      <td width=144 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>http://xml.amazon.com...</p></td>
+      <td width=216 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><span style='color:windowtext'><a
+  href="http://soap.amazon.com/schemas3/AmazonWebServices.wsdl"><span
+  style='color:windowtext;text-decoration:none'>http://soap.amazon.com/schemas3/AmazonWebServices.wsdl</span></a></span></p></td>
+    </tr>
+  </table>
+  
+<h3 class="subhead2"><br>
+  International Product Mode Parameters</h3>
+  <p class=bodycopy><span style='font-size:10.0pt'>Users of international AWS 
+    should be aware that product mode parameters vary slightly on a country-by-country 
+    basis, and that a service call will not work if an incorrect mode is used. 
+    Here is a list of modes that you should use in your service calls. You can 
+    also use this table to find out what product lines each country offers:</span></p>
+  <table border=1 cellpadding=0 cellspacing=0>
+    <tr> 
+      <td width=121 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>Product 
+          Line</b></p></td>
+      <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>US</b><b> 
+          mode parameter</b></p></td>
+      <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>UK</b><b> 
+          mode parameter</b></p></td>
+      <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>DE 
+          mode parameter</b></p></td>
+      <td width=108 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><b>JP 
+          mode parameter</b></p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Books</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>books</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>books-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>books-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>books-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Popular 
+          Music</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>music</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>music</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>pop-music-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>music-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Classical 
+          Music</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>classical</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>classical</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>classical-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>classical-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>DVD</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>dvd</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>dvd-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>dvd-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>dvd-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Video</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>vhs</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>vhs-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>vhs-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>vhs-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Electronics</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>electronics</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>electronics-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>ce-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>electronics-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Kitchen 
+          &amp; Housewares</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>kitchen</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>kitchen-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>kitchen-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Software</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>software</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>software-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>software-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>software-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Computer 
+          &amp; Video Games</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>videogames</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>video-games-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>video-games-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>videogames-jp</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Magazines</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>magazines</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>magazines-de</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Toys 
+          &amp; Games</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>toys</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>toys-uk</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Camera 
+          &amp; Photo</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>photo</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Apparel</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>apparel</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Baby</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>baby</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Outdoor 
+          Living</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>garden</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Computers</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>pc-hardware</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+    <tr> 
+      <td width=121 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>Tools 
+          &amp; Hardware</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>universal</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+      <td width=108 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy>NA</p></td>
+    </tr>
+  </table>
+  <h3><span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>Please 
+    be aware that our international Web Sites are continually adding new product 
+    lines to their catalog, and most of these new product lines will automatically 
+    be supported by AWS. So check back often!</span></h3>
+  
+<h3 class="subhead2"><br>
+  International Browse Nodes</h3>
+  <h3><span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>The 
+    browse structure is the way that Amazon.com organizes products into subjects 
+    and categories on our site so that customers can find the product they want 
+    easily and efficiently. A browse ID is a number that corresponds to a general 
+    subject area of Amazon.com. Browse nodes are required for certain AWS searches.</span></h3>
+  
+<h3><span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>Our 
+  international Web sites also use browse nodes, although each international site 
+  has a different set of nodes, even when their products are organized in a similar 
+  way to the </span><span style='font-size:10.0pt;font-family:Verdana;
+  font-weight:normal'>US</span><span style='font-size:10.0pt;font-family:Verdana;
+font-weight:normal'> catalog. For example, the node for comedy DVDs is “163357” 
+  (for the </span><span style='font-size:10.0pt;font-family:Verdana;font-weight:
+  normal'>US</span><span style='font-size:10.0pt;font-family:Verdana;
+font-weight:normal'>) and “501866” (for the </span><span style='font-size:10.0pt;
+  font-family:Verdana;font-weight:normal'>UK</span><span style='font-size:10.0pt;
+font-family:Verdana;font-weight:normal'>):</span></h3>
+<ul>
+  <li> 
+<span style='font-size:8.0pt;font-family:Verdana'><a
+href="http://www.amazon.com/exec/obidos/tg/browse/-/163357">http://www.amazon.com/exec/obidos/tg/browse/-/163357</a></span>
+  </li>
+  <li> 
+    <span style='font-size:8.0pt;font-family:Verdana'><a
+href="http://www.amazon.co.uk/exec/obidos/tg/browse/-/501866">http://www.amazon.co.uk/exec/obidos/tg/browse/-/501866</a></span>
+  </li>
+</ul>
+<div class=Section1> 
+  <h3><span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>Be 
+    sure to use the correct browse node when querying our international services. 
+    We list common international browse nodes in <a href="common_modes.htm">this 
+    section</a>.</span></h3>
+  <h3 class="subhead2"><br>
+    International ASINs</h3>
+  <h3><span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>An 
+    ASIN, or “Amazon Standard Item Number”, is the unique ID code for a product 
+    in Amazon’s catalog. It is also a common parameter used in certain AWS searches. 
+    All of our international sites use ASINs, although the ASIN will differ on 
+    a country-by-country basis, even if it is the same product in both catalogs. 
+    For example, the “Indiana Jones 4-pack DVD set” is represented by two different 
+    ASINs – “B00003CXC5” (for the </span><span style='font-size:10.0pt;font-family:
+  Verdana;font-weight:normal'>US</span><span style='font-size:10.0pt;
+font-family:Verdana;font-weight:normal'>) and “B00009ZWAB” (for the </span><span
+  style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>UK</span><span
+style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>):</span></h3>
+</div>
+<ul>
+  <li> 
+        <span style='font-size:8.0pt;font-family:Verdana'><a
+href="http://www.amazon.com/exec/obidos/ASIN/B00003CXC5">http://www.amazon.com/exec/obidos/ASIN/B00003CXC5</a></span>
+  </li>
+  <li> 
+        <span style='font-size:8.0pt;font-family:Verdana'><a
+href="http://www.amazon.co.uk/exec/obidos/ASIN/B00009ZWAB">http://www.amazon.co.uk/exec/obidos/ASIN/B00009ZWAB</a></span></li>
+</ul>
+<span style='font-size:10.0pt;font-family:Verdana;font-weight:normal'>Be 
+    sure to use the correct ASIN number when querying our international services.</span>
+  <h3 class="subhead2"><br>
+    Using Associates IDs in International Service Calls</h3>
+  
+<p class=subhead><font color="#000000"><span style='font-size:10.0pt;color:windowtext;font-weight:
+normal'>If you want to get credit for sales that you generate through a particular 
+  country’s AWS links, you will need to be a member of that country’s Associates 
+  program (and embed your Associates ID in your calls to the service). For more 
+  information about the </span><span style='font-size:10.0pt;color:windowtext;
+  font-weight:normal'>UK</span><span style='font-size:10.0pt;color:windowtext;
+font-weight:normal'>, DE and JP Associate programs, or to sign up, please see:</span></font></p>
+<ul>
+  <li> 
+    <font color="#000000"><span style='font-size:8.0pt;font-family:Verdana'><a
+href="http://www.amazon.co.uk/associates">http://www.amazon.co.uk/associates</a></span></font>
+  </li>
+  <li><font color="#000000"><span style='font-size:8.0pt;font-family:Verdana'><a
+href="http://www.amazon.de/exec/obidos/tg/stores/static/-/associates/associates/">http://www.amazon.de/exec/obidos/tg/stores/static/-/associates/associates/</a></span></font></li>
+  <li><font color="#000000"><span style='font-size:8.0pt;font-family:Verdana'><a
+href="http://www.amazon.co.jp/exec/obidos/subst/associates/join/associates.html">http://www.amazon.co.jp/exec/obidos/subst/associates/join/associates.html</a></span></font></li>
+</ul>
+<div class=Section1>
+  <p class=subhead><font color="#000000"><span style='font-size:10.0pt;color:windowtext;font-weight:
+normal'>Please note that the Amazon.de and Amazon.co.jp Associate programs are 
+    only supported in the German and Japanese languages, respectively.</span></font></p>
+  <p class=subhead><span style='font-size:12.0pt'>IV. Sample Calls</span></p>
+  <h3 class="subhead2"><br>
+    XML/HTTP Call Format (UK)</h3>
+  <p class=bodycopy><span style='font-size:10.0pt'>To target a given XML/HTTP 
+    call to Amazon.co.uk, change the URL from </span><span style='font-size:10.0pt'>xml.amazon.com...</span><span
+style='font-size:10.0pt'> to </span><span style='font-size:10.0pt'>xml-eu.amazon.com...</span><span
+style='font-size:10.0pt'>, and pass the locale parameter, as shown in the following 
+    request:</span></p>
+  <p style='background:#D3ECD4'><span style='font-size:8.0pt;
+font-family:Verdana;color:black'>http://</span><strong><span style='font-size:
+8.0pt;font-family:Verdana;font-weight:normal'>xml-eu</span></strong><span
+style='font-size:8.0pt;font-family:Verdana'>.amazon<span style='color:black'>.com/onca/xml3?t=webservices-20&amp;dev-t=</span><b><span
+style='color:red'>[developer’s token goes here]</span></b><span
+style='color:black'>&amp; type=</span><b><span style='color:red'>[lite or heavy]</span></b><span style='color:black'>&amp;mode=</span><b><span
+style='color:red'>[product line goes here]</span></b><span style='color:black'>&amp;page=</span><b><span
+style='color:red'>[page # goes here]</span></b><span style='color:black'>&amp;f=xml&amp;KeywordSearch=</span><b><span
+style='color:red'>[subject keyword goes here]</span></b><span style='color:
+black'>&amp;locale=uk</span></span></p>
+  <h3 class="subhead2"><br>
+    XML/HTTP Call Format (DE)</h3>
+  <p class=bodycopy><span style='font-size:10.0pt'>To target a given XML/HTTP 
+    call to Amazon.de, change the URL from </span><span style='font-size:10.0pt'>xml.amazon.com...</span><span
+style='font-size:10.0pt'> to </span><span style='font-size:10.0pt'>xml-eu.amazon.com...</span><span
+style='font-size:10.0pt'>, and pass the locale parameter, as shown in the following 
+    request:</span></p>
+  <p style='background:#D3ECD4'><span style='font-size:8.0pt;
+font-family:Verdana;color:black'>http://</span><strong><span style='font-size:
+8.0pt;font-family:Verdana;font-weight:normal'>xml-eu</span></strong><b><span
+style='font-size:8.0pt;font-family:Verdana'>.</span></b><span style='font-size:
+8.0pt;font-family:Verdana;color:black'>amazon.com/onca/xml3?t=webservices-20&amp;dev-t=</span><b><span
+style='font-size:8.0pt;font-family:Verdana;color:red'>[developer’s token goes 
+    here]</span></b><span style='font-size:8.0pt;font-family:Verdana;color:black'>&amp; 
+    type=</span><b><span style='font-size:8.0pt;font-family:Verdana;color:red'>[lite 
+    or heavy]</span></b><span style='font-size:8.0pt;font-family:Verdana;
+color:black'>&amp;mode=</span><b><span style='font-size:8.0pt;font-family:Verdana;
+color:red'>[product line goes here]</span></b><span style='font-size:8.0pt;
+font-family:Verdana;color:black'>&amp;page=</span><b><span style='font-size:
+8.0pt;font-family:Verdana;color:red'>[page # goes here]</span></b><span
+style='font-size:8.0pt;font-family:Verdana;color:black'>&amp;f=xml&amp;KeywordSearch=</span><b><span
+style='font-size:8.0pt;font-family:Verdana;color:red'>[subject keyword goes here]</span></b><span style='font-size:8.0pt;font-family:Verdana;color:black'>&amp;locale=de</span></p>
+  <h3 class="subhead2"><br>
+    XML/HTTP Call Format (JP)</h3>
+  <p class=bodycopy><span style='font-size:10.0pt'>To target a given XML/HTTP 
+    call to Amazon.co.jp, pass the locale parameter, as shown in the following 
+    request. (You do not need to change the URL).</span></p>
+  <p style='background:#D3ECD4'><span style='font-size:8.0pt;
+font-family:Verdana;color:black'>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=</span><b><span
+style='font-size:8.0pt;font-family:Verdana;color:red'>[developer’s token goes 
+    here]</span></b><span style='font-size:8.0pt;font-family:Verdana;color:black'>&amp; 
+    type=</span><b><span style='font-size:8.0pt;font-family:Verdana;color:red'>[lite 
+    or heavy]</span></b><span style='font-size:8.0pt;font-family:Verdana;
+color:black'>&amp;mode=</span><b><span style='font-size:8.0pt;font-family:Verdana;
+color:red'>[product line goes here]</span></b><span style='font-size:8.0pt;
+font-family:Verdana;color:black'>&amp;page=</span><b><span style='font-size:
+8.0pt;font-family:Verdana;color:red'>[page # goes here]</span></b><span
+style='font-size:8.0pt;font-family:Verdana;color:black'>&amp;f=xml&amp;KeywordSearch=</span><b><span
+style='font-size:8.0pt;font-family:Verdana;color:red'>[subject keyword goes here]</span></b><span style='font-size:8.0pt;font-family:Verdana;color:black'>&amp;locale=jp</span></p>
+  <h3 class="subhead2"><br>
+    SOAP Call Format</h3>
+  <p class=bodycopy><span style='font-size:10.0pt'>To target a given SOAP call 
+    to Amazon.co.uk, Amazon.de or Amazon.co.jp, you will need to add a <b>locale 
+    string</b> parameter to your request (“</span><span style='font-size:10.0pt'>uk</span><span
+style='font-size:10.0pt'>”, “de” or “jp”). For the </span><span
+  style='font-size:10.0pt'>UK</span><span style='font-size:10.0pt'> and </span><span
+  style='font-size:10.0pt'>Germany</span><span style='font-size:10.0pt'>, you 
+    will also need to change your SOAP WSDL from </span><span style='font-size:10.0pt'>http://soap.amazon.com</span><span
+style='font-size:10.0pt'>... to </span><span style='font-size:10.0pt'>http://soap-eu.amazon.com.</span></p>
+  <p class=subhead><span style='font-size:12.0pt'>V. Working with Japanese Characters</span></p>
+  <p class=bodycopy><span style='font-size:10.0pt'> Amazon.co.jp Web Services 
+    are UTF-8 encoded, so you cannot enter pure Japanese characters in your XML 
+    or SOAP service calls. Instead, you must convert Japanese characters to UTF-8 
+    before passing requests to our services. </span></p>
+  <p class=bodycopy><span style='font-size:10.0pt'> Similarly, the XML that we 
+    pass back is UTF-8 encoded as well. This may not be ideal for certain applications 
+    where the information is ultimately displayed on a Web page. If this is the 
+    case, you will need to convert the data to a format that works best for your 
+    audience (such as shift_jis).</span></p>
+  <p class=bodycopy><span style='font-size:10.0pt'> One more thing: You may encounter 
+    some “invalid character errors” when attempting to view the XML in Internet 
+    Explorer. If you do run into this problem, you may want to either use a different 
+    browser (such as Mozilla which doesn’t seem to have the same problems), or 
+    an XML client like XMLSpy.</span> </p>
+  <p class=subhead><span style='font-size:12.0pt'>VI. For More Information</span></p>
+  <p class=bodycopy><span style='font-size:10.0pt'>For more information about 
+    working with international data, please see the developer forums found at 
+    www.amazon.com/webservices.</span></p>
+</div>
+</body>
+</html>

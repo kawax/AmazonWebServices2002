@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Generating Additional Product Results</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<h2 class="header">Generating Additional Product Results</h2>
+<p class="bodycopy">Because some queries could potentially return a large number 
+  of results, Amazon breaks down the results and returns them in ten-item chunks. 
+   To obtain more than ten results for a search, you simply need to pass a &quot;page&quot; 
+  parameter in your URL. For example, to get the top 30 books written by Stephen 
+  King (instead of simply the top 10), you would need to make three separate calls 
+  into Amazon.com, with the parameters page=1 (which will give you books #1 through 
+  #10), page=2 (books #11 through #20) and page=3 (books #21 through #30). </p>
+<p class="bodycopy">Specifying a page value of&nbsp;<b>1</b> requests the first 
+  page, <b>2</b> the second, and so forth.&nbsp;A special value&nbsp;called <b>TotalResults</b> 
+  is returned as a part of any request that can return more than one result. This 
+  value indicates the total number of items (not pages) that are available from 
+  the query.  The total number of pages that are available from the query will 
+  be returned in a value called <b>TotalPages</b>.<span style='color:blue'> </span></p>
+<p class="bodycopy">The process for obtaining “<b>N</b>” items in a search is 
+  to create an algorithm as shown:</p>
+<ol start=1 type=1>
+  <li class="bodycopy">Form the basic query&nbsp;(omitting the page parameter)</li>
+  <li class="bodycopy">Set a page variable to <b>1</b></li>
+  <li class="bodycopy">Finalize the query by inserting&nbsp;the page variable 
+    into the basic query</li>
+  <li class="bodycopy">Issue the query</li>
+  <li class="bodycopy">Repeat steps 4 and 5 until the desired number of results 
+    have been fetched</li>
+</ol>
+
+</body>
+</html>

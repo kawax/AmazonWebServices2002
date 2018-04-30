@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+	<SOAP-ENV:Body>
+		<namesp1:KeywordSearchRequestResponse xmlns:namesp1="urn:PI/DevCentral/SoapService">
+			<ProductInfo>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/B00005O5DJ">
+					<Asin>B00005O5DJ</Asin>
+					<ProductName>Cats &amp; Dogs (Full Screen Edition)</ProductName>
+					<Catalog>DVD</Catalog>
+					<Directors>
+						<Director>Lawrence Guterman</Director>
+					</Directors>
+					<TheatricalReleaseDate>04 July, 2001</TheatricalReleaseDate>
+					<ReleaseDate>16 October, 2001</ReleaseDate>
+					<Manufacturer>Warner Studios</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/B00005O5DJ.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/B00005O5DJ.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/B00005O5DJ.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$26.98</ListPrice>
+					<OurPrice>$22.99</OurPrice>
+					<SalesRank>1,883</SalesRank>
+					<Lists>
+						<ListId>1FRDG9GR8J18E</ListId>
+						<ListId>36DOYMKRQYHXI</ListId>
+						<ListId>184A0KOYBA5RQ</ListId>
+					</Lists>
+					<BrowseList>
+						<BrowseNode>
+							<BrowseName>Feature Film Family</BrowseName>
+						</BrowseNode>
+					</BrowseList>
+					<Media>DVD</Media>
+					<NumMedia>1</NumMedia>
+					<Features>
+						<Feature>Color</Feature>
+						<Feature>Closed-captioned</Feature>
+						<Feature>Animated</Feature>
+					</Features>
+					<MpaaRating>PG (Parental Guidance Suggested)</MpaaRating>
+					<Availability>Available</Availability>
+					<Upc>085392125326</Upc>
+					<Reviews>
+						<AvgCustomerRating>3.40741</AvgCustomerRating>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>a movie that's fun for the whole family</Summary>
+							<Comment>Let's face it, there are very few movies that don't drive a parent insane when they are viewed dozens of times, but this is one of them. I've seen this countless times and still don't mind it. The story of the hidden war between cats and dogs is a hoot, whether or not you actually prefer one species over the other, and the jokes and one-liners are hysterical. Like the best cartoons, there are jokes that make the kids laugh and jokes that make the adults laugh. The voice talent is superb, the human actors are very good (though poor Jeff Goldblum just seems to play himself anymore), the special effects are impressive and each scene works -- from the elaborate opening sequence to ninja cats and a visit to Dog Headquarters.&lt;P>As for this DVD edition, the special features are pretty good. The film can be heard in English or French with English, French or Spanish subtitles. There are two featurettes: a 13-minute HBO First Look and a 6-minute special fx review. You can also compare storyboards of the ninja cat scene to the film, and the commentary track, featuring the director, the producer and the production designer, is very entertaining -- the participants even try to make the case that this movie is "like The Matrix"! I was prepared to give the DVD 5 stars until I realized that in very small print on the back of the box it says that the enhanced features on the DVD (including an alternative ending, an artwork gallery, screen savers and wallpaper) do not work on a Macintosh computer. Lame. Otherwise, though, this is a fun movie with entertaining DVD extras.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>"Cats and Dogs" is a cute flick!</Summary>
+							<Comment>"Cats and Dogs" is the story of scientist Professor Brody (Jeff Goldblum) who is working on a cure for all dog allergies. It's up to the dogs to protect his work from the evil cats lead by Mr. Tinkles (Sean Hayes). The cat's plan: to reverse the chemical for curing dog allergy to making it so when humans take it, they will be allergic to all dogs. Then cats will rule the world. But instead of the dog leader Agent Butch (Alec Baldwin) getting a professional replacement for retired agent Buddy, he gets a young beagle puppy, Lou (Tobey Maguire), instead.&lt;P>Has a pretty simple plot with some hilarious parts. Yet very stupid, with the animation very, very obvious like the 'ninja kitties'. Reminded me a lot of "102 Dalmations" except this movie has James Bond 007 thrown in.&lt;P>But the biggest reason for giving this movie 4 stars is the voice talents from stars Alec Baldwin (one of my most favorite actors in his role in "The Hunt for Red October"), Tobey Maguire, Sean Hayes, Susan Sarandon (Played with another one of my favorite actors Kevin Costner in "Bull Durham"), Joe Pantoliano ("The Matrix", "The Fugitive", and "U.S. Marshals"), and Charlton Heston ("Ben Hur", "Ten Commandments" and "Planet of the Apes"). It was pretty fun for me to watch the movie and guess whose voice was whose. Got most of it correct. The other reason for giving it 4 stars was the humor for some of the humor was funny, others not. Favorite parts are:&lt;P>Sean Hayes as Mr. Tinkles when forced to where a bonnet: "Does evil where a bonnet?"&lt;P>Jeff Goldblum as Professor Brody, thinking there's a burglar in the house: "I've got a mitt and I'm not afraid to use it."&lt;P>Alec Baldwin as Butch, when Lou (Toby Maguire) tries to eat an dynamite disguised as a cookie: "That would have been the shortest assignment in history." And more but can't write it all down.&lt;P>All-in-all, a pretty cute flick for maybe young kids and adults, not much for teenagers I think.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>THE FUR FLIES</Summary>
+							<Comment>What a strange movie! It has some really funny scenes and some great dialogue. Being a person who likes both cats and dogs, although favoring the felines, it was amusing to see how the cats were portrayed so villainously. The heroic dogs of course were lovable, particularly Lou, Butch and Ivy. The opening sequence had my wife almost choking on laughter. The catapult (play on words here) in the beginning is truly funny.&lt;BR>The effects overall are astounding in that there are times when Butch really looks like Alec Baldwin, who provides the voice. One can almost see Toby Maguire too in Lou. The human actors (Jeff Goldblum, Elizabeth Perkins) are cartoonish but appropriately so in such a far out film.&lt;BR>"Cats and Dogs" moves well, and one can't help but find it a great way to spend ninety or so minutes. Kids and adults both should love it. Not a great movie, but it is a lot of fun.</Comment>
+						</CustomerReview>
+					</Reviews>
+					<SimilarProducts>
+						<Product>B00003CX5P</Product>
+						<Product>B00003CXI1</Product>
+						<Product>B000065U1N</Product>
+						<Product>B00005JKQZ</Product>
+						<Product>B00005K3OT</Product>
+					</SimilarProducts>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/B000059HAP">
+					<Asin>B000059HAP</Asin>
+					<ProductName>The Truth About Cats &amp; Dogs</ProductName>
+					<Catalog>DVD</Catalog>
+					<Starring>
+						<Actor>Uma Thurman</Actor>
+						<Actor>Janeane Garofalo</Actor>
+					</Starring>
+					<Directors>
+						<Director>Michael Lehmann</Director>
+					</Directors>
+					<TheatricalReleaseDate>26 April, 1996</TheatricalReleaseDate>
+					<ReleaseDate>17 April, 2001</ReleaseDate>
+					<Manufacturer>Twentieth Century Fox</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/B000059HAP.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/B000059HAP.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/B000059HAP.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$24.98</ListPrice>
+					<OurPrice>$22.48</OurPrice>
+					<SalesRank>1,657</SalesRank>
+					<Lists>
+						<ListId>1TUQ5F4IUCI0N</ListId>
+						<ListId>2LCW6EBTKGOVO</ListId>
+						<ListId>2A2OUNJEKRNWL</ListId>
+					</Lists>
+					<BrowseList>
+						<BrowseNode>
+							<BrowseName>Feature Film-comedy</BrowseName>
+						</BrowseNode>
+					</BrowseList>
+					<Media>DVD</Media>
+					<NumMedia>1</NumMedia>
+					<Features>
+						<Feature>Color</Feature>
+						<Feature>Closed-captioned</Feature>
+						<Feature>Widescreen</Feature>
+						<Feature>Dolby</Feature>
+					</Features>
+					<MpaaRating>PG-13 (Parental Guidance Suggested)</MpaaRating>
+					<Availability>Available</Availability>
+					<Upc>024543013808</Upc>
+					<Reviews>
+						<AvgCustomerRating>4.55556</AvgCustomerRating>
+						<CustomerReview>
+							<Rating>5</Rating>
+							<Summary>Outstanding</Summary>
+							<Comment>This is a great movie... giving the everyday woman out there hope that there is a man that thinks we are beautiful on the outside because we are beautiful on the inside.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>5</Rating>
+							<Summary>I love Janeane Garofalo. I love this movie.</Summary>
+							<Comment>As a usual horror movie buff, I was surprised to see how much I loved "The Truth About Cats and Dogs." This movie is so charming I couldn't help but love it. I laughed and laughed all the way through, and when I wasn't laughing, I was smiling. Janeane Garofalo makes a terrific starring role debut as Abby Barnes, a talk radio host who feels that she is punished for how she looks. In fact, she is so convinced that no man would ever give her a chance, that when Brian (Ben Chaplin) asks her out for a drink, she gives him a description of her model neighbor, Noelle (Uma Thurman), and doesn't show up. When Brian shows up at the radio station, Noelle is there, and he automatically assumes that she is Abby. The movie is a hilarious romantic love triangle from then on. All the lead performances, not to mention a good supporting comedic role from Jamie Foxx, are terrific. The movie ends with one of the funniest one-liners in film history.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>5</Rating>
+							<Summary>Mixing up the formula</Summary>
+							<Comment>This movie is privvy to one of the weirdest gimmicks of all time -- what if the romantic lead were actually the side kick and the side kick the romantic lead. You take the normal, formulaic romantic comedy and intentionally and self-consciously cast contrarily so that Janeane Garofalo is the romantic lead and Uma Thurman is her side kick. Moreover, you make no attempt to hide Uma's beauty (remember "Pretty Woman" and Laura San Giocomo costumed to avoid us noticing her). In this case, the whole point is Noelle (Uma Thurman) is prettier than Abby (Janeane Garafalo). This is brought to a head by Brian (Ben Chaplin) who calls in to Abby's veterinary radio show and finds himself intrigued by the woman he speaks to on the telephone. The problem enters when Abby, thinking he would rather date Noelle, introduces Noelle as herself. This would be alright if this guy were a one night stand, but he is serious and real and wants the charming woman he met on the telephone. Even he begins to notice that Noelle (despite her obvious charms) is not that woman. In the only sex scene in the movie (conducted via telephone) Brian and Abby finally do come together, but her deception, born of insecurity, thwarts them. Finally it is Noelle who cracks, her love for Abby overcoming her lust for Brian and all is made right.</Comment>
+						</CustomerReview>
+					</Reviews>
+					<SimilarProducts>
+						<Product>B00003CXT7</Product>
+						<Product>B00005JKTP</Product>
+						<Product>B00005JKZH</Product>
+						<Product>B00005O5CM</Product>
+						<Product>B00003CXI1</Product>
+					</SimilarProducts>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/B00005QJJ4">
+					<Asin>B00005QJJ4</Asin>
+					<ProductName>Cats &amp; Dogs (Widescreen Edition)</ProductName>
+					<Catalog>DVD</Catalog>
+					<Directors>
+						<Director>Lawrence Guterman</Director>
+					</Directors>
+					<TheatricalReleaseDate>04 July, 2001</TheatricalReleaseDate>
+					<ReleaseDate>16 October, 2001</ReleaseDate>
+					<Manufacturer>Warner Studios</Manufacturer>
+					<ImageUrlSmall>http://images.amazon.com/images/P/B00005QJJ4.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/B00005QJJ4.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/B00005QJJ4.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<ListPrice>$26.98</ListPrice>
+					<OurPrice>$24.28</OurPrice>
+					<SalesRank>3,330</SalesRank>
+					<Lists>
+						<ListId>2HSR0MN4N4X24</ListId>
+						<ListId>2CB0D51EF6CH1</ListId>
+						<ListId>3SKDVGQAQTLLI</ListId>
+					</Lists>
+					<BrowseList>
+						<BrowseNode>
+							<BrowseName>Feature Film Family</BrowseName>
+						</BrowseNode>
+					</BrowseList>
+					<Media>DVD</Media>
+					<NumMedia>1</NumMedia>
+					<Features>
+						<Feature>Color</Feature>
+						<Feature>Closed-captioned</Feature>
+						<Feature>Widescreen</Feature>
+						<Feature>Animated</Feature>
+					</Features>
+					<MpaaRating>PG (Parental Guidance Suggested)</MpaaRating>
+					<Availability>Available</Availability>
+					<Upc>085392229321</Upc>
+					<Reviews>
+						<AvgCustomerRating>3.40741</AvgCustomerRating>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>a movie that's fun for the whole family</Summary>
+							<Comment>Let's face it, there are very few movies that don't drive a parent insane when they are viewed dozens of times, but this is one of them. I've seen this countless times and still don't mind it. The story of the hidden war between cats and dogs is a hoot, whether or not you actually prefer one species over the other, and the jokes and one-liners are hysterical. Like the best cartoons, there are jokes that make the kids laugh and jokes that make the adults laugh. The voice talent is superb, the human actors are very good (though poor Jeff Goldblum just seems to play himself anymore), the special effects are impressive and each scene works -- from the elaborate opening sequence to ninja cats and a visit to Dog Headquarters.&lt;P>As for this DVD edition, the special features are pretty good. The film can be heard in English or French with English, French or Spanish subtitles. There are two featurettes: a 13-minute HBO First Look and a 6-minute special fx review. You can also compare storyboards of the ninja cat scene to the film, and the commentary track, featuring the director, the producer and the production designer, is very entertaining -- the participants even try to make the case that this movie is "like The Matrix"! I was prepared to give the DVD 5 stars until I realized that in very small print on the back of the box it says that the enhanced features on the DVD (including an alternative ending, an artwork gallery, screen savers and wallpaper) do not work on a Macintosh computer. Lame. Otherwise, though, this is a fun movie with entertaining DVD extras.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>"Cats and Dogs" is a cute flick!</Summary>
+							<Comment>"Cats and Dogs" is the story of scientist Professor Brody (Jeff Goldblum) who is working on a cure for all dog allergies. It's up to the dogs to protect his work from the evil cats lead by Mr. Tinkles (Sean Hayes). The cat's plan: to reverse the chemical for curing dog allergy to making it so when humans take it, they will be allergic to all dogs. Then cats will rule the world. But instead of the dog leader Agent Butch (Alec Baldwin) getting a professional replacement for retired agent Buddy, he gets a young beagle puppy, Lou (Tobey Maguire), instead.&lt;P>Has a pretty simple plot with some hilarious parts. Yet very stupid, with the animation very, very obvious like the 'ninja kitties'. Reminded me a lot of "102 Dalmations" except this movie has James Bond 007 thrown in.&lt;P>But the biggest reason for giving this movie 4 stars is the voice talents from stars Alec Baldwin (one of my most favorite actors in his role in "The Hunt for Red October"), Tobey Maguire, Sean Hayes, Susan Sarandon (Played with another one of my favorite actors Kevin Costner in "Bull Durham"), Joe Pantoliano ("The Matrix", "The Fugitive", and "U.S. Marshals"), and Charlton Heston ("Ben Hur", "Ten Commandments" and "Planet of the Apes"). It was pretty fun for me to watch the movie and guess whose voice was whose. Got most of it correct. The other reason for giving it 4 stars was the humor for some of the humor was funny, others not. Favorite parts are:&lt;P>Sean Hayes as Mr. Tinkles when forced to where a bonnet: "Does evil where a bonnet?"&lt;P>Jeff Goldblum as Professor Brody, thinking there's a burglar in the house: "I've got a mitt and I'm not afraid to use it."&lt;P>Alec Baldwin as Butch, when Lou (Toby Maguire) tries to eat an dynamite disguised as a cookie: "That would have been the shortest assignment in history." And more but can't write it all down.&lt;P>All-in-all, a pretty cute flick for maybe young kids and adults, not much for teenagers I think.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>THE FUR FLIES</Summary>
+							<Comment>What a strange movie! It has some really funny scenes and some great dialogue. Being a person who likes both cats and dogs, although favoring the felines, it was amusing to see how the cats were portrayed so villainously. The heroic dogs of course were lovable, particularly Lou, Butch and Ivy. The opening sequence had my wife almost choking on laughter. The catapult (play on words here) in the beginning is truly funny.&lt;BR>The effects overall are astounding in that there are times when Butch really looks like Alec Baldwin, who provides the voice. One can almost see Toby Maguire too in Lou. The human actors (Jeff Goldblum, Elizabeth Perkins) are cartoonish but appropriately so in such a far out film.&lt;BR>"Cats and Dogs" moves well, and one can't help but find it a great way to spend ninety or so minutes. Kids and adults both should love it. Not a great movie, but it is a lot of fun.</Comment>
+						</CustomerReview>
+					</Reviews>
+					<SimilarProducts>
+						<Product>B00003CX5P</Product>
+						<Product>B00003CXI1</Product>
+						<Product>B000065U1N</Product>
+						<Product>B00005JKQZ</Product>
+						<Product>B00005K3OT</Product>
+					</SimilarProducts>
+				</Details>
+				<Details url="http://www.amazon.com/exec/obidos/redirect?tag=your-assoc-tag%26creative=78997987%26camp=2025%26link_code=xm2%26path=ASIN/B00003CY52">
+					<Asin>B00003CY52</Asin>
+					<ProductName>Cats and Dogs</ProductName>
+					<Catalog>Video</Catalog>
+					<Directors>
+						<Director>Lawrence Guterman</Director>
+					</Directors>
+					<TheatricalReleaseDate>04 July, 2001</TheatricalReleaseDate>
+					<ImageUrlSmall>http://images.amazon.com/images/P/B00003CY52.01.THUMBZZZ.jpg</ImageUrlSmall>
+					<ImageUrlMedium>http://images.amazon.com/images/P/B00003CY52.01.MZZZZZZZ.jpg</ImageUrlMedium>
+					<ImageUrlLarge>http://images.amazon.com/images/P/B00003CY52.01.LZZZZZZZ.jpg</ImageUrlLarge>
+					<Lists>
+						<ListId>3CMGKSEF3RZ2Z</ListId>
+						<ListId>3IL1DJJ9PK7GX</ListId>
+					</Lists>
+					<Media>Theatrical Release</Media>
+					<MpaaRating>PG (Parental Guidance Suggested)</MpaaRating>
+					<Availability>Pre Order</Availability>
+					<Reviews>
+						<AvgCustomerRating>3.40741</AvgCustomerRating>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>a movie that's fun for the whole family</Summary>
+							<Comment>Let's face it, there are very few movies that don't drive a parent insane when they are viewed dozens of times, but this is one of them. I've seen this countless times and still don't mind it. The story of the hidden war between cats and dogs is a hoot, whether or not you actually prefer one species over the other, and the jokes and one-liners are hysterical. Like the best cartoons, there are jokes that make the kids laugh and jokes that make the adults laugh. The voice talent is superb, the human actors are very good (though poor Jeff Goldblum just seems to play himself anymore), the special effects are impressive and each scene works -- from the elaborate opening sequence to ninja cats and a visit to Dog Headquarters.&lt;P>As for this DVD edition, the special features are pretty good. The film can be heard in English or French with English, French or Spanish subtitles. There are two featurettes: a 13-minute HBO First Look and a 6-minute special fx review. You can also compare storyboards of the ninja cat scene to the film, and the commentary track, featuring the director, the producer and the production designer, is very entertaining -- the participants even try to make the case that this movie is "like The Matrix"! I was prepared to give the DVD 5 stars until I realized that in very small print on the back of the box it says that the enhanced features on the DVD (including an alternative ending, an artwork gallery, screen savers and wallpaper) do not work on a Macintosh computer. Lame. Otherwise, though, this is a fun movie with entertaining DVD extras.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>"Cats and Dogs" is a cute flick!</Summary>
+							<Comment>"Cats and Dogs" is the story of scientist Professor Brody (Jeff Goldblum) who is working on a cure for all dog allergies. It's up to the dogs to protect his work from the evil cats lead by Mr. Tinkles (Sean Hayes). The cat's plan: to reverse the chemical for curing dog allergy to making it so when humans take it, they will be allergic to all dogs. Then cats will rule the world. But instead of the dog leader Agent Butch (Alec Baldwin) getting a professional replacement for retired agent Buddy, he gets a young beagle puppy, Lou (Tobey Maguire), instead.&lt;P>Has a pretty simple plot with some hilarious parts. Yet very stupid, with the animation very, very obvious like the 'ninja kitties'. Reminded me a lot of "102 Dalmations" except this movie has James Bond 007 thrown in.&lt;P>But the biggest reason for giving this movie 4 stars is the voice talents from stars Alec Baldwin (one of my most favorite actors in his role in "The Hunt for Red October"), Tobey Maguire, Sean Hayes, Susan Sarandon (Played with another one of my favorite actors Kevin Costner in "Bull Durham"), Joe Pantoliano ("The Matrix", "The Fugitive", and "U.S. Marshals"), and Charlton Heston ("Ben Hur", "Ten Commandments" and "Planet of the Apes"). It was pretty fun for me to watch the movie and guess whose voice was whose. Got most of it correct. The other reason for giving it 4 stars was the humor for some of the humor was funny, others not. Favorite parts are:&lt;P>Sean Hayes as Mr. Tinkles when forced to where a bonnet: "Does evil where a bonnet?"&lt;P>Jeff Goldblum as Professor Brody, thinking there's a burglar in the house: "I've got a mitt and I'm not afraid to use it."&lt;P>Alec Baldwin as Butch, when Lou (Toby Maguire) tries to eat an dynamite disguised as a cookie: "That would have been the shortest assignment in history." And more but can't write it all down.&lt;P>All-in-all, a pretty cute flick for maybe young kids and adults, not much for teenagers I think.</Comment>
+						</CustomerReview>
+						<CustomerReview>
+							<Rating>4</Rating>
+							<Summary>THE FUR FLIES</Summary>
+							<Comment>What a strange movie! It has some really funny scenes and some great dialogue. Being a person who likes both cats and dogs, although favoring the felines, it was amusing to see how the cats were portrayed so villainously. The heroic dogs of course were lovable, particularly Lou, Butch and Ivy. The opening sequence had my wife almost choking on laughter. The catapult (play on words here) in the beginning is truly funny.&lt;BR>The effects overall are astounding in that there are times when Butch really looks like Alec Baldwin, who provides the voice. One can almost see Toby Maguire too in Lou. The human actors (Jeff Goldblum, Elizabeth Perkins) are cartoonish but appropriately so in such a far out film.&lt;BR>"Cats and Dogs" moves well, and one can't help but find it a great way to spend ninety or so minutes. Kids and adults both should love it. Not a great movie, but it is a lot of fun.</Comment>
+						</CustomerReview>
+					</Reviews>
+				</Details>
+			</ProductInfo>
+		</namesp1:KeywordSearchRequestResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

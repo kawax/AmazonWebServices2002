@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>XSLT Stylesheets</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+  <div class="header">XSLT Stylesheets</div>
+  <p class="bodycopy"><a>The Amazon XSL processor takes the output of an XML request 
+    and formats the XML using a user-supplied stylesheet. The stylesheet contains 
+    two types of information: patterns and templates. Each pattern is associated 
+    with a template. The patterns are used to match particular nodes or hierarchies 
+    of nodes in the XML data; the template associated with the pattern is copied 
+    to the output each time a match for the pattern is found.</a></p>
+  <p class="bodycopy"><a>XSL is very flexible. Using a set of stylesheets, the 
+    same data could be formatted as an HTML table, an HTML list, a plain-text 
+    document, or even another XML document. </a></p>
+  <h3><a><span class="subhead">Sample XSL Stylesheet</span></a></h3>
+  <p class="bodycopy"><a>The following XSL stylesheet shows example XML code and 
+    what each line of code represents.  Please note that line numbers are included 
+    for reference purposes and are not part of the document.</a></p>
+  <table border=1 cellspacing=0 cellpadding=0 width=588>
+    <tr> 
+      <td width=42 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><a>Line</a></p></td>
+      <td width=546 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><a>XSL 
+          Code</a></p></td>
+    </tr>
+    <tr> 
+      <td width=42 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>1</a></p>
+        <p class=bodycopy><a>2</a></p>
+        <p class=bodycopy><a>3</a></p>
+        <p class=bodycopy><a>4</a></p>
+        <p class=bodycopy><a>5</a></p>
+        <p class=bodycopy><a>6</a></p>
+        <p class=bodycopy><a>7</a></p>
+        <p class=bodycopy><a>8</a></p>
+        <p class=bodycopy><a>9</a></p>
+        <p class=bodycopy><a>10</a></p>
+        <p class=bodycopy><a>11</a></p>
+        <p class=bodycopy><a>12</a></p>
+        <p class=bodycopy><a>13</a></p>
+        <p class=bodycopy><a>14</a></p>
+        <p class=bodycopy><a>15</a></p>
+        <p class=bodycopy><a>16</a></p>
+        <p class=bodycopy><a>17</a></p>
+        <p class=bodycopy><a>18</a></p>
+        <p class=bodycopy><a>19</a></p>
+        <p class=bodycopy><a>20</a></p>
+        <p class=bodycopy><a>21</a></p>
+        <p class=bodycopy><a>22</a></p>
+        <p class=bodycopy><a>23</a></p>
+        <p class=bodycopy><a>24</a></p>
+        <p class=bodycopy><a>25</a></p></td>
+      <td width=546 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>&lt;?xml 
+          version=&quot;1.0&quot; ?&gt;</a></p>
+        <p class=bodycopy><a>&lt;xsl:stylesheet version=&quot;1.0&quot; </a></p>
+        <p class=bodycopy><a>xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; 
+          </a></p>
+        <p class=bodycopy><a>xmlns=&quot;http://www.w3.org/TR/xhtml1/strict&quot;&gt;</a></p>
+        <p class=bodycopy><a>&lt;xsl:template match=&quot;/&quot;&gt;</a></p>
+        <p class=bodycopy><a>&lt;html&gt;</a></p>
+        <p class=bodycopy><a>   &lt;body&gt;</a></p>
+        <p class=bodycopy><a>                &lt;table border=&quot;2&quot;&gt;</a></p>
+        <p class=bodycopy><a>                                &lt;tr&gt;</a></p>
+        <p class=bodycopy><a>                                                &lt;td&gt;ASIN&lt;/td&gt;</a></p>
+        <p class=bodycopy><a>                                                &lt;td&gt;URL&lt;/td&gt;</a></p>
+        <p class=bodycopy><a>                                                &lt;td&gt;Name&lt;/td&gt;</a></p>
+        <p class=bodycopy><a>                                &lt;/tr&gt;</a></p>
+        <p class=bodycopy><a>                    &lt;xsl:for-each select=&quot;ProductInfo/Details&quot;&gt;</a></p>
+        <p class=bodycopy><a>                                &lt;tr&gt;</a></p>
+        <p class=bodycopy><a>                                                &lt;td&gt;&lt;xsl:value-of 
+          select=&quot;Asin&quot;/&gt;&lt;/td&gt;</a></p>
+        <p class=bodycopy><a>                                                &lt;td&gt;&lt;xsl:value-of 
+          select=&quot;@url&quot;/&gt;&lt;/td&gt;</a></p>
+        <p class=bodycopy><a>                                                &lt;td&gt;&lt;xsl:value-of 
+          select=&quot;ProductName&quot;/&gt;&lt;/td&gt;</a></p>
+        <p class=bodycopy><a>                                &lt;/tr&gt;</a></p>
+        <p class=bodycopy><a>                &lt;/xsl:for-each&gt;</a></p>
+        <p class=bodycopy><a>                &lt;/table&gt;</a></p>
+        <p class=bodycopy><a>   &lt;/body&gt;</a></p>
+        <p class=bodycopy><a>&lt;/html&gt;</a></p>
+        <p class=bodycopy><a>&lt;/xsl:template&gt;</a></p>
+        <p class=bodycopy><a>&lt;/xsl:stylesheet&gt;</a></p></td>
+    </tr>
+  </table>
+  <p class="bodycopy"><a><b>Key:</b></a></p>
+  <ul type=disc>
+    <li class="bodycopy"><a><b>Line 1</b> indicates that the stylesheet is an 
+      XML document.</a></li>
+    <li class="bodycopy"><a><b>Line 2</b> shows the beginning of the stylesheet 
+      itself. The <b>xmlns</b> declarations on lines 3 and 4 identify the namespaces 
+      used in the document.</a></li>
+    <li class="bodycopy"><a><b>Lines 5 through 24</b> are the top-level XSL template. 
+      The phrase <b>match=”/” </b>signals that the template matches the top (root) 
+      of the XML.</a></li>
+    <li class="bodycopy"><a><b>Lines 6 through 12</b> are emitted each time the 
+      enclosing template matches the data in the document. Since the template 
+      (line 5) matches the root of the data, the text on these lines is copied 
+      to the output exactly once. An HTML document containing a table with three 
+      columns (ASIN, URL, and Title) is created.</a></li>
+    <li class="bodycopy"><a><b>Lines 14 through 20</b> are an interior template. 
+      The <b>for-each </b>indicates that the template is to be applied each time 
+      a two-level hierarchy of XML data is encountered, where the first level 
+      of the hierarchy is a &lt;ProductInfo&gt; node and the second level is a 
+      &lt;Details&gt; node. This template effectively “loops” around the XML data, 
+      copying everything inside the template (lines 15 through 19) to the output 
+      for each match.</a></li>
+    <li class="bodycopy"><a><b>Lines 15 through 19</b> are copied to the output 
+      for each match. The <b>value-of </b>indicates that data from the XML document 
+      is to be copied to the output. Each data match will result in the creation 
+      of a single table row.</a></li>
+    <li class="bodycopy"><a><b>Lines 16 and 18</b> copy values from the &lt;ASIN&gt; 
+      and &lt;ProductName&gt; nodes in the XML, each into a single table cell.</a></li>
+    <li class="bodycopy"><a><b>Line 17</b> copies the value of the URL attribute 
+      from the matched node (&lt;ProductDetails&gt; in this case) into a table 
+      cell.</a></li>
+    <li class="bodycopy"><a><b>Lines 21 and 23</b> are emitted each time the enclosing 
+      template matches the data in the document. Since the template (line 4) matches 
+      the root of the data, the text on these lines is copied to the output exactly 
+      once. An HTML document containing a table with three columns (ASIN, URL, 
+      and Title) is created.</a></li>
+  </ul>
+  <h2 class="bodycopy"><a class="subhead">Notes on XSL Usage</a></h2>
+  <p class="bodycopy"><a>This section provides notes on issues specific to XSL 
+    usage.</a></p>
+  <h3 class="bodycopy"><a class="subhead2">Using the CT Parameter</a></h3>
+  <p class="bodycopy"><a><b>CT</b> represents the content-type for the resulting 
+    data returned from your request. This parameter is important for those who 
+    use XSL or proprietary systems that can't handle the text/HTML content type. 
+    You can specify any content-type that they want as the value of the parameter. 
+    This will return data in the content-type specified. </a></p>
+  <p class="bodycopy"><a>For example, the following call will generate XML within 
+    IE using XSLT:</a></p>
+  
+<p class="code"><a><span
+style='color:windowtext'>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=GTYDRES564THU&amp;KeywordSearch=mr%20t&amp;mode=books&amp;type=heavy&amp;locale=us&amp;page=1&amp;f=http://www.kreators.org/rcm.xsl</span></a></p>
+  <p class="bodycopy"><a>…instead of…</a></p>
+  
+<p class="code"><a><span
+style='color:windowtext'>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=GTYDRES564THU&amp;KeywordSearch=mr%20t&amp;mode=books&amp;type=heavy&amp;ct=text/xml&amp;locale=us&amp;page=1&amp;f=http://www.kreators.org/rcm.xsl</span></a></p>
+  <p class="bodycopy"><a>The transformation works in the above example, but the 
+    content-type is defaulted to &quot;text/html&quot;. The transformation returns 
+    the right format for IE (for printing purposes) when the <b>ct</b> parameter 
+    is set to <b>text/xml</b>.</a></p>
+
+</body>
+</html>

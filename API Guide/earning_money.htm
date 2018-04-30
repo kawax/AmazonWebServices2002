@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Earning Money through the Amazon Associates Program</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Earning Money through the Amazon Associates Program</div>
+<p class="bodycopy">If you find yourself sending a lot of traffic to Amazon.com 
+  through sites and applications that you have developed through Web Services, 
+  you may decide that you want to be compensated for that traffic. Fortunately, 
+  Amazon.com already has an existing program - the Associates Program -- that 
+  enables Web site owners to link to our store and earn referral fees for any 
+  sales that are generated through their links. </p>
+<h2 class="subhead">Embedding Your Associates ID in Your Request</h2>
+<p class="bodycopy">Each Associate is assigned an Associates ID, and this same 
+  ID can very easily be embedded into any XML/HTTP or SOAP calls made to the Amazon.com 
+  Web site. </p>
+<p class="bodycopy">To do so, simply replace the &quot;webservices-20&quot; tag 
+  found in the examples with your Associates ID. This will have the effect of 
+  automatically inserting your Associates ID in product links within the XML document. 
+  In fact, if you already have an application that parses the XML data and uses 
+  product links contained within that data, you won't have to change your application 
+  in any way - simply replace the Associates ID and you are all set. (The same 
+  is true if you are using our XSLT service to generate pre-formatted HTML widgets). 
+</p>
+<h3 class="subhead">Using Your Associates ID with International Web Services</h3>
+<p class="bodycopy">If you intend to make calls to multiple versions of Amazon 
+  Web Services (US, UK, Germany and/or Japan), you’ll need to use different Associate 
+  IDs in each of your calls. &nbsp;</p>
+<p class="bodycopy">For example, say a developer has&nbsp;a developer token of 
+  &quot;GTYDRES564THU&quot;. They can use this same token for any call that they 
+  make, regardless of which country's services they are calling. But if they are 
+  also an Associate for all four countries, then they will have four separate 
+  Associate IDs (say -- myWebsite-20 (US),&nbsp;<span style='color:red'><font color="#333333">myWebsite-21</font></span> 
+  (UK), myWebsite-22 (DE), and myWebsite-23 (JP)), and they will need to use the 
+  correct ID in their calls (depending on which country they are calling). </p>
+<p class="bodycopy">The four example calls&nbsp;might look like this:&nbsp;</p>
+<ul type=disc>
+  <li class="bodycopy">US:<span style='color:blue'>  </span><span
+     style='color:black'>http://xml.amazon.com/onca/xml3?t=</span><span
+     style='color:red'>myWebsite-20</span><span style='color:black'>&amp;dev-t=</span><span
+     style='color:red'>GTYDRES564THU</span><span style='color:black'>&amp;KeywordSearch=dogs&amp;mode=books&amp;type=lite&amp;page=1&amp;f=xml</span></a><br>
+  </li>
+  <li><span class="bodycopy">UK:  <span
+     style='color:blue'><span
+     style='color:black'>http://xml-eu.amazon.com/onca/xml3?t=</span><span
+     style='color:green'><font color="#FF0000">myWebsite-21</font></span><span style='color:black'>&amp;dev-t=</span><span
+     style='color:red'>GTYDRES564THU</span><span style='color:black'>&amp;KeywordSearch=dogs&amp;mode=books-uk&amp;type=lite&amp;page=1&amp;f=xml</span></a></span></span><span class="bodycopy" style='color:black'>&amp;</span><span class="bodycopy"
+     style='color:red'>locale=uk<br>
+    </span></li>
+  <li><span class="bodycopy"> DE:  <span
+     style='color:blue'><span
+     style='color:black'>http://xml-eu.amazon.com/onca/xml3?t=</span><span
+     style='color:green'><font color="#FF0000">myWebsite-22</font></span><span style='color:black'>&amp;dev-t=</span><span
+     style='color:red'>GTYDRES564THU</span><span style='color:black'>&amp;KeywordSearch=dogs&amp;mode=books-de&amp;type=lite&amp;page=1&amp;f=xml</span></span></span><span class="bodycopy" style='color:black'>&amp;</span><span class="bodycopy"
+     style='color:red'>locale=de<br>
+    </span></li>
+  <li><span class="bodycopy">JP:  <span
+     style='color:blue'><span
+     style='color:black'>http://xml.amazon.com/onca/xml3?t=</span><span
+     style='color:green'><font color="#FF0000">myWebsite-23</font></span><span style='color:black'>&amp;dev-t=</span><span
+     style='color:red'>GTYDRES564THU</span><span style='color:black'>&amp;KeywordSearch=dogs&amp;mode=books-jp&amp;type=lite&amp;page=1&amp;f=xml</span></span></span><span class="bodycopy" style='color:black'>&amp;</span><span class="bodycopy"
+     style='color:red'>locale=jp</span></li>
+</ul>
+</body>
+</html>

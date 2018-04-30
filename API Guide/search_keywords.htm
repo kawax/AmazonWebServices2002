@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Keyword Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="header">Keyword Searches</h2>
+<h2 class="bodycopy">This section shows how to execute keyword searches using 
+  SOAP or XML.</h2>
+<h2><a class="subhead">Keyword Searches via XML</a></h2>
+<p><a class="bodycopy">A keyword is a general search term that is used to find 
+  products in the Amazon.com catalog. Often, more than one keyword is used at 
+  the same time to form a short phrase (such as “finance software”). To call a 
+  list of products in XML based on a keyword (or keywords), please use the following 
+  request format:</a></p>
+<h3><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr class="bodycopy"> 
+    <td width=138 valign=top> <p class=TableBody><a>Request Format</a></p></td>
+    <td width=493 valign=top> <p class=TableBody><a><span class=code0>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[developer’s 
+        token goes here]</span>&amp;KeywordSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>subject keyword 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;mode=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>product line 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;page=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>page # goes here</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;f=xml</span> </a></p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=138 valign=top> <p class=TableBody><a>Response</a></p></td>
+    <td width=493 valign=top> <p class=TableBody><a>The KeywordSearch request 
+        returns a ProductInfo node. The ProductInfo node contains an array of 
+        Detail nodes.</a></p></td>
+  </tr>
+</table>
+<h3><a class="subhead2">Example</a></h3>
+<p class="bodycopy"><a>Objective: Generate a list of bestselling books on the 
+  topic of dogs in a &quot;lite&quot; XML document. </a></p>
+<ol start=1 type=1>
+  <li class="bodycopy"><a>Subject keyword: <b>dogs</b></a></li>
+  <li class="bodycopy"><a>Product line: <b>books</b></a></li>
+  <li class="bodycopy"><a>Document type: <b>lite</b></a></li>
+  <li class="bodycopy"><a>Page: <b>1</b></a></li>
+</ol>
+<p class="bodycopy"><a>The URL will look like this: </a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;KeywordSearch=dogs&amp;mode=books&amp;type=lite&amp;page=1&amp;f=xml 
+  </a></p>
+<p class="bodycopy"><a>If you have more than one subject keyword, you can simply 
+  separate them with &quot;%20&quot;, such as: </a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;KeywordSearch=dogs%20cats&amp;mode=books&amp;type=lite&amp;page=1&amp;f=xml 
+  </a></p>
+<p class="bodycopy"><a>You would use also use &quot;%20&quot; if you had one subject 
+  that contained more than one word, such as &quot;KeywordSearch=civil%20war&quot; 
+  or &quot;KeywordSearch=Ronald%20Reagan&quot;. </a></p>
+<h2><a class="subhead">Keyword Searches via SOAP</a></h2>
+<p><a class="bodycopy">This section shows how to create a request for a keyword 
+  search.  This request will return a SOAP object containing the Lite or the Heavy 
+  form of the data.</a></p>
+<h3><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr class="bodycopy"> 
+    <td width=121 valign=top> <p class=TableBody><a>Request Name</a></p></td>
+    <td width=511 valign=top> <p class=TableBody><a>KeywordSearchRequest</a></p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=121 valign=top> <p class=TableBody><a>Request Format</a></p></td>
+    <td width=511 valign=top> <p class=tablebody0><a>keyword&nbsp; string</a></p>
+      <p class=tablebody0><a>page&nbsp; string</a></p>
+      <p class=tablebody0><a>mode&nbsp; string</a></p>
+      <p class=tablebody0><a>tag&nbsp; string</a></p>
+      <p class=tablebody0><a>type&nbsp; string</a></p>
+      <p class=tablebody0><a>sort&nbsp; string&nbsp; (optional)</a></p>
+      <p class=tablebody0><a>devtag&nbsp; string</a></p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=121 valign=top> <p class=TableBody><a>Response</a></p></td>
+    <td width=511 valign=top> <p class=TableBody><a>The KeywordSearch request 
+        returns a ProductInfo node. The ProductInfo node contains an array of 
+        Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

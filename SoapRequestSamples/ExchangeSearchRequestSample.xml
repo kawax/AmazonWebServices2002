@@ -1,0 +1,12 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<SOAP-ENV:Body>
+		<m:ExchangeSearchRequest xmlns:m="urn:PI/DevCentral/SoapService">
+			<ExchangeSearchRequest xsi:type="m:ExchangeRequest">
+				<exchange_id xsi:type="xsd:string">Y01Y2741473Y6491313</exchange_id>
+				<tag xsi:type="xsd:string">webservices-20</tag>
+				<type xsi:type="xsd:string">lite</type>
+				<devtag xsi:type="xsd:string">your-dev-tag</devtag>
+			</ExchangeSearchRequest>
+		</m:ExchangeSearchRequest>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

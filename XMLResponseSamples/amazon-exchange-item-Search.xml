@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><ExchangeSearch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xml.amazon.com/schemas/dev-heavy.xsd">
+
+   <ListingProductDetails>
+      <ExchangeId>Z01Y1142250Y1355111</ExchangeId>
+      <ListingId>0826B409939</ListingId>
+      <ExchangeTitle>The 7 Habits of Highly Effective People [Paperback]  by Covey, Stephen R.</ExchangeTitle>
+      <ExchangePrice>$10.10</ExchangePrice>
+      <ExchangeAsin>0671708635</ExchangeAsin>
+      <ExchangeEndDate>12/31/1969 16:00:00 PST</ExchangeEndDate>
+      <ExchangeSellerId>A1ZE11QWGVVW3E</ExchangeSellerId>
+      <ExchangeSellerNickname>maqsood-seller22</ExchangeSellerNickname>
+      <ExchangeStartDate>08/26/2002 15:56:39 PDT</ExchangeStartDate>
+      <ExchangeStatus>A</ExchangeStatus>
+      <ExchangeQuantity>3</ExchangeQuantity>
+      <ExchangeQuantityAllocated>2</ExchangeQuantityAllocated>
+      <ExchangeFeaturedCategory>289349</ExchangeFeaturedCategory>
+      <ExchangeCondition>test</ExchangeCondition>
+      <ExchangeConditionType>acceptable</ExchangeConditionType>
+      <ExchangeOfferingType>used</ExchangeOfferingType>
+      <ExchangeSellerState>WA</ExchangeSellerState>
+      <ExchangeSellerCountry>United States</ExchangeSellerCountry>
+      <ExchangeSellerRating>3.0</ExchangeSellerRating>
+   </ListingProductDetails>
+</ExchangeSearch>

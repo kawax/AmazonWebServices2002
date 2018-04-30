@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Using Amazon.com Chat</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+ 
+<div class="header">
+  
+<div class="header">Mobile Access to Amazon.com's Catalog</div>
+  <p class="bodycopy">Amazon.com has several interfaces and APIs that allow users 
+  of non-traditional computing devices to find, discover, and buy items from its 
+  catalog. In 2000, Amazon.com began sharing these interfaces with a select number 
+  of developers and 3rd party mobile content providers as ways for them to add 
+  mobile commerce opportunities to their offerings. By embedding links within 
+  their applications to our product detail pages and/or search results, mobile 
+  content providers now have the ability to earn the same revenue sharing opportunities 
+  available to those who currently link to the Amazon.com html website. Now developers 
+  can easily use Amazon.com Web Services to display product information within 
+  their applications and then link to Amazon.com using the following information.</p>
+<p class="bodycopy">Let's say that you have used Amazon.com Web Services to find 
+  products that match the keyword &quot;dog&quot;. By now, most of you are familiar 
+  with ASINs, but if you are not, ASINs are unique product identifiers that Amazon 
+  assigns to products within its catalog. The bestselling book found using the 
+  keyword &quot;dog&quot; currently is &quot;Don't Shoot the Dog: The New Art 
+  of Teaching and Training&quot;. It's ASIN is &quot;0553380397&quot;. Let's also 
+  say that your application transforms the resulting xml into some other mark-up 
+  language using Amazon.com's XSLT service. In order to embed viable links within 
+  your XSL document, you need to know which url to construct.</p>
+  <p class="bodycopy">To link to this item's product detail page on the pc, developers 
+    would use the url in the &quot;Details&quot; tag: http://www.amazon.com/exec/obidos/ASIN/0553380397/[your_assoc_tag]?dev-t=[your_developer_token]</p>
+<p class="bodycopy">To link to this item's product detail page via a Personal 
+  Data Assistant, developers should use this url: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=dt/upda-1.0-anywhere/tg/aa/upda/item/-/0553380397.</p>
+<p class="bodycopy">To link to this item's product detail page via a RIM Blackberry 
+  Device, developers should use this link: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=dt/upda-1.0-i/tg/aa/upda/item/-/0553380397.</p>
+<p class="bodycopy">To link to this item's product detail page via a HDML enabled 
+  cell phone or browser, developers should use this link: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=ct/text/x-hdml/-/tg/aa/hdml/item/-/0553380397.</p>
+<p class="bodycopy">To link to this item's product detail page via a WAP enabled 
+  cell phone or browser, developers should use this link: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=ct/text/vnd.wap.wml/-/tg/aa/xml/glance-xml/-/0553380397.</p>
+<p class="bodycopy">To link to this item's product detail page via VoiceXML, developers 
+  should use this link: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=dt/(vxml_app_provider)/tg/aa/xml/glance-xml/-/0553380397. 
+  For Tellme applications, replace &quot;vxml_app_provider&quot; with &quot;vxml&quot;. 
+  For Bevocal, use &quot;vxml3&quot;. Each one of these companies (tellme.com 
+  and bevocal.com) have a free online developer studio. </p>
+<p class="bodycopy">Let's say that you just want your application to link to Amazon.com's 
+  top search results for a particular keyword. Let's say that we have a news or 
+  event driven service available for users. The keyword can be derived within 
+  a news article, can be associated with a location, weather, or even the name 
+  of a band. Let's say that our keyword for this example is &quot;solar power&quot; 
+  and we're going to link to the top search results in books. (Hint: use &quot;%20&quot; 
+  to represent the space in &quot;solar power&quot; and &quot;blended&quot; for 
+  all product search.)</p>
+<p class="bodycopy">To link to a search results page on the pc, developers would 
+  use the url : http://www.amazon.com/exec/obidos/external-search?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26keyword=solar%20power%26mode=books.</p>
+<p class="bodycopy">To link to this item's product detail page via a Personal 
+  Data Assistant, developers should use this url: http://www.amazon.com/exec/obidos/dt/upda=1.0-pocketpc/search-handle-url?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26index=books%26page=1%26size=6%26ss=1%26file=aa/upda/upda-other%26field-keywords=solar%20power%26method=GET%26.</p>
+<p class="bodycopy">To link to this item's product detail page via a RIM Blackberry 
+  Device, developers should use this link: http://www.amazon.com/exec/obidos/dt/upda=1.0-i/search-handle-url?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26index=books%26page=1%26size=6%26ss=1%26file=aa/upda/upda-other%26field-keywords=solar%20power%26method=GET%26</p>
+<p class="bodycopy">To link to this item's product detail page via a HDML enabled 
+  cell phone or browser, developers should use this link: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=ct/text/x-hdml/-/tg/aa/hdml/search/-/books/solar%20power</p>
+<p class="bodycopy">To link to this item's product detail page via a WAP enabled 
+  cell phone or browser, developers should use this link: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=ct/text/vnd.wap.wml/-/tg/aa/xml/search/-/books/solar%20power/1/</p>
+<p class="bodycopy">To link to this item's product detail page via VoiceXML, developers 
+  should use this link: http://www.amazon.com/exec/obidos/redirect?tag=your_assoc_tag%26creative=your_developer_token%26camp=2025%26link_code=xm2%26path=dt/(vxml_app_provider)/tg/aa/xml/search/-/books/solar%20power/1/. 
+  For Tellme applications, replace &quot;vxml_app_provider&quot; with &quot;vxml&quot;. 
+  For Bevocal, use &quot;vxml3&quot;. Each one of these companies (tellme.com 
+  and bevocal.com) have a free online developer studio. </p>
+<p class="bodycopy">Hopefully, this information sparks new ideas that can help 
+  developers create unique applications that can be monetized using Amazon.com's 
+  Associate program. If you have an application that links to non-traditional 
+  computing devices, then let us know by sending email to: webservices@amazon.com.</p>
+<p></p>
+<p class="bodycopy">&nbsp;</p>
+  </div></body>
+</html>

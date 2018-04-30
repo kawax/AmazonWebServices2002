@@ -1,0 +1,739 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title></title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class=Section1> 
+  <h1 class="header">Getting Started</h1>
+  <h2><a class="subhead">What Are Amazon Web Services for Sellers?</a></h2>
+  <p class="bodycopy">Amazon Web Services for Sellers provides a secure and automated 
+    method to upload inventory details to Amazon.com (zShops and Amazon Marketplace) 
+    on a scheduled basis. It also enables the automation of other important seller 
+    activities such as generating order reports and issuing bulk refunds. This 
+    is a first step toward real-time updates that will enable selling partners 
+    to better manage their inventory in multiple physical and virtual locations. 
+  </p>
+  <p class="bodycopy">This project utilizes HTTPS (Hypertext Transfer Protocol 
+    Secure), a protocol that is designed to transfer encrypted information between 
+    computers over the World Wide Web. HTTPS is a unique protocol that combines 
+    SSL and HTTP to provide secure data transmission. The goal of this document 
+    is to help our valued partners understand the technical requirements of our 
+    HTTPS solution.</p>
+  <h2 class="subhead">Getting Registered</h2>
+  <p class="bodycopy">In order to sell products on the Amazon Web site, you’ll 
+    first need to register with Amazon.com.  To get started, see the <a
+href="http://www.amazon.com/exec/obidos/tg/browse/-/1161232/ref=br_lr_/104-8908261-1003914">help 
+    information</a> contained on the Amazon Web site.</p>
+  <h2><a class="subhead">Security</a></h2>
+  <p class="bodycopy">Use of HTTPS ensures that all data uploads and downloads 
+    will be encrypted and secure. </p>
+  <p class="bodycopy">Sellers will need to use SSL (Secure Sockets Layer) and 
+    PKI (Public Key Infrastructure) technology to communicate securely with Amazon.com—if 
+    you are using Perl, note that both of these technologies are built into Perl 
+    to ensure that scripts written to automate the data communication are correctly 
+    configured.</p>
+  <p class="bodycopy">The identity of the seller will be verified using the &quot;Basic 
+    HTTP Authentication Scheme.&quot; The seller will provide his or her e-mail 
+    address and password in the HTTPS header, encoded using base64.&nbsp;</p>
+  <h2><a class="subhead">Automation</a> </h2>
+  <p class="bodycopy">Please note that the below instructions are detailed for 
+    partners using Perl. However, you may use any language.</p>
+  <h3><a>Script Configuration</a> </h3>
+  <p>In order to automate the secure uploading and retrieval of files and/or reports, 
+    selling partners will need to create an HTTPS client. This client will consist 
+    of scripts that automate the uploading and retrieval of files. </p>
+  <ul type=disc>
+    <li><b>Upload:</b> To upload a file, the seller uses a Perl script that they 
+      have written to send a POST request with the file attached in the request 
+      body. The seller should include both their Amazon.com e-mail address and 
+      password in the request header.</li>
+    <li><b>Retrieve:</b> To retrieve a file, the seller sends a POST request for 
+      the particular file. Amazon.com sends the requested file in an HTTPS response, 
+      at which point the seller would redirect the response to a specified directory 
+      and then save the file.</li>
+    <li><b>Notifications:</b> Selling partners who participate in the HTTPS solution 
+      can have the automatic e-mail notifications from Amazon.com regarding uploads 
+      and reports turned off, relying instead on the HTTPS responses in XML.</li>
+  </ul>
+  <p>If an upload fails due to internal error, Amazon.com will send e-mail with 
+    the batch status and information<b>.</b></p>
+  <p><b>&nbsp;NOTE: </b>Your script will need to include the cookie value – here 
+    is a sample of this code in Perl: </p>
+  <p class=Code>$request-&gt;headers-&gt;push_header('Cookie',&quot;x-main=YvjPkwfntqDKun0QEmVRPcTTZDMe?Tn?;ubid-main=002-8989859-9917520;ubid-tacbus=019-5423258-4241018;x-tacbus=vtm4d53DvX\@Sc9LxTnAnxsFL3DorwxJa; 
+    ubid-tcmacb=087-8055947-0795529;ubid-ty2kacbus=161-5477122-2773524; session-id=087-178254-5924832; 
+    session-id-time=950660664&quot;);</p>
+  <h1><a>Managing Inventory</a></h1>
+  <h2><a>Types of Requests (Summary)</a></h2>
+  <table border=1 cellspacing=0 cellpadding=0 width=630>
+    <tr> 
+      <td width=90 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Request 
+          Type </p></td>
+      <td width=72 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>HTTP Request 
+          Type </p></td>
+      <td width=138 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>URL </p></td>
+      <td width=174 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Name 
+          Value Pairs in Header </p></td>
+      <td width=156 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Response 
+          Types </p></td>
+    </tr>
+    <tr> 
+      <td width=90 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Add/ Modify/Delete</p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST </p></td>
+      <td width=138 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/add-modify-delete 
+        </p></td>
+      <td width=174 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>UploadFor:</span></b><span
+  style='font-size:9.0pt'> ZShop or Marketplace or MarketplaceOnly</span></p>
+        <p><b><span style='font-size:9.0pt'>FileFormat:</span></b><span
+  style='font-size:9.0pt'> UIEE or TabDelimited</span></p></td>
+      <td width=156 valign=top bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>&lt;Success&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          SUCCESS<br>
+          <b>&lt;/Success&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          CUSTOMER_UNAUTHORIZED<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          NO_DEFAULT_PAYMENT<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          INVALID_LISTING_PROGRAM<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          INVALID_FILE_FORMAT<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span> </p></td>
+    </tr>
+    <tr> 
+      <td width=90 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Modify 
+          Delete</p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody> POST</p></td>
+      <td width=138 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/modify-only</p></td>
+      <td width=174 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>UploadFor:</span></b><span
+  style='font-size:9.0pt'> ZShop or Marketplace or MarketplaceOnly </span></p>
+        <p><b><span style='font-size:9.0pt'>FileFormat:</span></b><span
+  style='font-size:9.0pt'> UIEE or TabDelimited</span></p></td>
+      <td width=156 valign=top bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>&lt;Success&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          SUCCESS<br>
+          <b>&lt;/Success&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          CUSTOMER_UNAUTHORIZED<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          NO_DEFAULT_PAYMENT<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          INVALID_LISTING_PROGRAM<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          INVALID_FILE_FORMAT<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p></td>
+    </tr>
+    <tr> 
+      <td width=90 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Purge 
+          and Replace </p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST </p></td>
+      <td width=138 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/purge-replace 
+        </p></td>
+      <td width=174 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>UploadFor:</span></b><span
+  style='font-size:9.0pt'> ZShop or Marketplace or MarketplaceOnly </span></p>
+        <p><b><span style='font-size:9.0pt'>FileFormat:</span></b><span
+  style='font-size:9.0pt'> UIEE or TabDelimited</span></p></td>
+      <td width=156 valign=top bgcolor="#FDFDF9" class="Normal"> <p> <b><span style='font-size:9.0pt'>&lt;Success&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          SUCCESS<br>
+          <b>&lt;/Success&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          CUSTOMER_UNAUTHORIZED<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          NO_DEFAULT_PAYMENT<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          INVALID_LISTING_PROGRAM<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p>
+        <p class=Tablebody><b>&lt;BusinessLogicError&gt;</b><br>
+          INVALID_FILE_FORMAT<br>
+          <b>&lt;/BusinessLogicError&gt;</b></p></td>
+    </tr>
+  </table>
+  <h2><a>Types of Requests (Detailed)</a></h2>
+  <p>Sellers will be able to manage their inventory at Amazon.com using the following 
+    request types:</p>
+  <ul type=disc>
+    <li>Add/Modify/Delete </li>
+    <li>Modify/Delete</li>
+    <li>Purge and Replace </li>
+  </ul>
+  <p>The difference between each of these request types is explained below.</p>
+  <h3><a>Inventory Upload via Add/Modify/Delete</a></h3>
+  <p><b>Use Case: </b>A seller should use the Add/Modify/Delete request to upload 
+    a batch of Amazon Marketplace and/or zShops listings containing additions, 
+    modifications, and/or deletions to their current inventory. Deletions must 
+    be marked as such in their template, (with a <b>d</b> in the add-delete field) 
+    and our system will update changed items to reflect the modifications. </p>
+  <p>A seller should choose the Add/Modify/Delete option when they have a large 
+    amount of inventory to upload onto the Amazon.com platform.</p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/add-modify-delete">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/add-modify-delete</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Choice of program type</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Amazon Marketplace only (for UIEE users) (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>zShops only</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Amazon Marketplace and/or zShops </p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Choice of file format</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Tab-delimited (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>UIEE</p>
+  <p><b>Message Body:</b></p>
+  <p>The body of the message should include the actual inventory file desired 
+    for upload with the required Amazon.com headers and values. These required 
+    values can be found via the URL below for program type &quot;zShops only&quot;:</p>
+  <p><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html</a></p>
+  <p>and via the URL below for program type &quot;Amazon Marketplace and/or zShops&quot;:</p>
+  <p><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html</a></p>
+  <h3><a>Inventory Upload via Modify/Delete</a></h3>
+  <p><b>Use Case: </b>A seller should use the Modify/Delete request when they 
+    want to upload modifications to their current inventory but don't want to 
+    supply all of the fields that an Add/Modify/Delete file requires. The field 
+    &quot;sku&quot; is required in this upload file, as well as at least one additional 
+    field that they are choosing to modify. The allowable fields of modification 
+    in the Modify/Delete Only option are price and quantity. Please note: to submit 
+    a delete, use the quantity column and enter &quot;0&quot; as the value. </p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/modify-only">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/modify-only</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Choice of program type (UploadFor) </p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Amazon Marketplace only (for UIEE users) (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>zShops only</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Amazon Marketplace and/or zShops </p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Choice of file format (FileFormat)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Tab-delimited (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>UIEE</p>
+  <h3><a>Inventory Upload via Purge and Replace</a></h3>
+  <p><b>Use Case: </b>A seller should use the Purge and Replace request when they 
+    want to completely purge all of their current Amazon Marketplace and/or zShops 
+    listings and replace them with a new set of offerings contained in their template.</p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/purge-replace">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/purge-replace</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Choice of program type</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Amazon Marketplace only (for UIEE users) (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>zShops only</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Amazon Marketplace and/or zShops </p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Choice of file format</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Tab-delimited (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>UIEE</p>
+  <p><b>Message Body:</b></p>
+  <p>The body of the message should include the actual inventory file desired 
+    for upload with the required Amazon.com headers and values. These required 
+    values can be found via the URL below for program type &quot;zShops only&quot;:</p>
+  <p><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/fixed-price-template-fields.html</a></p>
+  <p>and via the URL below for program type &quot;Amazon Marketplace and/or zShops&quot;:</p>
+  <p><a
+href="http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html">http://s1.amazon.com/exec/varzea/subst/seller-admin/marketplace-template-fields.html</a></p>
+  <h1><a>Checking Inventory Status</a> </h1>
+  <h2><a>Types of Requests (Summary)</a></h2>
+  <table border=1 cellspacing=0 cellpadding=0 width=630>
+    <tr> 
+      <td width=90 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Request 
+          Type </p></td>
+      <td width=72 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>HTTP Request 
+          Type </p></td>
+      <td width=138 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>URL </p></td>
+      <td width=174 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Name 
+          Value Pairs in Header </p></td>
+      <td width=156 bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Response 
+          Types </p></td>
+    </tr>
+    <tr> 
+      <td width=90 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Upload 
+          status</p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST </p></td>
+      <td width=138 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exe/panama/seller-admin/catalog-upload/get-batches 
+        </p></td>
+      <td width=174 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>NumberOfBatches:</span></b><span
+  style='font-size:9.0pt'> [insert number of batches here]</span> </p></td>
+      <td width=156 valign=top bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>&lt;Batches&gt; 
+          <br>
+          &lt;Batch&gt;</span></b><span style='font-size:9.0pt'><br>
+          BatchID= <br>
+          status = <br>
+          dateandtime = <br>
+          activateditems = <br>
+          numberofwarnings = itemsnotactivated =<br>
+          <b>&lt;/Batch&gt;<br>
+          &lt;/Batches&gt;</b> </span></p></td>
+    </tr>
+    <tr> 
+      <td width=90 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Error 
+          log </p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST</p></td>
+      <td width=138 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/download/errorlog 
+        </p></td>
+      <td width=174 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>BatchID:</span></b><span
+  style='font-size:9.0pt'> [insert Batch ID here] </span></p></td>
+      <td width=156 valign=top bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>&lt;FileError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          FILE_NOT_FOUND<br>
+          <b>&lt;/FileError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;SecurityError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          ACCESS_DENIED<br>
+          <b>&lt;/SecurityError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          INVALID_BATCH<br>
+          <b>&lt;/BusinessLogicError&gt; </b></span></p></td>
+    </tr>
+    <tr> 
+      <td width=90 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Quick 
+          fix file </p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST</p></td>
+      <td width=138 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/download/quickfix 
+        </p></td>
+      <td width=174 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>BatchID:</span></b><span
+  style='font-size:9.0pt'> [insert Batch ID here]</span></p></td>
+      <td width=156 valign=top bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>&lt;FileError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          FILE_NOT_FOUND<br>
+          <b>&lt;/FileError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;SecurityError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          ACCESS_DENIED<br>
+          <b>&lt;/SecurityError&gt;</b></span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          INVALID_BATCH<br>
+          <b>&lt;/BusinessLogicError&gt;</b></span></p></td>
+    </tr>
+  </table>
+  <h2><a>Types of Requests (Detailed)</a></h2>
+  <p>Once a seller has uploaded their inventory on the Amazon.com platform, they 
+    may want to check the status of their upload. Each inventory upload (whether 
+    it is an Add/Delete/Modify, Delete/Modify or Purge/Replace) has a batch ID 
+    associated with it. Sellers can either check the status of multiple batches, 
+    or retrieve error logs and/or quick fix files for specific batch IDs.</p>
+  <h3><a>Checking Upload Status</a>          </h3>
+  <p><b>Use Case:</b> A seller should use the Upload Status request when they 
+    want to find out the status of their latest uploads. (They will need to specify 
+    the number of uploads that they want to check on in the request header). Each 
+    upload (or “batch”) will return a batch ID, status report, and other information. 
+    If the status of a particular batch is negative, the seller can use the batch 
+    ID to retrieve an error log or quick fix file. (See below).</p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/get-batches">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/get-batches</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Number of Batches (default=10)</p>
+  <h3><a>Retrieval of Inventory Upload Error Log</a></h3>
+  <p><b>Use Case: </b>If something goes wrong with a specific inventory upload, 
+    the seller can retrieve the upload’s Error Log to determine what caused the 
+    problem. The Error Log will contain the row number of any applicable error 
+    or warning, the SKU, and the item name. It will also contain the message type 
+    (status message, data error, template error, etc.) and the message itself. 
+    The seller can use this information to fix any errors and re-upload those 
+    rows.</p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama%20/seller-admin/download/error_log">https://secure.amazon.com/exec/panama 
+    /seller-admin/download/error_log</a> </p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Batch ID</p>
+  <h3><a>Retrieval of Inventory Upload Quick Fix File</a></h3>
+  <p><b>Use Case: </b>A seller<b> </b>can also retrieve a Quick Fix file if something 
+    goes wrong with a particular upload. A Quick Fix file is similar to an Error 
+    Log, except that it contains only the error rows that did not get uploaded 
+    to the site due to missing required information or inappropriate information. 
+  </p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama%20/seller-admin/download/quick_fix">https://secure.amazon.com/exec/panama 
+    /seller-admin/download/quick_fix</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Batch ID</p>
+  <h1><a>Retrieving Order Information</a></h1>
+  <h2><a>Types of Requests (Summary)</a></h2>
+  <table border=1 cellspacing=0 cellpadding=0 width=624>
+    <tr> 
+      <td width=84 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Request 
+          Type</p></td>
+      <td width=72 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>HTTP 
+          RequestType </p></td>
+      <td width=126 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>URL 
+        </p></td>
+      <td width=192 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Name 
+          Value Pairs in Header</p></td>
+      <td width=150 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Response 
+          Types </p></td>
+    </tr>
+    <tr> 
+      <td width=84 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Report 
+          Status</p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST</p></td>
+      <td width=126 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exec/panama/ 
+          seller-admin/manual-reports/get-report-status </p></td>
+      <td width=192 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>NumberOfReports:</span></b><span
+  style='font-size:9.0pt'> [insert number of reports here]</span></p>
+        <p><b><span style='font-size:9.0pt'>ReportName:</span></b><span
+  style='font-size:9.0pt'> Order or PreOrder or BatchRefund or BulkRefund</span></p></td>
+      <td width=150 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>&lt;Reports&gt;<br>
+          &lt;Report&gt;</span></b><span style='font-size:9.0pt'> <br>
+          reportstarttime<br>
+          reportendtime<br>
+          ReportID<br>
+          <b>&lt;/Report&gt;<br>
+          &lt;/Reports&gt;</b> </span></p></td>
+    </tr>
+    <tr> 
+      <td width=84 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Order 
+          Fulfillment Report</p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST</p></td>
+      <td width=126 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>https://secure.amazon.com/exec/panama/ 
+          seller-admin/download/report </p></td>
+      <td width=192 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>ReportID:</span></b><span
+  style='font-size:9.0pt'> [insert Report ID here]</span></p>
+        <p><span style='font-size:9.0pt'>or</span></p>
+        <p><b><span style='font-size:9.0pt'>ReportName:</span></b><span
+  style='font-size:9.0pt'> Order or PreOrder or BatchRefund or BulkRefund</span></p></td>
+      <td width=150 valign=top bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>&lt;FileError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          FILE_NOT_FOUND<br>
+          <b>&lt;/FileError&gt;</b> </span></p>
+        <p><b><span style='font-size:9.0pt'>&lt;SecurityError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+          ACCESS_DENIED<br>
+          <b>&lt;/SecurityError&gt;</b></span></p></td>
+    </tr>
+  </table>
+  <h2><a>Types of Requests (Detailed)</a></h2>
+  <p>Sellers can also make HTTPS requests to retrieve order information. The two 
+    types of requests are detailed below.</p>
+  <h3><a>Checking Status of Order Fulfillment Reports</a></h3>
+  <p><b>Use Case: </b>A seller<b> </b>should use the Report Status Request when 
+    they want to check on the status of multiple order reports. They should include 
+    the number of reports that they want to check on in the request header.</p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama/seller-admin/manual-reports/get-report-status">https://secure.amazon.com/exec/panama/seller-admin/manual-reports/get-report-status</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Number of Reports (default = 10)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Choice of Report Name</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Order (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Preorder</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Batch Refund</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Bulk Refund</p>
+  <h3><a>Retrieving Order Fulfillment Reports</a></h3>
+  <p><b>Use Case: </b>A seller<b> </b>should use the Order Fulfillment Request 
+    when they want to download a specific report. The request header must include 
+    either the ID of the report in question, or a generic report name (Order, 
+    Preorder, etc.). If a generic report name is used, then the system will retrieve 
+    the latest available report.</p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama/seller-admin/download/report">https://secure.amazon.com/exec/panama/seller-admin/download/report</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Report ID or Choice of Report Name</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Order (default)</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Preorder</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Batch Refund</p>
+  <p><span
+style='font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Bulk Refund</p>
+  <h1><a>Submitting Bulk Refunds</a></h1>
+  <h2><a>Types of Requests (Summary)</a></h2>
+  <table border=1 cellspacing=0 cellpadding=0 width=624>
+    <tr> 
+      <td width=84 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Request 
+          Type</p></td>
+      <td width=72 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>HTTP 
+          RequestType </p></td>
+      <td width=126 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>URL 
+        </p></td>
+      <td width=192 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Name 
+          Value Pairs in Header</p></td>
+      <td width=150 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=TableHead>Response 
+          Types </p></td>
+    </tr>
+    <tr> 
+      <td width=84 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>Bulk Refund</p></td>
+      <td width=72 bgcolor="#FDFDF9" class="Normal"> <p class=Tablebody>POST</p></td>
+      <td width=126 bgcolor="#FDFDF9" class="Normal"> <p>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/batch-refund</p></td>
+      <td width=192 bgcolor="#FDFDF9" class="Normal"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>order-id:</span></b><span
+  style='font-size:9.0pt'> [insert order id here]</span></p>
+        <p><b><span style='font-size:9.0pt'>payments-transaction-id:</span></b><span
+  style='font-size:9.0pt'> [insert payments transaction id here]</span></p>
+        <p><b><span style='font-size:9.0pt'>refund-amount: </span></b><span
+  style='font-size:9.0pt'>[insert refund amount here]</span></p>
+        <p><b><span style='font-size:9.0pt'>reason: </span></b><span
+  style='font-size:9.0pt'>[insert reason here]</span></p>
+        <p><b><span style='font-size:9.0pt'>message: </span></b><span
+  style='font-size:9.0pt'>[insert message here]</span></p></td>
+      <td width=150 bgcolor="#FDFDF9" class="Normal">&nbsp; </td>
+    </tr>
+  </table>
+  <h2><a>Types of Requests (Detailed)</a></h2>
+  <h3><a>Submitting Bulk Refunds</a></h3>
+  <p><b>Use Case: </b>A seller<b> </b>should use the Bulk Refund request when 
+    they need to issue a large number of buyer refunds at one time.</p>
+  <p><b>HTTPS POST request to the following URL:</b></p>
+  <p><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/batch-refund">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/batch-refund</a></p>
+  <p><b>Header Content:</b></p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Username (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Password (using basic authentication)</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Developer Token</p>
+  <ul type=disc>
+    <ul type=disc>
+      <li>Order ID</li>
+      <li>Payments Transaction ID</li>
+      <li>Refund Amount</li>
+      <li>Reason</li>
+      <li>Message</li>
+    </ul>
+  </ul>
+  <h2>&nbsp;</h2>
+  <h1><a>Uploads and Order Fulfillment Report Logistics</a> </h1>
+  <h2><a>Schedule</a></h2>
+  <p>File processing will be restricted to one file at a time. For example, if 
+    a seller has a scheduled upload at the same time he or she schedules a delete 
+    file pickup, the requests will be queued in the order received so that only 
+    one request will be processed at a time. </p>
+  <p>If a purge and replace request fails, the remaining files in the queue will 
+    continue to be processed. To avoid data corruption, it will be the sellers’ 
+    responsibility to submit a fresh purge and replace request in the next schedule. 
+    If it is urgent that a purge and replace file is processed before the next 
+    scheduled pickup, the seller can instead use the manual upload found using 
+    the following URL:</p>
+  <p><span class=MsoHyperlink><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/catalog-upload-now/">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/catalog-upload-now/</a> 
+    </span></p>
+  <ul type=disc>
+    <li>The POST requests for inventory upload (Add/Modify/Delete) should be sent 
+      every four hours or multiples of four hours (12 midnight, 4a.m., 8a.m., 
+      12 noon, 4p.m., 8p.m. daily) All times PST</li>
+    <li>The POST requests associated with the purge and replace should be either 
+      sent every 12 midnight or every Friday 12 midnight . If the purge and replace 
+      file is going to be over 20 MB, it should only be scheduled for pickup once 
+      a week. </li>
+    <li>The POST requests associated with the upload of delete can be sent as 
+      frequent as every 30 minutes or multiples of 30 minutes.</li>
+  </ul>
+  <h2><a>Purge Policy</a> </h2>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>Pre-order reports and open listings are saved for 10 days.</p>
+  <p><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    </span></span>All other reports are saved for 30 days.</p>
+  <h1><a>Status Notifications</a> </h1>
+  <h2>&nbsp;<a>Email</a> </h2>
+  <p>We will not send e-mail notifying successful pick up because the seller will 
+    receive an automatic response as part of the HTTPS protocol. </p>
+  <p>E-mail will be sent if an upload batch fails do to an internal error. This 
+    e-mail will include information regarding the number of records, if any, that 
+    were processed before the batch failure and will instruct the seller to resubmit 
+    the file.</p>
+  <h2><a>Failure/Edge Case Notification</a></h2>
+  <h3><a>Login Failure</a></h3>
+  <p>When login and password fails for any request, the HTTPS response will include 
+    a 404 error that notifies the seller that there was an error on the client’s 
+    end. </p>
+  <h3><a>Business Logic Validation Failures</a></h3>
+  <p>There are two levels of business logic failures </p>
+  <ol start=1 type=1>
+    <li>When a request is submitted.  If a request fails at submission time, the 
+      error will be returned in the HTTPS response.</li>
+    <li>When the request is processed </li>
+  </ol>
+  <p>If the request fails during processing (no records are valid) the error(s) 
+    will be noted in the error log file, which can be downloaded as explained 
+    in the previous sections. </p>
+  <h3><a>File Fatal Processing</a> </h3>
+  <p>Because the file processing is done asynchronously, if a processing fatals, 
+    Amazon.com will send e-mail stating that the request caused a fatal error 
+    and that the file should be resubmitted.</p>
+</div>
+</body>
+</html>

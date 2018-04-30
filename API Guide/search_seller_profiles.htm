@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Seller Profile Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">Seller Profile Search</div>
+  
+<p class="subhead">Seller Profile Search via XML</p>
+<p class="bodycopy"><a>Every third-party seller at Amazon.com has a “member profile” 
+  with information such as seller nickname and cumulative feedback rating. To 
+  generate a particular seller’s profile in XML, please use the following format:</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span
+  style='font-size:10.0pt;color:red'>[developer’s token goes here]</span>&amp;SellerProfile=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>Seller ID 
+        goes here</span><span style='font-size:10.0pt;color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span>&amp;page=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>page # goes 
+        here</span><span style='font-size:10.0pt;color:red'>]</span>&amp;f=xml</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The SellerProfile 
+        request returns a SellerProfile node. The SellerProfile node contains 
+        an array of SellerProfileDetail nodes.</a></p></td>
+  </tr>
+</table>
+<h3 class="bodycopy"><a><span class="subhead2">Example</span></a></h3>
+<p class="bodycopy"><a>To generate the seller profile of Djangos.com (seller ID 
+  SRCE3VS0XUZ2O), you would use the following format:</a></p>
+<p class=code><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;SellerProfile=SRCE3VS0XUZ2O&amp;type=lite&amp;page=1&amp;f=xml 
+  </a></p>
+<div></div>
+<h2 class="subhead"><a>Seller Profile Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for seller profile 
+  searches via SOAP.  This request will return a SOAP object containing the Lite 
+  or the Heavy form of the data.</a></p>
+<h3 class="bodycopy"><a><span class="subhead2">Call and Response</span></a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>SellerProfileSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>seller_id  string</a></p>
+      <p class=bodycopy><a>page  string</a></p>
+      <p class=bodycopy><a>mode  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The SellerProfile 
+        request returns a SellerProfile node. The SellerProfile node contains 
+        an array of SellerProfileDetail nodes.</a></p></td>
+  </tr>
+</table>
+</body>
+</html>

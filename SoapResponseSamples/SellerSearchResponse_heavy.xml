@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:namesp221="urn:PI/DevCentral/SoapService" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+	<SOAP-ENV:Body>
+		<namesp222:SellerSearchRequestResponse xmlns:namesp222="urn:PI/DevCentral/SoapService">
+			<return xsi:type="namesp221:SellerSearch">
+				<SellerSearchDetails SOAP-ENC:arrayType="namesp221:SellerSearchDetails[1]" xsi:type="SOAP-ENC:Array">
+					<SellerSearchDetails xsi:type="namesp221:SellerSearchDetails">
+						<SellerNickname xsi:type="xsd:string">1bookstreet</SellerNickname>
+						<StoreId xsi:type="xsd:string">S2HD7SHV3OTSUT</StoreId>
+						<StoreName xsi:type="xsd:string">1bookstreet zShop</StoreName>
+						<NumberOfOpenListings xsi:type="xsd:string">3872</NumberOfOpenListings>
+						<ListingProductInfo xsi:type="namesp221:ListingProductInfo">
+							<ListingProductDetails SOAP-ENC:arrayType="namesp221:ListingProductDetails[1]" xsi:type="SOAP-ENC:Array">
+								<ListingProductDetails xsi:type="namesp221:ListingProductDetails">
+									<ExchangeId xsi:type="xsd:string">Y02Y1970161Y5209934</ExchangeId>
+									<ListingId xsi:type="xsd:string">0621T021450</ListingId>
+									<ExchangeTitle xsi:type="xsd:string">Little Prayer Series: Classic Children's Prayers [Hardcover]  by Parry, Alan...</ExchangeTitle>
+									<ExchangePrice xsi:type="xsd:string">$3.76</ExchangePrice>
+									<ExchangeAsin xsi:type="xsd:string">0849911605</ExchangeAsin>
+									<ExchangeEndDate xsi:type="xsd:string">12/31/1969 16:00:00 PST</ExchangeEndDate>
+									<ExchangeOfferingType xsi:type="xsd:string">new</ExchangeOfferingType>
+									<ExchangeSellerId xsi:type="xsd:string">ARZ6W4AEZ5FQH</ExchangeSellerId>
+									<ExchangeSellerNickname xsi:type="xsd:string">1bookstreet</ExchangeSellerNickname>
+									<ExchangeStartDate xsi:null="1" xsi:type="xsd:string"/>
+									<ExchangeStatus xsi:type="xsd:string">Cancelled</ExchangeStatus>
+									<ExchangeQuantity xsi:type="xsd:string">38</ExchangeQuantity>
+									<ExchangeQuantityAllocated xsi:type="xsd:string">0</ExchangeQuantityAllocated>
+									<ExchangeFeaturedCategory xsi:type="xsd:string">68297</ExchangeFeaturedCategory>
+									<ExchangeCondition xsi:type="xsd:string">Brand new! Warehouse direct to you. Experienced seller, over 50,000 orders.</ExchangeCondition>
+									<ExchangeConditionType xsi:type="xsd:string">new</ExchangeConditionType>
+									<ExchangeAvailability xsi:type="xsd:string">Usually ships in 1-2 business days</ExchangeAvailability>
+									<ExchangeSellerState xsi:type="xsd:string">CA</ExchangeSellerState>
+									<ExchangeSellerCountry xsi:type="xsd:string">United States</ExchangeSellerCountry>
+									<ExchangeSellerRating xsi:type="xsd:string">4.5</ExchangeSellerRating>
+								</ListingProductDetails>
+							</ListingProductDetails>
+						</ListingProductInfo>
+					</SellerSearchDetails>
+				</SellerSearchDetails>
+			</return>
+		</namesp222:SellerSearchRequestResponse>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Submitting Bulk Refunds</title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class=Section1> 
+  <h1 class="header"><a>Submitting Bulk Refunds</a></h1>
+  <h2><a class="subhead">Types of Requests (Summary)</a></h2>
+  <table border=1 cellspacing=0 cellpadding=0 width=624>
+    <tr class="bodycopy"> 
+      <td width=84 valign=top bgcolor="#D9D6AF"> <p class=TableHead>Request Type</p></td>
+      <td width=72 valign=top bgcolor="#D9D6AF"> <p class=TableHead>HTTP RequestType 
+        </p></td>
+      <td width=126 valign=top bgcolor="#D9D6AF"> <p class=TableHead>URL </p></td>
+      <td width=192 valign=top bgcolor="#D9D6AF"> <p class=TableHead>Name Value 
+          Pairs in Header</p></td>
+      <td width=150 valign=top bgcolor="#D9D6AF"> <p class=TableHead>Response 
+          Types </p></td>
+    </tr>
+    <tr class="bodycopy"> 
+      <td width=84 bgcolor="#FDFDF9"> <p class=Tablebody>Bulk Refund</p></td>
+      <td width=72 bgcolor="#FDFDF9"> <p class=Tablebody>POST</p></td>
+      <td width=126 bgcolor="#FDFDF9"> <p>https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/batch-refund</p></td>
+      <td width=192 bgcolor="#FDFDF9"> <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+        <p><b><span style='font-size:9.0pt'>order-id:</span></b><span
+  style='font-size:9.0pt'> [insert order id here]</span></p>
+        <p><b><span style='font-size:9.0pt'>payments-transaction-id:</span></b><span
+  style='font-size:9.0pt'> [insert payments transaction id here]</span></p>
+        <p><b><span style='font-size:9.0pt'>refund-amount: </span></b><span
+  style='font-size:9.0pt'>[insert refund amount here]</span></p>
+        <p><b><span style='font-size:9.0pt'>reason: </span></b><span
+  style='font-size:9.0pt'>[insert reason here]</span></p>
+        <p><b><span style='font-size:9.0pt'>message: </span></b><span
+  style='font-size:9.0pt'>[insert message here]</span></p></td>
+      <td width=150 bgcolor="#FDFDF9">&nbsp; </td>
+    </tr>
+  </table>
+  <h2><a class="subhead">Types of Requests (Detailed)</a></h2>
+  <h3><a class="subhead2">Submitting Bulk Refunds</a></h3>
+  <p class="bodycopy"><b>Use Case: </b>A seller<b> </b>should use the Bulk Refund 
+    request when they need to issue a large number of buyer refunds at one time.</p>
+  <p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+  <p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/batch-refund">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/batch-refund</a></p>
+  <p class="bodycopy"><b>Header Content:</b></p>
+</div>
+<ul>
+  <li>
+    <div class=bodycopy>Username (using basic authentication)</div>
+  </li>
+  <li>
+    <div class=bodycopy>Password (using basic authentication)</div>
+  </li>
+  <li>
+    <div class=bodycopy>Developer Token</div>
+  </li>
+  <li>
+    <div class=bodycopy>Order ID</div>
+  </li>
+  <li>
+    <div class=bodycopy>Payments Transaction ID</div>
+  </li>
+  <li>
+    <div class=bodycopy>Refund Amount</div>
+  </li>
+  <li>
+    <div class=bodycopy>Reason</div>
+  </li>
+  <li>
+    <div class=bodycopy>Message</div>
+  </li>
+</ul>
+</body>
+</html>

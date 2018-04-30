@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Browse Node Searches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="header">Browse Node Searches</h2>
+<h2><a class="subhead">Browse Node Searches via XML</a></h2>
+<p class="bodycopy"><a>The browse structure is the way that Amazon.com organizes 
+  products into subjects and categories on our site so that customers can find 
+  the product they want easily and efficiently. A browse ID is a number that corresponds 
+  to a general subject area of Amazon.com. (For example, the browse ID for the 
+  parent books category in the US is 1000). </a></p>
+<p class="bodycopy"><a>To find browse IDs at Amazon.com, the best way is to visit 
+  the &quot;browse&quot; area of the various product lines at our Web site. When 
+  you find a subject area that you would like to generate XML for, look at the 
+  web page URL. The browse ID should appear after the string &quot;/tg/browse/-/&quot;. 
+  Here are some examples of URLs that contain browse IDs: </a></p>
+<p class="code">http://www.amazon.com/exec/obidos/tg/browse/-/<b>30</b> (In 
+  this example, the browse ID = 30) <br>
+http://www.amazon.com/exec/obidos/tg/browse/-/<b>467970</b> 
+  (In this example, the browse ID = 467970) <br>
+http://www.amazon.com/exec/obidos/tg/browse/-/<b>602314</b> 
+  (In this example, the browse ID = 60231<i> </i></p>
+<p class="bodycopy"><a>Please be aware that some nodes cannot be used with a BrowseNodeSearch. 
+  (The vast majority of them can, but you may run across a few that simply will 
+  not work). It is also important to point out that from time to time, some browse 
+  nodes are deprecated or are changed without notice. Please see Appendix A for 
+  a list of commonly used browse nodes.</a></p>
+<h3><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='font-size:10.0pt;color:red'>[Developer’s 
+        token goes here]</span>&amp;BrowseNodeSearch=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>browse node 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;mode=<span
+  style='font-size:10.0pt;color:red'>[</span><span style='color:red'>product line 
+        goes here</span><span style='font-size:10.0pt;
+  color:red'>]</span>&amp;type=<span
+  style='font-size:10.0pt;color:red'>[lite or heavy]</span> &amp;page=<span style='font-size:10.0pt;color:red'>[</span><span
+  style='color:red'>page # goes here</span><span
+  style='font-size:10.0pt;color:red'>]</span>&amp;f=xml </a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The BrowseNodeSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<h3 class="bodycopy"><a class="subhead2">Example</a></h3>
+<p class="bodycopy"><a>To generate a &quot;heavy&quot; XML document listing top-selling 
+  books, the URL would look like this: </a></p>
+<p class=code><a><span
+style='font-size:10.0pt;font-family:"Courier New"'>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=</span><b><span style='font-size:10.0pt;color:red'>[developer’s 
+  token goes here]</span></b><span style='font-size:10.0pt;
+font-family:"Courier New"'>&amp;BrowseNodeSearch=1000&amp;mode=books&amp;type=heavy&amp;page=1&amp;f=xml</span></a></p>
+<h2 class="bodycopy"><a class="subhead">Browse Node Searches via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows how to create a request for a browse 
+  node search.  This request will return a SOAP object containing the Lite or 
+  the Heavy form of the data.</a></p>
+<h3 class="bodycopy"><a class="subhead2">Call and Response</a></h3>
+<table class=TableHead border=1 cellspacing=0 cellpadding=0>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Name</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>BrowseNodeSearchRequest</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Request Format</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>browse_node 
+        string</a></p>
+      <p class=bodycopy><a>page  string</a></p>
+      <p class=bodycopy><a>mode  string</a></p>
+      <p class=bodycopy><a>tag  string</a></p>
+      <p class=bodycopy><a>type  string</a></p>
+      <p class=bodycopy><a>sort&nbsp; string&nbsp; (optional)</a></p>
+      <p class=bodycopy><a>devtag  string</a></p></td>
+  </tr>
+  <tr> 
+    <td width=138 valign=top class="Normal"> <p class=bodycopy><a>Response</a></p></td>
+    <td width=493 valign=top class="Normal"> <p class=bodycopy><a>The BrowseNodeSearch 
+        request returns a ProductInfo node. The ProductInfo node contains an array 
+        of Detail nodes.</a></p></td>
+  </tr>
+</table>
+<p class="subhead"><a name="filter"></a></p>
+<p class="subhead">Filtering by Browse Results by Keyword </p>
+<p class="bodycopy">You can add a keywords parameter to your request to filter 
+  the results by that keyword. To filter by keyword, add the keyword parameter 
+  to your request as shown:</p>
+<p class="code"><a><span
+style='font-size:10.0pt;font-family:"Courier New"'>http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=</span><b><span style='font-size:10.0pt;color:red'>[developer’s 
+  token goes here]</span></b><span style='font-size:10.0pt;
+font-family:"Courier New"'>&amp;BrowseNodeSearch=1000&amp;mode=books&amp;type=heavy&amp;page=1<font color="#FF0000"><strong>&amp;keywords=dog</strong></font>&amp;f=xml</span></a></p>
+</body>
+</html>

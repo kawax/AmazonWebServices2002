@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Using the Amazon.com XSLT Service</title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Using the Amazon.com XSLT Service</div>
+<p><a class="bodycopy">This section provides information on developing applications 
+  and Web sites that use Amazon XSLT data.</a></p>
+<h2><a class="subhead">XSLT Service Overview</a></h2>
+<p class="bodycopy"><a>One of the unique features of Amazon.com Web Services is 
+  our XSLT service, which enables you to transform the contents of our standard 
+  XML output into documents that utilize the markup language of your choice. </a></p>
+<p class="bodycopy"><a>To use the service, simply pass us an XSL style sheet, 
+  and we will return a document that follows the guidelines of that style sheet. 
+  The resulting document can be anything from slightly revised XML to a completely 
+  transformed HTML widget. Amazon.com has embraced XSLT to ensure that even the 
+  most novice developer has the means to interact with our Web services and produce 
+  rich content, without parsing and manipulating programming languages. Currently 
+  we only offer the XSLT service through XML over HTTP; SOAP is not supported 
+  at this time. </a></p>
+<p><a><img border=0 width=593 height=412
+src="http://images.amazon.com/images/G/01/anywhere/web-services/image005.gif"></a></p>
+<div class="header">Implementing XSLT</div>
+<p><a class="bodycopy">This section explains how to implement XSLT in your application 
+  or Web page.</a></p>
+<h3><a><span class="subhead">Process</span></a></h3>
+<p class="bodycopy"><a>The XSL stylesheet can be applied to the XML data returned 
+  by Amazon from any of the queries described in section 6, above.  The following 
+  examples use the Keyword Search (though you could use any search in practice).</a></p>
+<p class="bodycopy"><a>For a Keyword search using XML/HTTP, the format for the 
+  request was given as: </a></p>
+<div class="code">http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;KeywordSearch=<span style='color:
+red;font-weight:normal'>[subject keyword goes here]</span>&amp;mode=<span style='color:red;font-weight:normal'>[product 
+  line goes here]</span>&amp;type=<span style='color:red;font-weight:normal'>[lite 
+  or heavy]</span>&amp;page=<span style='color:red;font-weight:normal'>[page # 
+  goes here]</span>&amp;f=xml </div>
+<p class="bodycopy"><a>If you would like to use Amazon.com's XSLT Service, then 
+  you would use the following format instead:</a></p>
+<div class="code">http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;KeywordSearch=<span style='color:
+red;font-weight:normal'>[subject keyword goes here]</span>&amp;mode=<span style='color:red;font-weight:normal'>[product 
+  line goes here]</span>&amp;type=<span style='color:red;font-weight:normal'>[lite 
+  or heavy]</span>&amp;page=<span style='color:red;font-weight:normal'>[page # 
+  goes here]</span>&amp;f=<span style='color:red;font-weight:normal'>[URL pointer 
+  to XSL document]</span> </div>
+<p class="bodycopy"><a>The parameter <b><span style='color:red'>[URL pointer to 
+  XSL document]</span></b> is the location on the web where the XSL document is 
+  stored. The location is a standard URL that must be encoded so that we can process 
+  the request properly. Our XSLT service will run the query,  and will then transform 
+  the XML returned by the query using the style sheet. </a></p>
+<p class="bodycopy"><a>For example, if an XSL document is stored at http://www.foo.com/bar.xsl, 
+  then the request would be: </a></p>
+<div class="code">http://xml.amazon.com/onca/xml3?t=webservices-20&amp;dev-t=<span style='color:red;font-weight:normal'>[developer’s 
+  token goes here]</span>&amp;t=<span style='color:red;font-weight:
+normal'>[Associates ID goes here]</span>&amp;KeywordSearch=<span style='color:red;font-weight:normal'>[subject 
+  keyword goes here]</span>&amp;mode=<span style='color:red;
+font-weight:normal'>[product line goes here]</span>&amp;type=<span style='color:red;font-weight:normal'>[lite 
+  or heavy]</span>&amp; page=<span style='color:red;font-weight:normal'>[page 
+  # goes here]</span>&amp;f=http://www.foo.com/bar.xsl </div>
+<p class="bodycopy"><a>XSL documents should not exceed <b>20K</b>. Thus, the XSLT 
+  service should not be used to render large HTML pages but rather &quot;HTML 
+  widgets&quot;, such as lists, search results, and/or detailed product information. 
+  </a></p>
+<p class="bodycopy"><a>We have included some examples of XSL style sheets that 
+  are designed to work with Amazon.com Web Services in this kit. </a></p>
+<h3><a class="subhead">Implementation Notes</a></h3>
+<p class="bodycopy"><a>Please take the following caveats into account when developing 
+  your Web page or application:</a></p>
+<ul type=disc>
+  <li class="bodycopy"><a>The Amazon platform will cache your XSLT style sheet 
+    for up to 5 minutes. If you don't see changes as expected when testing your 
+    style sheet, you may need to wait up to 5 minutes to allow the data to expire 
+    from the cache.  Please also note that the XSLT file needs to be located at 
+    a URL that is not protected with passwords or IP access controls.</a></li>
+  <li class="bodycopy"><a>The XSLT file needs to be at a URL that is publicly 
+    queryable, i.e. not protected with passwords or IP access controls.&nbsp;</a></li>
+  <li class="bodycopy"><a>In cases where <b>f=</b> is not XML, the standard XSL 
+    processing described above applies.</a></li>
+</ul>
+</body>
+</html>

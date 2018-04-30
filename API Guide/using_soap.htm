@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Accessing Amazon.com Data via SOAP</title>
+
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Accessing Amazon.com Data via SOAP</div>
+<p><a class="bodycopy">This section explains how to access Amazon.com data using 
+  SOAP.</a></p>
+<h2><a class="subhead">Amazon.com SOAP Usage Overview</a></h2>
+<p><a class="bodycopy">SOAP lets third-party developers retrieve Amazon catalog 
+  information using remote procedure calls. This information is encoded using 
+  XML, although this is transparent to you in the course of normal usage. Please 
+  see our <a href="http://soap.amazon.com/schemas3/AmazonWebServices.wsdl
+">SOAP WSDL</a> for more information on the contents of AWS SOAP responses.</a></p>
+<h2><a class="subhead2">Guidelines for Accessing Amazon.com Data via SOAP</a></h2>
+<p class="bodycopy"><a>This section shows general guidelines for accessing Amazon.com 
+  data via SOAP.</a></p>
+<ol start=1 type=1>
+  <li class="bodycopy"><a>Your Web site or application should make no more than 
+    one (1) request per second to our servers.</a></li>
+  <li class="bodycopy"><a>Your Web site or application should have some kind of 
+    caching mechanism to temporarily store Amazon catalog data.</a></li>
+  <li class="bodycopy"><a>Your Web site or application should not cache Amazon 
+    data for more than twenty four (24) hours.</a></li>
+  <li class="bodycopy"><a>Your Web site or application should contain some measure 
+    of error handling.</a></li>
+  <li class="bodycopy"><a>Your Web site or application should not be configured 
+    to immediately retry failed server requests—doing so only exacerbates problems.</a></li>
+</ol>
+<h2><a class="subhead">SOAP Tools</a></h2>
+<p><a class="bodycopy">This section provides information on SOAP toolkits and 
+  SOAP-aware development tools.</a></p>
+<h3><a class="subhead2">Toolkits</a></h3>
+<p class="bodycopy"><a>This section provides information on toolkits commonly 
+  used to form SOAP requests.  </a></p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=192 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><a>Toolkit</a></p></td>
+    <td width=426 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><a>Location</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><b>Java</b></a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>Apache AXIS: http://xml.apache.org/axis/</a></p>
+      <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>Systinet WASP for Java: http://www.systinet.com/index.php?nav=/products/wasp_jserver/overview</a></p>
+      <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>GLUE: http://www.themindelectric.com/glue/index.html</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><b>Perl</b></a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>SOAP::Lite: http://www.soaplite.com/</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><b>PHP</b></a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>NuSOAP: http://www.sourceforge.net/projects/nusoap/</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><b>COM 
+        (Visual Basic, Visual C++)</b></a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>Microsoft SOAP Toolkit :http://msdn.microsoft.com/code/default.asp?url=/code/sample.asp?url=/msdn-files/027/001/580/msdncompositedoc.xml</a></p>
+      <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>PocketSOAP: http://www.pocketsoap.com/pocketsoap/</a></p>
+      <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>Lucin SOAP Toolkit: http://www.soaptoolset.com/</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><b>.NET</b></a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>.NET Framework SDK: http://msdn.microsoft.com/downloads/default.asp?URL=/code/sample.asp?url=/MSDN-FILES/027/000/976/msdncompositedoc.xml</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><b>C++</b></a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a><span
+  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </span></span>SQLData SOAP Library: http://www.sqldata.com/soapclient/soapclient30.htm</a></p></td>
+  </tr>
+</table>
+<h3><a><span class="subhead2">SOAP-aware Development Tools</span></a></h3>
+<p><a class="bodycopy">This section provides information on SOAP-aware developm<span class="bodycopy">ent 
+  tools.  </span></a></p>
+<table border=1 cellspacing=0 cellpadding=0 width=618>
+  <tr> 
+    <td width=192 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><a>Toolkit</a></p></td>
+    <td width=426 valign=top bgcolor="#D9D6AF" class="Normal"> <p class=bodycopy><a>Location</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>Cape 
+        Clear Studio</a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>http://www.capeclear.com/products/capestudio/</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>Microsoft 
+        Visual Studio.NET</a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>http://msdn.microsoft.com/vstudio/productinfo/default.asp</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>Delphi 
+        Studio</a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>http://www.borland.com/delphi/</a></p></td>
+  </tr>
+  <tr> 
+    <td width=192 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>Blue 
+        Titan Server Suite</a></p></td>
+    <td width=426 valign=top bgcolor="#FDFDF9" class="Normal"> <p class=bodycopy><a>http://www.bluetitan.com/products/btitan_suite.htm</a></p></td>
+  </tr>
+</table>
+<p class="bodycopy"><a><b><i><span style='color:red'>Please note</span></i></b><i>: 
+  This information is included for reference only.  Amazon does not endorse any 
+  specific toolkit, and the presence of a toolkit on this list does not mean that 
+  Amazon guarantees compatibility with that toolkit.</i></a></p>
+<h2>&nbsp;</h2>
+</body>
+</html>

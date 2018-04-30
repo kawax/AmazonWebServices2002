@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Uploads and Order Fulfillment Report Logistics</title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class=Section1> 
+  <h1 class="header"><a>Uploads and Order Fulfillment Report Logistics</a> </h1>
+  <h2><a class="subhead">Schedule</a></h2>
+  <p class="bodycopy">File processing will be restricted to one file at a time. 
+    For example, if a seller has a scheduled upload at the same time he or she 
+    schedules a delete file pickup, the requests will be queued in the order received 
+    so that only one request will be processed at a time. </p>
+  <p class="bodycopy">If a purge and replace request fails, the remaining files 
+    in the queue will continue to be processed. To avoid data corruption, it will 
+    be the sellers’ responsibility to submit a fresh purge and replace request 
+    in the next schedule. If it is urgent that a purge and replace file is processed 
+    before the next scheduled pickup, the seller can instead use the manual upload 
+    found using the following URL:</p>
+  <p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/catalog-upload-now/">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/catalog-upload-now/</a> 
+  </p>
+  <ul type=disc>
+    <li class="bodycopy">The POST requests for inventory upload (Add/Modify/Delete) 
+      should be sent every four hours or multiples of four hours (12 midnight, 
+      4a.m., 8a.m., 12 noon, 4p.m., 8p.m. daily) All times PST</li>
+    <li class="bodycopy">The POST requests associated with the purge and replace 
+      should be either sent every 12 midnight or every Friday 12 midnight . If 
+      the purge and replace file is going to be over 20 MB, it should only be 
+      scheduled for pickup once a week. </li>
+    <li class="bodycopy">The POST requests associated with the upload of delete 
+      can be sent as frequent as every 30 minutes or multiples of 30 minutes.</li>
+  </ul>
+  <h2><a class="subhead">Purge Policy</a> </h2>
+</div>
+<ul>
+  <li>
+    <div class=Section1><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Pre-order 
+      reports and open listings are saved for 10 days.</span></div>
+  </li>
+  <li>
+    <div class=Section1><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">All 
+      other reports are saved for 30 days.</span></div>
+  </li>
+</ul>
+<div class=Section1>
+  <h1><a class="subhead">Status Notifications</a> </h1>
+  <h2><a class="subhead2">Email</a> </h2>
+  <p class="bodycopy">We will not send e-mail notifying successful pick up because 
+    the seller will receive an automatic response as part of the HTTPS protocol. 
+  </p>
+  <p class="bodycopy">E-mail will be sent if an upload batch fails do to an internal 
+    error. This e-mail will include information regarding the number of records, 
+    if any, that were processed before the batch failure and will instruct the 
+    seller to resubmit the file.</p>
+  <h2><a class="subhead2">Failure/Edge Case Notification</a></h2>
+  <h3><a class="subhead2">Login Failure</a></h3>
+  <p class="bodycopy">When login and password fails for any request, the HTTPS 
+    response will include a 404 error that notifies the seller that there was 
+    an error on the client’s end. </p>
+  <h3><a class="subhead2">Business Logic Validation Failures</a></h3>
+  <p class="bodycopy">There are two levels of business logic failures </p>
+  <ol start=1 type=1>
+    <li class="bodycopy">When a request is submitted.  If a request fails at submission 
+      time, the error will be returned in the HTTPS response.</li>
+    <li class="bodycopy">When the request is processed </li>
+  </ol>
+  <p class="bodycopy">If the request fails during processing (no records are valid) 
+    the error(s) will be noted in the error log file, which can be downloaded 
+    as explained in the previous sections. </p>
+  <h3><a class="subhead2">File Fatal Processing</a> </h3>
+  <p class="bodycopy">Because the file processing is done asynchronously, if a 
+    processing fatals, Amazon.com will send e-mail stating that the request caused 
+    a fatal error and that the file should be resubmitted.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.header {	font-family: Verdana, Arial, sans-serif;	font-size: 18px;
+	font-weight: bold;
+	color: #036A08;
+	border-bottom:solid #036A08 1.0pt;
+}
+.subhead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #036A08;
+}
+.subhead2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #036A08;
+}
+.bodycopy {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+}
+
+.code {
+    font-family: "Courier New", Courier, mono;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    color: #000000;
+    background-color: #D3ECD4;
+    width: auto;
+    border: 1px solid #D3ECD4;
+    margin: 24px;
+    padding: 6px;
+}

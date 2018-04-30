@@ -1,0 +1,178 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<title>Checking Inventory Status</title>
+<link href="help1.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" link=blue vlink="#606420" class="Normal" lang=EN-US>
+<div class="header">Checking Inventory Status</div>
+<h2><a class="subhead">Types of Requests (Summary)</a></h2>
+<table border=1 cellspacing=0 cellpadding=0 width=630>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#D9D6AF"> 
+      <p class=TableHead>Request 
+        Type </p></td>
+    <td width=72 bgcolor="#D9D6AF"> 
+      <p class=TableHead>HTTP Request 
+        Type </p></td>
+    <td width=138 bgcolor="#D9D6AF"> 
+      <p class=TableHead>URL </p></td>
+    <td width=174 bgcolor="#D9D6AF"> 
+      <p class=TableHead>Name Value 
+        Pairs in Header </p></td>
+    <td width=156 bgcolor="#D9D6AF"> 
+      <p class=TableHead>Response 
+        Types </p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>Upload status</p></td>
+    <td width=72 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>POST </p></td>
+    <td width=138 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>https://secure.amazon.com/exe/panama/seller-admin/catalog-upload/get-batches 
+      </p></td>
+    <td width=174 bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+      <p><b><span style='font-size:9.0pt'>NumberOfBatches:</span></b><span
+  style='font-size:9.0pt'> [insert number of batches here]</span> </p></td>
+    <td width=156 valign=top bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>&lt;Batches&gt; 
+        <br>
+        &lt;Batch&gt;</span></b><span style='font-size:9.0pt'><br>
+        BatchID= <br>
+        status = <br>
+        dateandtime = <br>
+        activateditems = <br>
+        numberofwarnings = itemsnotactivated =<br>
+        <b>&lt;/Batch&gt;<br>
+        &lt;/Batches&gt;</b> </span></p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>Error log 
+      </p></td>
+    <td width=72 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>POST</p></td>
+    <td width=138 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/download/errorlog 
+      </p></td>
+    <td width=174 bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+      <p><b><span style='font-size:9.0pt'>BatchID:</span></b><span
+  style='font-size:9.0pt'> [insert Batch ID here] </span></p></td>
+    <td width=156 valign=top bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>&lt;FileError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        FILE_NOT_FOUND<br>
+        <b>&lt;/FileError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;SecurityError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        ACCESS_DENIED<br>
+        <b>&lt;/SecurityError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        INVALID_BATCH<br>
+        <b>&lt;/BusinessLogicError&gt; </b></span></p></td>
+  </tr>
+  <tr class="bodycopy"> 
+    <td width=90 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>Quick fix 
+        file </p></td>
+    <td width=72 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>POST</p></td>
+    <td width=138 bgcolor="#FDFDF9"> 
+      <p class=Tablebody>https://secure.amazon.com/exec/panama/seller-admin/download/quickfix 
+      </p></td>
+    <td width=174 bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>dev-t:</span></b><span
+  style='font-size:9.0pt'> [insert developer token here]</span></p>
+      <p><b><span style='font-size:9.0pt'>BatchID:</span></b><span
+  style='font-size:9.0pt'> [insert Batch ID here]</span></p></td>
+    <td width=156 valign=top bgcolor="#FDFDF9"> 
+      <p><b><span style='font-size:9.0pt'>&lt;FileError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        FILE_NOT_FOUND<br>
+        <b>&lt;/FileError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;SecurityError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        ACCESS_DENIED<br>
+        <b>&lt;/SecurityError&gt;</b></span></p>
+      <p><b><span style='font-size:9.0pt'>&lt;BusinessLogicError&gt;</span></b><span
+  style='font-size:9.0pt'><br>
+        INVALID_BATCH<br>
+        <b>&lt;/BusinessLogicError&gt;</b></span></p></td>
+  </tr>
+</table>
+<h2><a class="subhead">Types of Requests (Detailed)</a></h2>
+<p class="bodycopy">Once a seller has uploaded their inventory on the Amazon.com 
+  platform, they may want to check the status of their upload. Each inventory 
+  upload (whether it is an Add/Delete/Modify, Delete/Modify or Purge/Replace) 
+  has a batch ID associated with it. Sellers can either check the status of multiple 
+  batches, or retrieve error logs and/or quick fix files for specific batch IDs.</p>
+<h3><span class="subhead2"><a>Checking Upload Status</a>  </span>        </h3>
+<p class="bodycopy"><b>Use Case:</b> A seller should use the Upload Status request 
+  when they want to find out the status of their latest uploads. (They will need 
+  to specify the number of uploads that they want to check on in the request header). 
+  Each upload (or “batch”) will return a batch ID, status report, and other information. 
+  If the status of a particular batch is negative, the seller can use the batch 
+  ID to retrieve an error log or quick fix file. (See below).</p>
+<p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+<p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/get-batches">https://secure.amazon.com/exec/panama/seller-admin/catalog-upload/get-batches</a></p>
+<p class="bodycopy"><b>Header Content:</b></p>
+<ul>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Username 
+    (using basic authentication)</span></li>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Password 
+    (using basic authentication)</span></li>
+  <li><span class="bodycopy">Developer Token</span></li>
+  <li><span class="bodycopy">Number of Batches (default=10)</span></li>
+</ul>
+<h3 class="bodycopy"><a class="subhead2">Retrieval of Inventory Upload Error Log</a></h3>
+<p class="bodycopy"><b>Use Case: </b>If something goes wrong with a specific inventory 
+  upload, the seller can retrieve the upload’s Error Log to determine what caused 
+  the problem. The Error Log will contain the row number of any applicable error 
+  or warning, the SKU, and the item name. It will also contain the message type 
+  (status message, data error, template error, etc.) and the message itself. The 
+  seller can use this information to fix any errors and re-upload those rows.</p>
+<p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+<p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama%20/seller-admin/download/error_log">https://secure.amazon.com/exec/panama 
+  /seller-admin/download/error_log</a> </p>
+<p class="bodycopy"><b>Header Content:</b></p>
+<ul>
+  <li><span class="bodycopy">Username (using basic authentication)</span></li>
+  <li><span class="bodycopy">Password (using basic authentication)</span></li>
+  <li><span class="bodycopy">Developer Token</span></li>
+  <li><span class="bodycopy">Batch ID</span></li>
+</ul>
+<h3><a class="subhead2">Retrieval of Inventory Upload Quick Fix File</a></h3>
+<p class="bodycopy"><b>Use Case: </b>A seller<b> </b>can also retrieve a Quick 
+  Fix file if something goes wrong with a particular upload. A Quick Fix file 
+  is similar to an Error Log, except that it contains only the error rows that 
+  did not get uploaded to the site due to missing required information or inappropriate 
+  information. </p>
+<p class="bodycopy"><b>HTTPS POST request to the following URL:</b></p>
+<p class="bodycopy"><a
+href="https://secure.amazon.com/exec/panama%20/seller-admin/download/quick_fix">https://secure.amazon.com/exec/panama 
+  /seller-admin/download/quick_fix</a></p>
+<p class="bodycopy"><b>Header Content:</b></p>
+<ul>
+  <li><span class="bodycopy">Username (using basic authentication)</span></li>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Password 
+    (using basic authentication)</span></li>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Developer 
+    Token</span></li>
+  <li><span class="bodycopy"
+style='font-family:Symbol'><span style='font:7.0pt "Times New Roman"'> </span></span><span class="bodycopy">Batch 
+    ID</span></li>
+</ul>
+</body>
+</html>
